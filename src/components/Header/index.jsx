@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Container, Navbar, Nav } from "react-bootstrap";
 import { Typography } from "@mui/material";
+import React from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Header(props) {
   return (
@@ -23,7 +23,7 @@ function Header(props) {
               Tổng hợp
             </Link>
 
-            <Link to="/accountant" className="text-decoration-none px-3">
+            <Link to="/account" className="text-decoration-none px-3">
               Kế toán
             </Link>
 

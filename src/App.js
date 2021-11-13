@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Product from "./features/Product";
 import Order from "./features/Order";
 import Synthetic from "./features/Synthetic";
-import Accountant from "./features/Accountant";
+import Account from "./features/Account";
 import Media from "./features/Media";
 import Analysis from "./features/Analysis";
 import Master from "./features/Master";
@@ -19,7 +19,7 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/order" element={<Order />} />
           <Route path="/synthetic" element={<Synthetic />} />
-          <Route path="/accountant" element={<Accountant />} />
+          <Route path="/account" element={<Account />} />
           <Route path="/media" element={<Media />} />
           <Route path="/analysis" element={<Analysis />} />
           <Route path="/master" element={<Master />} />

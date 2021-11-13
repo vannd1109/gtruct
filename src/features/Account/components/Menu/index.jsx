@@ -6,61 +6,55 @@ function Menu(props) {
       <ul className="tree-view-parent">
         <li>
           <a href>
-            <Add /> <Folder className="folder" /> Master Data
+            <Add /> <Folder className="folder" /> Prepay payment
           </a>
           <ul className="tree-view-child">
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Basic Logistics Mgt
+                CMS
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký lịch nghỉ làm(công ty giao nhận)
+                    Đăng ký thanh toán bằng tiền mặt
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quản lý số lượng hàng giao theo ngày
+                    Giải quyết thanh toán bằng tiền mặt
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quản lý giao hàng theo khu vực
+                    Xử lý hủy bỏ trường hợp thanh toán bằng tiền mặt
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quản lý kho
+                    Hủy bỏ tất cả trường hợp chưa chuyển tiền
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quản lý mã số kệ để hàng
+                    Số trường hợp chưa được thanh toán bằng tiền mặt
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quản lý nhân viên thao tác kho
+                    Giải quyết các trường hợp thanh toán bằng tiền mặt
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quản lý quy cách sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Quản lý các loại chi phí khác theo khu vực
+                    Số trường hợp hủy thanh toán bằng tiền mặt
                   </a>
                 </li>
               </ul>
@@ -68,19 +62,43 @@ function Menu(props) {
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Basic Logistics Inquiry
+                Card
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    In nhãn sản phấm
+                    Hoàn tất việc thanh toán bằng thẻ
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Kiểm tra tình hình đăng ký chi phí chuyển hàng
+                    Lập tài liệu đăng ký thẻ
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Đăng ký tài liệu yêu cầu thanh toán
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Yêu cầu hủy bỏ thẻ
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Trường hợp đặt hàng trả góp bằng thẻ
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Thống kê thanh toán bằng thẻ
                   </a>
                 </li>
               </ul>
@@ -88,52 +106,186 @@ function Menu(props) {
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Basic Logistics Rule Mgt
+                SCJ point
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quy tắc nhập kho
+                    Quản lý điểm tích lũy
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quy tắc lấy hàng
+                    Tình hình điểm tích lũy của từng khách hàng
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tình hình tặng các dịch vụ cộng điểm khác
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Kỳ hạn sử dụng điểm tích lũy
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tình hình sử dụng điểm tích lũy của nhân viên công ty
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tổng số điểm cộng được tặng
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tổng số điểm tích lũy đã dùng
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href className="document-title">
+                <Add /> <Folder className="folder" />
+                Deposit
+              </a>
+              <ul className="tree-view-child">
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Quản lý số tiền đặt cọc
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tình hình cấp tiền đặt cọc theo ngày
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tình hình sử dụng tiền đặt cọc theo ngày
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tình hình tiền đặt cọc của từng khách hàng
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href className="document-title">
+                <Add /> <Folder className="folder" />
+                CreditLoan
+              </a>
+              <ul className="tree-view-child">
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Xử lý chấp nhận Creadit Loan
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Yêu cầu làm giấy tờ Creadit Loan
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Đăng nhập giấy tờ gửi tiền Creadit Loan
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Thống kê gửi tiền Credit Loan
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href className="document-title">
+                <Add /> <Folder className="folder" />
+                Payment Online
+              </a>
+              <ul className="tree-view-child">
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Xác nhận thu tiền Payment Online
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Hoàn trả tiền cho Payment Online
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Xác nhận thu tiền trả góp (Payment Online)
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Trường hợp đặt hàng trả góp bằng thẻ (Payment Online)
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Thống kê thanh toán Payment Online
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Installment Payment Online
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
+
         <li>
           <a href>
-            <Add /> <Folder className="folder" /> QC
+            <Add /> <Folder className="folder" /> Postpay payment
           </a>
           <ul className="tree-view-child">
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Approval Inspection
+                COD
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Chấp nhận yêu cầu kiểm tra sản phẩm
+                    Giải quyết thanh toán COD(Mới)
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký kết quả kiểm tra phê duyệt
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Trạng thái tiến hành kiểm tra phê duyệt sản phẩm
+                    Tình hình đã nhận được tài liệu thanh toán theo công ty giao
+                    hàng
                   </a>
                 </li>
               </ul>
@@ -141,96 +293,65 @@ function Menu(props) {
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Warehousing Inspection
+                Status by Postpay
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký kết quả kiểm tra sản phẩm nhập kho
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Inspection Status
-              </a>
-              <ul className="tree-view-child">
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Tình trạng của khách hàng yêu cầu bồi thường giá Quatity
+                    Tình hình chưa thanh toán trả sau
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Kết quả kiểm tra phê duyệt của từng sản phẩm
+                    Tình hình thanh toán trả sau
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    In hạng mục cần bổ sung
+                    Tình hình xuất kho những sản phẩm được thanh toán trả sau
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Kiểm tra kết quả kiểm tra nhập kho
+                    Tình hình chưa thanh toán trả sau
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Trạng thái Kết quả kiểm tra nhập kho
+                    Tình hình dự kiến thanh toán COD
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
+
         <li>
           <a href>
-            <Add /> <Folder className="folder" /> Warehousing/Shipping Mgt
+            <Add /> <Folder className="folder" /> Refund
           </a>
           <ul className="tree-view-child">
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Warehousing Order Mgt
+                Refund proc
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Yêu cầu nhập kho
+                    Trả lại tiền mặt
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Phê duyệt yêu cầu nhập kho
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Yêu cầu tiến hành nhập kho
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập hủy yêu cầu nhập kho
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Xuất dữ liệu Pre Order
+                    Giải quyết việc trả lại tiền sau khi xác nhận thu hồi hàng
                   </a>
                 </li>
               </ul>
@@ -238,122 +359,35 @@ function Menu(props) {
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Warehousing Mgt
+                Status by refund
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập xác nhận nhập kho
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập lịch nhập kho
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Consigment Mgt
-              </a>
-              <ul className="tree-view-child">
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng ký số lượng có thể nhập kho
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng ký số lượng có thể bán chương trình Live
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Phê duyệt số lượng có thể nhập kho
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng ký số lượng có thể bán của hàng ký gửi
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Consigment Adjustment
-              </a>
-              <ul className="tree-view-child">
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Điều chỉnh số lượng có thể bán chương trình Live
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Phê duyệt điều chỉnh số lượng có thể bán
+                    Kết quả việc trả lại tiền
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
+
         <li>
           <a href>
-            <Add /> <Folder className="folder" /> Shipping Order Mgt
+            <Add /> <Folder className="folder" /> Other Anal
           </a>
           <ul className="tree-view-child">
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Shipping Order
+                Sale and Payment Anal
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Hướng dẫn xuất kho của từng sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Hướng dẫn xuất kho toàn bộ đơn hàng
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng ký hủy bỏ lệnh vận chuyển hàng
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Hướng dẫn xuất kho toàn bộ đơn hàng(B2B)
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Hướng dẫn xuất kho toàn bộ đơn hàng(Vendor)
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Hướng dẫn xuất kho toàn bộ đơn hàng(Other)
+                    Báo cáo doanh thu và thanh toán bán hàng
                   </a>
                 </li>
               </ul>
@@ -361,175 +395,77 @@ function Menu(props) {
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Shipping Schedules
+                Other Anal
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Tình hình dựu kiến xuất kho
+                    Tình hình đăng ký thanh toán theo từng loại thanh toán
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Tình hình tạo hướng dẫn xuất kho
+                    Tình hình xác nhận/thanh toán theo từng loại thanh toán
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Bố trí lấy hàng
+                    Monthly dilivery cost report by companies
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Xử lý hủy bỏ và phân công lại việc lấy hàng
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Danh sách sản phẩm có khuyến mãi được hướng dẫn xuất kho
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Tình hình tiếp nhận sản phẩm trả lại sau khi có lệnh vận
-                    chuyển hàng
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Tình trạng chi tiết hướng dẫn vận chuyển hàng
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Waybill Output
-              </a>
-              <ul className="tree-view-child">
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    In ra hóa đơn kèm phiếu giao hàng
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    In ra chứng từ vận chuyển
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Thay đổi phương thức vận chuyển xuất kho
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Thay đổi cách thức chuyển chứng từ thu hồi hàng
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    In ra hóa đơn kèm phiếu giao hàng(B2B)
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Thay đổi phương pháp vận chuyển xuất kho Excel
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    In phiếu giao hàng hóa đơn điện tử Kho HCM(NEW)
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Sign Ebill Excel
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    In ra chứng từ vận chuyển(NEW)
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    In phiếu gia hàng hóa đơn điện tử Kho HN(NEW)
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    In phiếu giao hàng không giá tiền(NEW)
+                    Monthly dilivery cost report by item
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
+
         <li>
           <a href>
-            <Add /> <Folder className="folder" /> Shipment Mgt
+            <Add /> <Folder className="folder" /> Receipt
           </a>
           <ul className="tree-view-child">
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Shipment Process
+                Receipts issued
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký gửi lại chứng từ vận chuyển
+                    Đăng ký nhận biên lai
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Xác nhận xuất kho
+                    In biên lai cho khách hàng
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quản lý nguyên nhân chưa chuyển hàng
+                    In biên lai của từng vận đơn
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Xác nhận hoàn tất giao hàng
+                    In DM địa chỉ của khách hàng
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Xác nhận thu tiền
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Xác nhận thu tiền[EXCEL]
+                    In biên lai của từng vận đơn HĐĐT
                   </a>
                 </li>
               </ul>
@@ -537,106 +473,73 @@ function Menu(props) {
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Shipment Status
+                Customer DM issued
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập sản phẩm đại diện
+                    Tình hình đăng ký nhận biên lai
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quản lý thông tin Key của Item
+                    Tình hình in biên lai
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href className="document-title">
+                <Add /> <Folder className="folder" />
+                Individual income tax
+              </a>
+              <ul className="tree-view-child">
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Giải quyết việc chuyển tiền thuế thu nhập cá nhân
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký sản phẩm thông thường
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng ký thông tin sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng ký TSKT của sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Quá trình thay đổi TSKT của sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng ký phê duyệt sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Sửa đổi thông tin phân tích sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng ký xử lý sản phẩm đã ngừng bán
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Quản lý sản phẩm nhà cung cấp
+                    Tình hình chuyển tiền thuế chu nhập cá nhân
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
+
         <li>
           <a href>
-            <Add /> <Folder className="folder" /> Direct Delivery Mgt
+            <Add /> <Folder className="folder" /> Vendor Mgt
           </a>
           <ul className="tree-view-child">
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Direct Delivery Warehousing Mgt
+                Basic Vendor Info
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Mã số phân loại sản phẩm
+                    Đăng ký công ty ký gửi hàng
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập mô tả sản phẩm
+                    Đăng ký mã số bảo lưu/số khấu từ
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập nhãn hiệu
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập hãng sản xuất
+                    Quản lý phân loại công ty ký gửi theo tháng
                   </a>
                 </li>
               </ul>
@@ -644,106 +547,133 @@ function Menu(props) {
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Direct Delivery Shipment
+                Basic Payment Info
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập sản phẩm đại diện
+                    Quản lý mã số ngân hàng
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quản lý thông tin Key của Item
+                    Quản lý tài khoản chuyển tiền
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký sản phẩm thông thường
+                    Quản lý mã số công ty thẻ
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký thông tin sản phẩm
+                    Quản lý mã số thẻ
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký TSKT của sản phẩm
+                    Quản lý công ty cho vay tín dụng
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quá trình thay đổi TSKT của sản phẩm
+                    Đăng ký tiêu chuẩn vay tín dụng Rebate
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href className="document-title">
+                <Add /> <Folder className="folder" />
+                Basic info.status
+              </a>
+              <ul className="tree-view-child">
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tình hình đăng ký công ty ký gửi hàng
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký phê duyệt sản phẩm
+                    Tình hình ngân hàng của công ty ký gửi hàng
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Sửa đổi thông tin phân tích sản phẩm
+                    In DM của công ty ký gửi hàng
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký xử lý sản phẩm đã ngừng bán
+                    Kiểm tra tiêu chuẩn quyết toán của công ty ký gửi hàng
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quản lý sản phẩm nhà cung cấp
+                    Tình hình hàng tồn của mỗi nhà cung cấp nhập hàng nguyên tắc
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
+
         <li>
           <a href>
-            <Add /> <Folder className="folder" /> Collection Mgt
+            <Add /> <Folder className="folder" /> Vendor Settlement
           </a>
           <ul className="tree-view-child">
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Collection Process
+                Bill Payment
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Mã số phân loại sản phẩm
+                    Tiến hành thanh toán theo tiêu chuẩn phát sinh
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập mô tả sản phẩm
+                    Xác nhận hóa đơn thanh toán
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập nhãn hiệu
+                    Đăng ký hóa đơn
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập hãng sản xuất
+                    Tiến hành chi trả theo tiêu chuẩn thanh toán
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Xác nhận việc chi trả
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Đăng ký hóa đơn(Điều chỉnh hàng tồn kho)
                   </a>
                 </li>
               </ul>
@@ -751,184 +681,315 @@ function Menu(props) {
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Collection Status
+                Item supply price inquire
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập sản phẩm đại diện
+                    Tình hình chi trả của các công ký gửi hàng
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quản lý thông tin Key của Item
+                    Tình hình chi trả
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href className="document-title">
+                <Add /> <Folder className="folder" />
+                Pinance I/F
+              </a>
+              <ul className="tree-view-child">
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Sales data(Daily)
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký sản phẩm thông thường
+                    Vendor payment(Monthly)
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký thông tin sản phẩm
+                    Payment method closing(Daily)
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký TSKT của sản phẩm
+                    SCJ point payment closing(Monthly)
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quá trình thay đổi TSKT của sản phẩm
+                    Accounting stock sheet
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký phê duyệt sản phẩm
+                    COD sales status(Monthly)
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Sửa đổi thông tin phân tích sản phẩm
+                    Yêu cầu nhập xuất tới kho
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng ký xử lý sản phẩm đã ngừng bán
+                    Tình hình công nợ nhà cung cấp theo hóa đơn
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Quản lý sản phẩm nhà cung cấp
+                    Tình hình chi tiết công nợ nhà cung cấp
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
+
         <li>
           <a href>
-            <Add /> <Folder className="folder" /> Vemdor Out Mgt
+            <Add /> <Folder className="folder" /> Voucher Mgt
           </a>
           <ul className="tree-view-child">
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Vendor Out Mgt
+                Voucher Processing
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Mã số phân loại sản phẩm
+                    Đăng ký thông tin phiếu mua hàng tích lũy điểm
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập mô tả sản phẩm
+                    Yêu cầu kiểm tra đối tượng nhập kho phiếu mua hàng tích lũy
+                    điểm
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập nhãn hiệu
+                    Nhập phiếu mua hàng tích lũy điểm
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập hãng sản xuất
+                    Bỏ phiếu mua hàng
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Phê duyệt phát hành phiếu mua hàng tích lũy điểm
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Xử lý việc xuất phiếu mua hàng tích lũy điểm
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tình hình phê duyệt phiếu mua hàng tích lũy điểm
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href className="document-title">
+                <Add /> <Folder className="folder" />
+                Voucher Status
+              </a>
+              <ul className="tree-view-child">
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tình hình tiến hành phiếu mua hàng tích lũy điểm
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tình hình sử dụng phiếu mua hàng tích lũy điểm
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tình hình xuất nhập kho phiếu mua hàng
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Quản lý phiếu mua hàng tích lũy điểm
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
+
         <li>
           <a href>
-            <Add /> <Folder className="folder" /> Other Logistics Mgt
+            <Add /> <Folder className="folder" /> D/C Coupon
           </a>
           <ul className="tree-view-child">
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Packing Material Mgt
+                D/C Coupon Mgt
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Mã số phân loại sản phẩm
+                    Đăng ký thông tin phiếu giảm giá
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập mô tả sản phẩm
+                    Phê duyệt phiếu giảm giá
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập nhãn hiệu
+                    Phát hành phiếu giảm giá (riêng lẻ)
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập hãng sản xuất
+                    Phát hành phiếu giảm giá (đồng loạt)
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href className="document-title">
+                <Add /> <Folder className="folder" />
+                D/C Coupon Status
+              </a>
+              <ul className="tree-view-child">
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tình hình sửu dụng phiếu giảm giá
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Tình hình phát hành phiếu giảm giá
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    Kiểm tra tình hình phiếu giảm giá
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
+
         <li>
           <a href>
-            <Add /> <Folder className="folder" /> Warehouse Mgt
+            <Add /> <Folder className="folder" /> B2B Mgt
           </a>
           <ul className="tree-view-child">
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Inventory Mgt
+                B2B Processing
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Mã số phân loại sản phẩm
+                    B2B - Đăng ký thông tin khách hàng B2B
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập mô tả sản phẩm
+                    B2B - Đăng ký thanh toán bằng tiền mặt
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập nhãn hiệu
+                    B2B - Giải quyết thanh toán CMS đợt 1
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập hãng sản xuất
+                    B2B - Giải quyết thanh toán CMS đợt 2
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    B2B - Xử lý hủy bỏ trường hợp thanh toán bằng tiền mặt
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    B2B - Hủy bỏ tất cả trường hợp chưa chuyển tiền
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    B2B - Số trường hợp chưa được xác nhận thanh toán bằng tiền
+                    mặt
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    B2B - Giải quyết các trường hợp thanh toán bằng tiền mặt
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    B2B - Số trường hợp hủy thanh toán bằng tiền mặt
+                  </a>
+                </li>
+                <li>
+                  <a href className="document-title">
+                    <Description className="file" />
+                    B2B - Giải quyết thanh toán COD (Mới)
                   </a>
                 </li>
               </ul>
@@ -936,230 +997,41 @@ function Menu(props) {
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Adjustment Status
+                B2B Status
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Mã số phân loại sản phẩm
+                    B2B - Tình hình công nợ
                   </a>
                 </li>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Đăng nhập mô tả sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập nhãn hiệu
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập hãng sản xuất
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Inventory Status
-              </a>
-              <ul className="tree-view-child">
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Mã số phân loại sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập mô tả sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập nhãn hiệu
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập hãng sản xuất
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Item move by Warehouse
-              </a>
-              <ul className="tree-view-child">
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Mã số phân loại sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập mô tả sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập nhãn hiệu
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập hãng sản xuất
+                    B2B - Tình hình thanh toán theo tháng
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
+
         <li>
           <a href>
-            <Add /> <Folder className="folder" /> Delivery Cost Mgt
+            <Add /> <Folder className="folder" /> MotorBike Mgt
           </a>
           <ul className="tree-view-child">
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
-                Delivery Cost Setting
+                MotorBike Processing
               </a>
               <ul className="tree-view-child">
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
-                    Mã số phân loại sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập mô tả sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập nhãn hiệu
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập hãng sản xuất
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Delivery Cost Calculate
-              </a>
-              <ul className="tree-view-child">
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Mã số phân loại sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập mô tả sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập nhãn hiệu
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập hãng sản xuất
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Delivery Cost Status
-              </a>
-              <ul className="tree-view-child">
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Mã số phân loại sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập mô tả sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập nhãn hiệu
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập hãng sản xuất
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Basic Info
-              </a>
-              <ul className="tree-view-child">
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Mã số phân loại sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập mô tả sản phẩm
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập nhãn hiệu
-                  </a>
-                </li>
-                <li>
-                  <a href className="document-title">
-                    <Description className="file" />
-                    Đăng nhập hãng sản xuất
+                    In hóa đơn xe máy
                   </a>
                 </li>
               </ul>

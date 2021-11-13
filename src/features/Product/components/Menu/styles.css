@@ -27,7 +27,7 @@
 }
 
 .tree-view-com .tree-view-child > li {
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 .tree-view-com .tree-view-child > li:last-of-type {
   padding-bottom: 0px;
@@ -39,7 +39,7 @@
   top: 2px;
 }
 .tree-view-com ul > li > ul {
-  margin-top: 15px;
+  margin: 5px 0px;
   position: relative;
   left: -4px;
 }
@@ -64,5 +64,23 @@
 /* hide */
 
 .tree-view-parent .tree-view-child .tree-view-child {
-  display: none;
+  /* display: none; */
+}
+
+.file {
+  color: #646161;
+  margin-right: 5px;
+}
+
+.tree-view-parent .tree-view-child .tree-view-child .document-title {
+  color: black;
+}
+
+.tree-view-parent .tree-view-child .document-title {
+  color: black;
+}
+
+.folder {
+  color: #efc426;
+  margin-right: 5px;
 }
