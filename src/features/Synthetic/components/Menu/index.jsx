@@ -1,20 +1,254 @@
-import { Description, Folder, Add } from "@mui/icons-material";
+import { useState } from "react";
+import {
+  Description,
+  Folder,
+  Add,
+  HorizontalRule,
+  FolderOpen,
+} from "@mui/icons-material";
+
+import { Typography } from "@material-ui/core";
 
 function Menu(props) {
+  // Master
+  const [openMaster, setOpenMaster] = useState(false);
+  const [closeMaster, setCloseMaster] = useState(true);
+
+  const [openMasterBasicMgt, setOpenMasterBasicMgt] = useState(false);
+  const [closeMasterBasicMgt, setCloseMasterBasicMgt] = useState(true);
+
+  const [openMasterInquiry, setOpenMasterInquiry] = useState(false);
+  const [closeMasterInquiry, setCloseMasterInquiry] = useState(true);
+
+  const [openMasterRule, setOpenMasterRule] = useState(false);
+  const [closeMasterRule, setCloseMasterRule] = useState(true);
+
+  // QC
+  const [openQC, setOpenQC] = useState(false);
+  const [closeQC, setCloseQC] = useState(true);
+
+  const [openQCAppoval, setOpenQCAppoval] = useState(false);
+  const [closeQCAppoval, setCloseQCAppoval] = useState(true);
+
+  const [openQCWarehousing, setOpenQCWarehousing] = useState(false);
+  const [closeQCWarehousing, setCloseQCWarehousing] = useState(true);
+
+  const [openQCStatus, setOpenQCStatus] = useState(false);
+  const [closeQCStatus, setCloseQCStatus] = useState(true);
+
+  // Warehousing
+  const [openWarehousing, setOpenWarehousing] = useState(false);
+  const [closeWarehousing, setCloseWarehousing] = useState(true);
+
+  const [openWarehousingOrder, setOpenWarehousingOrder] = useState(false);
+  const [closeWarehousingOrder, setCloseWarehousingOrder] = useState(true);
+
+  const [openWarehousingMgt, setOpenWarehousingMgt] = useState(false);
+  const [closeWarehousingMgt, setCloseWarehousingMgt] = useState(true);
+
+  const [openWarehousingCongiment, setOpenWarehousingCongiment] =
+    useState(false);
+  const [closeWarehousingCongiment, setCloseWarehousingCongiment] =
+    useState(true);
+
+  const [openWarehousingAdjustment, setOpenWarehousingAdjustment] =
+    useState(false);
+  const [closeWarehousingAdjustment, setCloseWarehousingAdjustment] =
+    useState(true);
+
+  // Shipping
+  const [openShipping, setOpenShipping] = useState(false);
+  const [closeShipping, setCloseShipping] = useState(true);
+
+  const [openShippingOrder, setOpenShippingOrder] = useState(false);
+  const [closeShippingOrder, setCloseShippingOrder] = useState(true);
+
+  const [openShippingSchedules, setOpenShippingSchedules] = useState(false);
+  const [closeShippingSchedules, setCloseShippingSchedules] = useState(true);
+
+  const [openShippingWaybill, setOpenShippingWaybill] = useState(false);
+  const [closeShippingWaybill, setCloseShippingWaybill] = useState(true);
+
+  // Shipment
+  const [openShipment, setOpenShipment] = useState(false);
+  const [closeShipment, setCloseShipment] = useState(true);
+
+  const [openShipmentProcess, setOpenShipmentProcess] = useState(false);
+  const [closeShipmentProcess, setCloseShipmentProcess] = useState(true);
+
+  const [openShipmentStatus, setOpenShipmentStatus] = useState(false);
+  const [closeShipmentStatus, setCloseShipmentStatus] = useState(true);
+
+  // Direct
+  const [openDirect, setOpenDirect] = useState(false);
+  const [closeDirect, setCloseDirect] = useState(true);
+
+  const [openDirectDelivery, setOpenDirectDelivery] = useState(false);
+  const [closeDirectDelivery, setCloseDirectDelivery] = useState(true);
+
+  const [openDirectShipment, setOpenDirectShipment] = useState(false);
+  const [closeDirectShipment, setCloseDirectShipment] = useState(true);
+
+  // Collection
+  const [openCollection, setOpenCollection] = useState(false);
+  const [closeCollection, setCloseCollection] = useState(true);
+
+  const [openCollectionProcess, setOpenCollectionProcess] = useState(false);
+  const [closeCollectionProcess, setCloseCollectionProcess] = useState(true);
+
+  const [openCollectionStatus, setOpenCollectionStatus] = useState(false);
+  const [closeCollectionStatus, setCloseCollectionStatus] = useState(true);
+
+  // Vendor
+  const [openVendor, setOpenVendor] = useState(false);
+  const [closeVendor, setCloseVendor] = useState(true);
+
+  const [openVendorOut, setOpenVendorOut] = useState(false);
+  const [closeVendorOut, setCloseVendorOut] = useState(true);
+
+  // Other
+  const [openOther, setOpenOther] = useState(false);
+  const [closeOther, setCloseOther] = useState(true);
+
+  const [openOtherPacking, setOpenOtherPacking] = useState(false);
+  const [closeOtherPacking, setCloseOtherPacking] = useState(true);
+
+  // Warehouse
+  const [openWarehouse, setOpenWarehouse] = useState(false);
+  const [closeWarehouse, setCloseWarehouse] = useState(true);
+
+  const [openWarehouseInventory, setOpenWarehouseInventory] = useState(false);
+  const [closeWarehouseInventory, setCloseWarehouseInventory] = useState(true);
+
+  const [openWarehouseAdjustment, setOpenWarehouseAdjustment] = useState(false);
+  const [closeWarehouseAdjustment, setCloseWarehouseAdjustment] =
+    useState(true);
+
+  const [openWarehouseStatus, setOpenWarehouseStatus] = useState(false);
+  const [closeWarehouseStatus, setCloseWarehouseStatus] = useState(true);
+
+  const [openWarehouseItem, setOpenWarehouseItem] = useState(false);
+  const [closeWarehouseItem, setCloseWarehouseItem] = useState(true);
+
+  // Delivery
+  const [openDelivery, setOpenDelivery] = useState(false);
+  const [closeDelivery, setCloseDelivery] = useState(true);
+
+  const [openDeliverySetting, setOpenDeliverySetting] = useState(false);
+  const [closeDeliverySetting, setCloseDeliverySetting] = useState(true);
+
+  const [openDeliveryCalculate, setOpenDeliveryCalculate] = useState(false);
+  const [closeDeliveryCalculate, setCloseDeliveryCalculate] = useState(true);
+
+  const [openDeliveryStatus, setOpenDeliveryStatus] = useState(false);
+  const [closeDeliveryStatus, setCloseDeliveryStatus] = useState(true);
+
+  const [openDeliveryBasic, setOpenDeliveryBasic] = useState(false);
+  const [closeDeliveryBasic, setCloseDeliveryBasic] = useState(true);
+
+  // ----------------------------------handle-----------------
+
+  // Master
+  const handleOpenMaster = (e) => {
+    setOpenMaster(!openMaster);
+    setCloseMaster(!closeMaster);
+  };
+
+  const handleOpenMasterBasicMgt = (e) => {
+    setOpenMasterBasicMgt(!openMasterBasicMgt);
+    setCloseMasterBasicMgt(!closeMasterBasicMgt);
+  };
+
+  const handleOpenMasterInquiry = (e) => {
+    setOpenMasterInquiry(!openMasterInquiry);
+    setCloseMasterInquiry(!closeMasterInquiry);
+  };
+
+  const handleOpenMasterRule = (e) => {
+    setOpenMasterRule(!openMasterRule);
+    setCloseMasterRule(!closeMasterRule);
+  };
+
+  // QC
+  const handleOpenQC = (e) => {
+    setOpenQC(!openQC);
+    setCloseQC(!closeQC);
+  };
+
+  // Warehousing
+  const handleOpenWarehousing = (e) => {
+    setOpenWarehousing(!openWarehousing);
+    setCloseWarehousing(!closeWarehousing);
+  };
+
+  // Shipping
+  const handleOpenShipping = (e) => {
+    setOpenShipping(!openShipping);
+    setCloseShipping(!closeShipping);
+  };
+
+  // Shipment
+  const handleOpenShipment = (e) => {
+    setOpenShipment(!openShipment);
+    setCloseShipment(!closeShipment);
+  };
+
+  // Direct
+  const handleOpenDirect = (e) => {
+    setOpenDirect(!openDirect);
+    setCloseDirect(!closeDirect);
+  };
+
+  // Collection
+  const handleOpenCollection = (e) => {
+    setOpenCollection(!openCollection);
+    setCloseCollection(!closeCollection);
+  };
+
+  // Vendor
+  const handleOpenVendor = (e) => {
+    setOpenVendor(!openVendor);
+    setCloseVendor(!closeVendor);
+  };
+
+  // Other
+  const handleOpenOther = (e) => {
+    setOpenOther(!openOther);
+    setCloseOther(!closeOther);
+  };
+
+  // Warehouse
+  const handleOpenWarehouse = (e) => {
+    setOpenWarehouse(!openWarehouse);
+    setCloseWarehouse(!closeWarehouse);
+  };
+
+  // Delivery
+  const handleOpenDelivery = (e) => {
+    setOpenDelivery(!openDelivery);
+    setCloseDelivery(!closeDelivery);
+  };
+
   return (
     <div className="tree-view-com">
       <ul className="tree-view-parent">
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Master Data
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenMaster}>
+            <Add fontSize="small" hidden={openMaster} />
+            <HorizontalRule fontSize="small" hidden={closeMaster} />
+            <Folder className="folder" hidden={openMaster} />
+            <FolderOpen className="folder" hidden={closeMaster} /> Master Data
+          </Typography>
+          <ul className="tree-view-child" hidden={closeMaster}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenMasterBasicMgt}>
+                <Add fontSize="small" hidden={openMasterBasicMgt} />
+                <HorizontalRule fontSize="small" hidden={closeMasterBasicMgt} />
+                <Folder className="folder" hidden={openMasterBasicMgt} />
+                <FolderOpen className="folder" hidden={closeMasterBasicMgt} />
                 Basic Logistics Mgt
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeMasterBasicMgt}>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
@@ -66,11 +300,14 @@ function Menu(props) {
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenMasterInquiry}>
+                <Add fontSize="small" hidden={openMasterInquiry} />
+                <HorizontalRule fontSize="small" hidden={closeMasterInquiry} />
+                <Folder className="folder" hidden={openMasterInquiry} />
+                <FolderOpen className="folder" hidden={closeMasterInquiry} />
                 Basic Logistics Inquiry
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeMasterInquiry}>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
@@ -86,11 +323,14 @@ function Menu(props) {
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenMasterRule}>
+                <Add fontSize="small" hidden={openMasterRule} />
+                <HorizontalRule fontSize="small" hidden={closeMasterRule} />
+                <Folder className="folder" hidden={openMasterRule} />
+                <FolderOpen className="folder" hidden={closeMasterRule} />
                 Basic Logistics Rule Mgt
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeMasterRule}>
                 <li>
                   <a href className="document-title">
                     <Description className="file" />
@@ -107,11 +347,15 @@ function Menu(props) {
             </li>
           </ul>
         </li>
+
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> QC
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenQC}>
+            <Add fontSize="small" hidden={openQC} />
+            <HorizontalRule fontSize="small" hidden={closeQC} />
+            <Folder className="folder" hidden={openQC} />
+            <FolderOpen className="folder" hidden={closeQC} /> QC
+          </Typography>
+          <ul className="tree-view-child" hidden={closeQC}>
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
@@ -192,11 +436,16 @@ function Menu(props) {
             </li>
           </ul>
         </li>
+
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Warehousing/Shipping Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenWarehousing}>
+            <Add fontSize="small" hidden={openWarehousing} />
+            <HorizontalRule fontSize="small" hidden={closeWarehousing} />
+            <Folder className="folder" hidden={openWarehousing} />
+            <FolderOpen className="folder" hidden={closeWarehousing} />{" "}
+            Warehousing/Shipping Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeWarehousing}>
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
@@ -309,11 +558,16 @@ function Menu(props) {
             </li>
           </ul>
         </li>
+
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Shipping Order Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenShipping}>
+            <Add fontSize="small" hidden={openShipping} />
+            <HorizontalRule fontSize="small" hidden={closeShipping} />
+            <Folder className="folder" hidden={openShipping} />
+            <FolderOpen className="folder" hidden={closeShipping} /> Shipping
+            Order Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeShipping}>
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
@@ -485,11 +739,16 @@ function Menu(props) {
             </li>
           </ul>
         </li>
+
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Shipment Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenShipment}>
+            <Add fontSize="small" hidden={openShipment} />
+            <HorizontalRule fontSize="small" hidden={closeShipment} />
+            <Folder className="folder" hidden={openShipment} />
+            <FolderOpen className="folder" hidden={closeShipment} /> Shipment
+            Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeShipment}>
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
@@ -604,11 +863,16 @@ function Menu(props) {
             </li>
           </ul>
         </li>
+
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Direct Delivery Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenDirect}>
+            <Add fontSize="small" hidden={openDirect} />
+            <HorizontalRule fontSize="small" hidden={closeDirect} />
+            <Folder className="folder" hidden={openDirect} />
+            <FolderOpen className="folder" hidden={closeDirect} /> Direct
+            Delivery Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeDirect}>
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
@@ -711,11 +975,16 @@ function Menu(props) {
             </li>
           </ul>
         </li>
+
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Collection Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenCollection}>
+            <Add fontSize="small" hidden={openCollection} />
+            <HorizontalRule fontSize="small" hidden={closeCollection} />
+            <Folder className="folder" hidden={openCollection} />
+            <FolderOpen className="folder" hidden={closeCollection} />{" "}
+            Collection Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeCollection}>
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
@@ -818,11 +1087,16 @@ function Menu(props) {
             </li>
           </ul>
         </li>
+
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Vemdor Out Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenVendor}>
+            <Add fontSize="small" hidden={openVendor} />
+            <HorizontalRule fontSize="small" hidden={closeVendor} />
+            <Folder className="folder" hidden={openVendor} />
+            <FolderOpen className="folder" hidden={closeVendor} /> Vendor Out
+            Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeVendor}>
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
@@ -857,11 +1131,16 @@ function Menu(props) {
             </li>
           </ul>
         </li>
+
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Other Logistics Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenOther}>
+            <Add fontSize="small" hidden={openOther} />
+            <HorizontalRule fontSize="small" hidden={closeOther} />
+            <Folder className="folder" hidden={openOther} />
+            <FolderOpen className="folder" hidden={closeOther} /> Other
+            Logistics Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeOther}>
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
@@ -896,11 +1175,16 @@ function Menu(props) {
             </li>
           </ul>
         </li>
+
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Warehouse Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenWarehouse}>
+            <Add fontSize="small" hidden={openWarehouse} />
+            <HorizontalRule fontSize="small" hidden={closeWarehouse} />
+            <Folder className="folder" hidden={openWarehouse} />
+            <FolderOpen className="folder" hidden={closeWarehouse} /> Warehouse
+            Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeWarehouse}>
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />
@@ -1031,11 +1315,16 @@ function Menu(props) {
             </li>
           </ul>
         </li>
+
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Delivery Cost Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenDelivery}>
+            <Add fontSize="small" hidden={openDelivery} />
+            <HorizontalRule fontSize="small" hidden={closeDelivery} />
+            <Folder className="folder" hidden={openDelivery} />
+            <FolderOpen className="folder" hidden={closeDelivery} /> Delivery
+            Cost Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeDelivery}>
             <li>
               <a href className="document-title">
                 <Add /> <Folder className="folder" />

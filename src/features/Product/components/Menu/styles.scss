@@ -16,10 +16,23 @@
   list-style: none;
 }
 
+.tree-view-com ul li .category__root {
+  display: flex;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 .tree-view-com ul li a {
   text-decoration: none;
   display: flex;
   font-size: 14px;
+}
+
+.tree-view-com ul li p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .tree-view-com .tree-view-parent > li > a {
@@ -59,12 +72,6 @@
   width: 25px;
   left: -32px;
   top: 12px;
-}
-
-/* hide */
-
-.tree-view-parent .tree-view-child .tree-view-child {
-  /* display: none; */
 }
 
 .file {
