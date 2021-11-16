@@ -27,8 +27,8 @@ function Menu(props) {
   const [openQC, setOpenQC] = useState(false);
   const [closeQC, setCloseQC] = useState(true);
 
-  const [openQCAppoval, setOpenQCAppoval] = useState(false);
-  const [closeQCAppoval, setCloseQCAppoval] = useState(true);
+  const [openQCApproval, setOpenQCApproval] = useState(false);
+  const [closeQCApproval, setCloseQCApproval] = useState(true);
 
   const [openQCWarehousing, setOpenQCWarehousing] = useState(false);
   const [closeQCWarehousing, setCloseQCWarehousing] = useState(true);
@@ -46,9 +46,9 @@ function Menu(props) {
   const [openWarehousingMgt, setOpenWarehousingMgt] = useState(false);
   const [closeWarehousingMgt, setCloseWarehousingMgt] = useState(true);
 
-  const [openWarehousingCongiment, setOpenWarehousingCongiment] =
+  const [openWarehousingConsigment, setOpenWarehousingConsigment] =
     useState(false);
-  const [closeWarehousingCongiment, setCloseWarehousingCongiment] =
+  const [closeWarehousingConsigment, setCloseWarehousingConsigment] =
     useState(true);
 
   const [openWarehousingAdjustment, setOpenWarehousingAdjustment] =
@@ -175,10 +175,45 @@ function Menu(props) {
     setCloseQC(!closeQC);
   };
 
+  const handleOpenQCApproval = (e) => {
+    setOpenQCApproval(!openQCApproval);
+    setCloseQCApproval(!closeQCApproval);
+  };
+
+  const handleOpenQCWarehousing = (e) => {
+    setOpenQCWarehousing(!openQCWarehousing);
+    setCloseQCWarehousing(!closeQCWarehousing);
+  };
+
+  const handleOpenQCStatus = (e) => {
+    setOpenQCStatus(!openQCStatus);
+    setCloseQCStatus(!closeQCStatus);
+  };
+
   // Warehousing
   const handleOpenWarehousing = (e) => {
     setOpenWarehousing(!openWarehousing);
     setCloseWarehousing(!closeWarehousing);
+  };
+
+  const handleOpenWarehousingOrder = (e) => {
+    setOpenWarehousingOrder(!openWarehousingOrder);
+    setCloseWarehousingOrder(!closeWarehousingOrder);
+  };
+
+  const handleOpenWarehousingMgt = (e) => {
+    setOpenWarehousingMgt(!openWarehousingMgt);
+    setCloseWarehousingMgt(!closeWarehousingMgt);
+  };
+
+  const handleOpenWarehousingConsigment = (e) => {
+    setOpenWarehousingConsigment(!openWarehousingConsigment);
+    setCloseWarehousingConsigment(!closeWarehousingConsigment);
+  };
+
+  const handleOpenWarehousingAdjustment = (e) => {
+    setOpenWarehousingAdjustment(!openWarehousingAdjustment);
+    setCloseWarehousingAdjustment(!closeWarehousingAdjustment);
   };
 
   // Shipping
@@ -187,16 +222,49 @@ function Menu(props) {
     setCloseShipping(!closeShipping);
   };
 
+  const handleOpenShippingOrder = (e) => {
+    setOpenShippingOrder(!openShippingOrder);
+    setCloseShippingOrder(!closeShippingOrder);
+  };
+
+  const handleOpenShippingSchedules = (e) => {
+    setOpenShippingSchedules(!openShippingSchedules);
+    setCloseShippingSchedules(!closeShippingSchedules);
+  };
+
+  const handleOpenShippingWaybill = (e) => {
+    setOpenShippingWaybill(!openShippingWaybill);
+    setCloseShippingWaybill(!closeShippingWaybill);
+  };
+
   // Shipment
   const handleOpenShipment = (e) => {
     setOpenShipment(!openShipment);
     setCloseShipment(!closeShipment);
   };
 
+  const handleOpenShipmentProcess = (e) => {
+    setOpenShipmentProcess(!openShipmentProcess);
+    setCloseShipmentProcess(!closeShipmentProcess);
+  };
+
+  const handleOpenShipmentStatus = (e) => {
+    setOpenShipmentStatus(!openShipmentStatus);
+    setCloseShipmentStatus(!closeShipmentStatus);
+  };
+
   // Direct
   const handleOpenDirect = (e) => {
     setOpenDirect(!openDirect);
     setCloseDirect(!closeDirect);
+  };
+  const handleOpenDirectDelivery = (e) => {
+    setOpenDirectDelivery(!openDirectDelivery);
+    setCloseDirectDelivery(!closeDirectDelivery);
+  };
+  const handleOpenDirectShipment = (e) => {
+    setOpenDirectShipment(!openDirectShipment);
+    setCloseDirectShipment(!closeDirectShipment);
   };
 
   // Collection
@@ -205,10 +273,25 @@ function Menu(props) {
     setCloseCollection(!closeCollection);
   };
 
+  const handleOpenCollectionProcess = (e) => {
+    setOpenCollectionProcess(!openCollectionProcess);
+    setCloseCollectionProcess(!closeCollectionProcess);
+  };
+
+  const handleOpenCollectionStatus = (e) => {
+    setOpenCollectionStatus(!openCollectionStatus);
+    setCloseCollectionStatus(!closeCollectionStatus);
+  };
+
   // Vendor
   const handleOpenVendor = (e) => {
     setOpenVendor(!openVendor);
     setCloseVendor(!closeVendor);
+  };
+
+  const handleOpenVendorOut = (e) => {
+    setOpenVendorOut(!openVendorOut);
+    setCloseVendorOut(!closeVendorOut);
   };
 
   // Other
@@ -217,16 +300,61 @@ function Menu(props) {
     setCloseOther(!closeOther);
   };
 
+  const handleOpenOtherPacking = (e) => {
+    setOpenOtherPacking(!openOtherPacking);
+    setCloseOtherPacking(!closeOtherPacking);
+  };
+
   // Warehouse
   const handleOpenWarehouse = (e) => {
     setOpenWarehouse(!openWarehouse);
     setCloseWarehouse(!closeWarehouse);
   };
 
+  const handleOpenWarehouseInventory = (e) => {
+    setOpenWarehouseInventory(!openWarehouseInventory);
+    setCloseWarehouseInventory(!closeWarehouseInventory);
+  };
+
+  const handleOpenWarehouseAdjustment = (e) => {
+    setOpenWarehouseAdjustment(!openWarehouseAdjustment);
+    setCloseWarehouseAdjustment(!closeWarehouseAdjustment);
+  };
+
+  const handleOpenWarehouseStatus = (e) => {
+    setOpenWarehouseStatus(!openWarehouseStatus);
+    setCloseWarehouseStatus(!closeWarehouseStatus);
+  };
+
+  const handleOpenWarehouseItem = (e) => {
+    setOpenWarehouseItem(!openWarehouseItem);
+    setCloseWarehouseItem(!closeWarehouseItem);
+  };
+
   // Delivery
   const handleOpenDelivery = (e) => {
     setOpenDelivery(!openDelivery);
     setCloseDelivery(!closeDelivery);
+  };
+
+  const handleOpenDeliverySetting = (e) => {
+    setOpenDeliverySetting(!openDeliverySetting);
+    setCloseDeliverySetting(!closeDeliverySetting);
+  };
+
+  const handleOpenDeliveryCalculate = (e) => {
+    setOpenDeliveryCalculate(!openDeliveryCalculate);
+    setCloseDeliveryCalculate(!closeDeliveryCalculate);
+  };
+
+  const handleOpenDeliveryStatus = (e) => {
+    setOpenDeliveryStatus(!openDeliveryStatus);
+    setCloseDeliveryStatus(!closeDeliveryStatus);
+  };
+
+  const handleOpenDeliveryBasic = (e) => {
+    setOpenDeliveryBasic(!openDeliveryBasic);
+    setCloseDeliveryBasic(!closeDeliveryBasic);
   };
 
   return (
@@ -250,52 +378,52 @@ function Menu(props) {
               </Typography>
               <ul className="tree-view-child" hidden={closeMasterBasicMgt}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký lịch nghỉ làm(công ty giao nhận)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý số lượng hàng giao theo ngày
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý giao hàng theo khu vực
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý mã số kệ để hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý nhân viên thao tác kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý quy cách sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý các loại chi phí khác theo khu vực
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -309,16 +437,16 @@ function Menu(props) {
               </Typography>
               <ul className="tree-view-child" hidden={closeMasterInquiry}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In nhãn sản phấm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Kiểm tra tình hình đăng ký chi phí chuyển hàng
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -332,16 +460,16 @@ function Menu(props) {
               </Typography>
               <ul className="tree-view-child" hidden={closeMasterRule}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quy tắc nhập kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quy tắc lấy hàng
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -357,80 +485,89 @@ function Menu(props) {
           </Typography>
           <ul className="tree-view-child" hidden={closeQC}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenQCApproval}>
+                <Add fontSize="small" hidden={openQCApproval} />
+                <HorizontalRule fontSize="small" hidden={closeQCApproval} />
+                <Folder className="folder" hidden={openQCApproval} />
+                <FolderOpen className="folder" hidden={closeQCApproval} />{" "}
                 Approval Inspection
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeQCApproval}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Chấp nhận yêu cầu kiểm tra sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký kết quả kiểm tra phê duyệt
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Trạng thái tiến hành kiểm tra phê duyệt sản phẩm
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenQCWarehousing}>
+                <Add fontSize="small" hidden={openQCWarehousing} />
+                <HorizontalRule fontSize="small" hidden={closeQCWarehousing} />
+                <Folder className="folder" hidden={openQCWarehousing} />
+                <FolderOpen className="folder" hidden={closeQCWarehousing} />
                 Warehousing Inspection
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeQCWarehousing}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký kết quả kiểm tra sản phẩm nhập kho
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenQCStatus}>
+                <Add fontSize="small" hidden={openQCStatus} />
+                <HorizontalRule fontSize="small" hidden={closeQCStatus} />
+                <Folder className="folder" hidden={openQCStatus} />
+                <FolderOpen className="folder" hidden={closeQCStatus} />
                 Inspection Status
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeQCStatus}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình trạng của khách hàng yêu cầu bồi thường giá Quatity
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Kết quả kiểm tra phê duyệt của từng sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In hạng mục cần bổ sung
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Kiểm tra kết quả kiểm tra nhập kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Trạng thái Kết quả kiểm tra nhập kho
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -447,112 +584,151 @@ function Menu(props) {
           </Typography>
           <ul className="tree-view-child" hidden={closeWarehousing}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenWarehousingOrder}>
+                <Add fontSize="small" hidden={openWarehousingOrder} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeWarehousingOrder}
+                />
+                <Folder className="folder" hidden={openWarehousingOrder} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeWarehousingOrder}
+                />{" "}
                 Warehousing Order Mgt
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeWarehousingOrder}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Yêu cầu nhập kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Phê duyệt yêu cầu nhập kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Yêu cầu tiến hành nhập kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hủy yêu cầu nhập kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xuất dữ liệu Pre Order
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
+
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenWarehousingMgt}>
+                <Add fontSize="small" hidden={openWarehousingMgt} />
+                <HorizontalRule fontSize="small" hidden={closeWarehousingMgt} />
+                <Folder className="folder" hidden={openWarehousingMgt} />
+                <FolderOpen className="folder" hidden={closeWarehousingMgt} />
                 Warehousing Mgt
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeWarehousingMgt}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập xác nhận nhập kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập lịch nhập kho
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
+
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenWarehousingConsigment}>
+                <Add fontSize="small" hidden={openWarehousingConsigment} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeWarehousingConsigment}
+                />
+                <Folder className="folder" hidden={openWarehousingConsigment} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeWarehousingConsigment}
+                />
                 Consigment Mgt
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul
+                className="tree-view-child"
+                hidden={closeWarehousingConsigment}
+              >
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký số lượng có thể nhập kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký số lượng có thể bán chương trình Live
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Phê duyệt số lượng có thể nhập kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký số lượng có thể bán của hàng ký gửi
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
+
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenWarehousingAdjustment}>
+                <Add fontSize="small" hidden={openWarehousingAdjustment} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeWarehousingAdjustment}
+                />
+                <Folder className="folder" hidden={openWarehousingAdjustment} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeWarehousingAdjustment}
+                />
                 Consigment Adjustment
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul
+                className="tree-view-child"
+                hidden={closeWarehousingAdjustment}
+              >
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Điều chỉnh số lượng có thể bán chương trình Live
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Phê duyệt điều chỉnh số lượng có thể bán
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -569,171 +745,189 @@ function Menu(props) {
           </Typography>
           <ul className="tree-view-child" hidden={closeShipping}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenShippingOrder}>
+                <Add fontSize="small" hidden={openShippingOrder} />
+                <HorizontalRule fontSize="small" hidden={closeShippingOrder} />
+                <Folder className="folder" hidden={openShippingOrder} />
+                <FolderOpen className="folder" hidden={closeShippingOrder} />
                 Shipping Order
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeShippingOrder}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Hướng dẫn xuất kho của từng sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Hướng dẫn xuất kho toàn bộ đơn hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký hủy bỏ lệnh vận chuyển hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Hướng dẫn xuất kho toàn bộ đơn hàng(B2B)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Hướng dẫn xuất kho toàn bộ đơn hàng(Vendor)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Hướng dẫn xuất kho toàn bộ đơn hàng(Other)
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenShippingSchedules}>
+                <Add fontSize="small" hidden={openShippingSchedules} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeShippingSchedules}
+                />
+                <Folder className="folder" hidden={openShippingSchedules} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeShippingSchedules}
+                />
                 Shipping Schedules
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeShippingSchedules}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình dựu kiến xuất kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình tạo hướng dẫn xuất kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Bố trí lấy hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xử lý hủy bỏ và phân công lại việc lấy hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Danh sách sản phẩm có khuyến mãi được hướng dẫn xuất kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình tiếp nhận sản phẩm trả lại sau khi có lệnh vận
                     chuyển hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình trạng chi tiết hướng dẫn vận chuyển hàng
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenShippingWaybill}>
+                <Add fontSize="small" hidden={openShippingWaybill} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeShippingWaybill}
+                />
+                <Folder className="folder" hidden={openShippingWaybill} />
+                <FolderOpen className="folder" hidden={closeShippingWaybill} />
                 Waybill Output
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeShippingWaybill}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In ra hóa đơn kèm phiếu giao hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In ra chứng từ vận chuyển
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Thay đổi phương thức vận chuyển xuất kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Thay đổi cách thức chuyển chứng từ thu hồi hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In ra hóa đơn kèm phiếu giao hàng(B2B)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Thay đổi phương pháp vận chuyển xuất kho Excel
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In phiếu giao hàng hóa đơn điện tử Kho HCM(NEW)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Sign Ebill Excel
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In ra chứng từ vận chuyển(NEW)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In phiếu gia hàng hóa đơn điện tử Kho HN(NEW)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In phiếu giao hàng không giá tiền(NEW)
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -750,114 +944,123 @@ function Menu(props) {
           </Typography>
           <ul className="tree-view-child" hidden={closeShipment}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenShipmentProcess}>
+                <Add fontSize="small" hidden={openShipmentProcess} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeShipmentProcess}
+                />
+                <Folder className="folder" hidden={openShipmentProcess} />
+                <FolderOpen className="folder" hidden={closeShipmentProcess} />
                 Shipment Process
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeShipmentProcess}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký gửi lại chứng từ vận chuyển
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xác nhận xuất kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý nguyên nhân chưa chuyển hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xác nhận hoàn tất giao hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xác nhận thu tiền
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xác nhận thu tiền[EXCEL]
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenShipmentStatus}>
+                <Add fontSize="small" hidden={openShipmentStatus} />
+                <HorizontalRule fontSize="small" hidden={closeShipmentStatus} />
+                <Folder className="folder" hidden={openShipmentStatus} />
+                <FolderOpen className="folder" hidden={closeShipmentStatus} />
                 Shipment Status
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeShipmentStatus}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập sản phẩm đại diện
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý thông tin Key của Item
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký sản phẩm thông thường
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký thông tin sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký TSKT của sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quá trình thay đổi TSKT của sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký phê duyệt sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Sửa đổi thông tin phân tích sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký xử lý sản phẩm đã ngừng bán
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý sản phẩm nhà cung cấp
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -874,102 +1077,111 @@ function Menu(props) {
           </Typography>
           <ul className="tree-view-child" hidden={closeDirect}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenDirectDelivery}>
+                <Add fontSize="small" hidden={openDirectDelivery} />
+                <HorizontalRule fontSize="small" hidden={closeDirectDelivery} />
+                <Folder className="folder" hidden={openDirectDelivery} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeDirectDelivery}
+                />{" "}
                 Direct Delivery Warehousing Mgt
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeDirectDelivery}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenDirectShipment}>
+                <Add fontSize="small" hidden={openDirectShipment} />
+                <HorizontalRule fontSize="small" hidden={closeDirectShipment} />
+                <Folder className="folder" hidden={openDirectShipment} />
+                <FolderOpen className="folder" hidden={closeDirectShipment} />
                 Direct Delivery Shipment
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeDirectShipment}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập sản phẩm đại diện
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý thông tin Key của Item
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký sản phẩm thông thường
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký thông tin sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký TSKT của sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quá trình thay đổi TSKT của sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký phê duyệt sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Sửa đổi thông tin phân tích sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký xử lý sản phẩm đã ngừng bán
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý sản phẩm nhà cung cấp
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -981,107 +1193,122 @@ function Menu(props) {
             <Add fontSize="small" hidden={openCollection} />
             <HorizontalRule fontSize="small" hidden={closeCollection} />
             <Folder className="folder" hidden={openCollection} />
-            <FolderOpen className="folder" hidden={closeCollection} />{" "}
+            <FolderOpen className="folder" hidden={closeCollection} />
             Collection Mgt
           </Typography>
           <ul className="tree-view-child" hidden={closeCollection}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenCollectionProcess}>
+                <Add fontSize="small" hidden={openCollectionProcess} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeCollectionProcess}
+                />
+                <Folder className="folder" hidden={openCollectionProcess} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeCollectionProcess}
+                />
                 Collection Process
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeCollectionProcess}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenCollectionStatus}>
+                <Add fontSize="small" hidden={openCollectionStatus} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeCollectionStatus}
+                />
+                <Folder className="folder" hidden={openCollectionStatus} />
+                <FolderOpen className="folder" hidden={closeCollectionStatus} />
                 Collection Status
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeCollectionStatus}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập sản phẩm đại diện
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý thông tin Key của Item
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký sản phẩm thông thường
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký thông tin sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký TSKT của sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quá trình thay đổi TSKT của sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký phê duyệt sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Sửa đổi thông tin phân tích sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký xử lý sản phẩm đã ngừng bán
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý sản phẩm nhà cung cấp
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -1098,34 +1325,37 @@ function Menu(props) {
           </Typography>
           <ul className="tree-view-child" hidden={closeVendor}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Vendor Out Mgt
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenVendorOut}>
+                <Add fontSize="small" hidden={openVendorOut} />
+                <HorizontalRule fontSize="small" hidden={closeVendorOut} />
+                <Folder className="folder" hidden={openVendorOut} />
+                <FolderOpen className="folder" hidden={closeVendorOut} /> Vendor
+                Out Mgt
+              </Typography>
+              <ul className="tree-view-child" hidden={closeVendorOut}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -1142,34 +1372,37 @@ function Menu(props) {
           </Typography>
           <ul className="tree-view-child" hidden={closeOther}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenOtherPacking}>
+                <Add fontSize="small" hidden={openOtherPacking} />
+                <HorizontalRule fontSize="small" hidden={closeOtherPacking} />
+                <Folder className="folder" hidden={openOtherPacking} />
+                <FolderOpen className="folder" hidden={closeOtherPacking} />
                 Packing Material Mgt
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeOtherPacking}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -1186,130 +1419,157 @@ function Menu(props) {
           </Typography>
           <ul className="tree-view-child" hidden={closeWarehouse}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenWarehouseInventory}>
+                <Add fontSize="small" hidden={openWarehouseInventory} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeWarehouseInventory}
+                />
+                <Folder className="folder" hidden={openWarehouseInventory} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeWarehouseInventory}
+                />
                 Inventory Mgt
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeWarehouseInventory}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenWarehouseAdjustment}>
+                <Add fontSize="small" hidden={openWarehouseAdjustment} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeWarehouseAdjustment}
+                />
+                <Folder className="folder" hidden={openWarehouseAdjustment} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeWarehouseAdjustment}
+                />
                 Adjustment Status
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeWarehouseAdjustment}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenWarehouseStatus}>
+                <Add fontSize="small" hidden={openWarehouseStatus} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeWarehouseStatus}
+                />
+                <Folder className="folder" hidden={openWarehouseStatus} />
+                <FolderOpen className="folder" hidden={closeWarehouseStatus} />
                 Inventory Status
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeWarehouseStatus}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenWarehouseItem}>
+                <Add fontSize="small" hidden={openWarehouseItem} />
+                <HorizontalRule fontSize="small" hidden={closeWarehouseItem} />
+                <Folder className="folder" hidden={openWarehouseItem} />
+                <FolderOpen className="folder" hidden={closeWarehouseItem} />
                 Item move by Warehouse
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeWarehouseItem}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -1326,130 +1586,151 @@ function Menu(props) {
           </Typography>
           <ul className="tree-view-child" hidden={closeDelivery}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenDeliverySetting}>
+                <Add fontSize="small" hidden={openDeliverySetting} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeDeliverySetting}
+                />
+                <Folder className="folder" hidden={openDeliverySetting} />
+                <FolderOpen className="folder" hidden={closeDeliverySetting} />
                 Delivery Cost Setting
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeDeliverySetting}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenDeliveryCalculate}>
+                <Add fontSize="small" hidden={openDeliveryCalculate} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeDeliveryCalculate}
+                />
+                <Folder className="folder" hidden={openDeliveryCalculate} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeDeliveryCalculate}
+                />
                 Delivery Cost Calculate
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeDeliveryCalculate}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenDeliveryStatus}>
+                <Add fontSize="small" hidden={openDeliveryStatus} />
+                <HorizontalRule fontSize="small" hidden={closeDeliveryStatus} />
+                <Folder className="folder" hidden={openDeliveryStatus} />
+                <FolderOpen className="folder" hidden={closeDeliveryStatus} />
                 Delivery Cost Status
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeDeliveryStatus}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenDeliveryBasic}>
+                <Add fontSize="small" hidden={openDeliveryBasic} />
+                <HorizontalRule fontSize="small" hidden={closeDeliveryBasic} />
+                <Folder className="folder" hidden={openDeliveryBasic} />
+                <FolderOpen className="folder" hidden={closeDeliveryBasic} />
                 Basic Info
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeDeliveryBasic}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>

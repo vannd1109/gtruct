@@ -7,6 +7,7 @@ import {
   Add,
   HorizontalRule,
   FolderOpen,
+  Dehaze,
 } from "@mui/icons-material";
 
 function Menu(props) {
@@ -127,8 +128,16 @@ function Menu(props) {
     setCloseEventResult(!closeEventResult);
   };
 
+  const handleOpenCloseMenu = () => {
+    console.log("ok");
+  };
+
   return (
     <div className="tree-view-com">
+      <div className="tree-view-com-icon" onClick={handleOpenCloseMenu}>
+        <Dehaze />
+      </div>
+
       <ul className="tree-view-parent">
         <li
           className="category__root mb-2"
@@ -152,28 +161,28 @@ function Menu(props) {
               </Typography>
               <ul className="tree-view-child" hidden={closeItemBasic}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Mã số phân loại sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập mô tả sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập nhãn hiệu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập hãng sản xuất
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -187,64 +196,64 @@ function Menu(props) {
               </Typography>
               <ul className="tree-view-child" hidden={closeItemInfo}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập sản phẩm đại diện
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý thông tin Key của Item
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký sản phẩm thông thường
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký thông tin sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký thông số kỹ thuật của sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quá trình thay đổi thông số kỹ thuật của sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký phê duyệt sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Sửa đổi thông tin phân tích sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký xử lý sản phẩm đã ngừng bán
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý sản phẩm nhà cung cấp
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -258,10 +267,10 @@ function Menu(props) {
               </Typography>
               <ul className="tree-view-child" hidden={closeItemPacking}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập vật liệu đóng gói
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -275,28 +284,28 @@ function Menu(props) {
               </Typography>
               <ul className="tree-view-child" hidden={closeItemStatus}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình đăng ký sản phẩm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình sản phẩm không còn tồn kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình bán sản phẩm mới
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình trạng hàng tồn
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -329,34 +338,34 @@ function Menu(props) {
                 hidden={closePromotionRegistation}
               >
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Hàng khuyến mãi
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Chương trình khuyến mãi có điều kiện
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Phê duyệt chương trình khuyến mãi
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Khuyến mãi bốc thăm trúng thưởng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập thông tin người trúng thưởng
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -373,22 +382,22 @@ function Menu(props) {
               </Typography>
               <ul className="tree-view-child" hidden={closePromotionStatus}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Kiểm tra toàn bộ chương trình khuyến mãi
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình chương trình khuyến mãi có điều kiện
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Yêu cầu khuyến mãi bốc thăm theo từng khách hàng
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -405,17 +414,17 @@ function Menu(props) {
               </Typography>
               <ul className="tree-view-child" hidden={closePromotionResult}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Kết quả chương trình khuyến mãi
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình chi phí chương trình khuyến mãi theo từng nhà cung
                     cấp
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -439,10 +448,10 @@ function Menu(props) {
               </Typography>
               <ul className="tree-view-child" hidden={closeEventRule}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký quy tắc
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -462,22 +471,22 @@ function Menu(props) {
               </Typography>
               <ul className="tree-view-child" hidden={closeEventRegistration}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký sự kiện
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xác nhận sự kiện
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xác nhận khách hàng được hưởng sự kiện
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -491,10 +500,10 @@ function Menu(props) {
               </Typography>
               <ul className="tree-view-child" hidden={closeEventResult}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình khách hàng được hưởng sự kiện
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>

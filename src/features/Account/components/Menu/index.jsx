@@ -1,263 +1,634 @@
-import { Description, Folder, Add } from "@mui/icons-material";
+import { useState } from "react";
+import {
+  Description,
+  Folder,
+  Add,
+  HorizontalRule,
+  FolderOpen,
+} from "@mui/icons-material";
+
+import { Typography } from "@material-ui/core";
 
 function Menu(props) {
+  // Prepay Payment
+  const [openPrepayPayment, setOpenPrepayPayment] = useState(false);
+  const [closePrepayPayment, setClosePrepayPayment] = useState(true);
+
+  const [openCMS, setOpenCMS] = useState(false);
+  const [closeCMS, setCloseCMS] = useState(true);
+
+  const [openCard, setOpenCard] = useState(false);
+  const [closeCard, setCloseCard] = useState(true);
+
+  const [openSCJPoint, setOpenSCJPoint] = useState(false);
+  const [closeSCJPoint, setCloseSCJPoint] = useState(true);
+
+  const [openDeposit, setOpenDeposit] = useState(false);
+  const [closeDeposit, setCloseDeposit] = useState(true);
+
+  const [openCreditLoan, setOpenCreditLoan] = useState(false);
+  const [closeCreditLoan, setCloseCreditLoan] = useState(true);
+
+  const [openPaymentOnline, setOpenPaymentOnline] = useState(false);
+  const [closePaymentOnline, setClosePaymentOnline] = useState(true);
+
+  // Postpay Payment
+  const [openPostpayPayment, setOpenPostpayPayment] = useState(false);
+  const [closePostpayPayment, setClosePostpayPayment] = useState(true);
+
+  const [openCOD, setOpenCOD] = useState(false);
+  const [closeCOD, setCloseCOD] = useState(true);
+
+  const [openStatusByPostpay, setOpenStatusByPostpay] = useState(false);
+  const [closeStatusByPostpay, setCloseStatusByPostpay] = useState(true);
+
+  // Refund
+  const [openRefund, setOpenRefund] = useState(false);
+  const [closeRefund, setCloseRefund] = useState(true);
+
+  const [openRefundProc, setOpenRefundProc] = useState(false);
+  const [closeRefundProc, setCloseRefundProc] = useState(true);
+
+  const [openStatusByRefund, setOpenStatusByRefund] = useState(false);
+  const [closeStatusByRefund, setCloseStatusByRefund] = useState(true);
+
+  // Other Anal
+  const [openAccountOtherAnal, setOpenAccountOtherAnal] = useState(false);
+  const [closeAccountOtherAnal, setCloseAccountOtherAnal] = useState(true);
+
+  const [openSaleAndPaymentAnal, setOpenSaleAndPaymentAnal] = useState(false);
+  const [closeSaleAndPaymentAnal, setCloseSaleAndPaymentAnal] = useState(true);
+
+  const [openOtherAnal, setOpenOtherAnal] = useState(false);
+  const [closeOtherAnal, setCloseOtherAnal] = useState(true);
+
+  // Receipt
+  const [openReceipt, setOpenReceipt] = useState(false);
+  const [closeReceipt, setCloseReceipt] = useState(true);
+
+  const [openReceiptsIssued, setOpenReceiptsIssued] = useState(false);
+  const [closeReceiptsIssued, setCloseReceiptsIssued] = useState(true);
+
+  const [openCustomerDMIssued, setOpenCustomerDMIssued] = useState(false);
+  const [closeCustomerDMIssued, setCloseCustomerDMIssued] = useState(true);
+
+  const [openIndividualIncomeTax, setOpenIndividualIncomeTax] = useState(false);
+  const [closeIndividualIncomeTax, setCloseIndividualIncomeTax] =
+    useState(true);
+
+  // Vendor Mgt
+  const [openVendorMgt, setOpenVendorMgt] = useState(false);
+  const [closeVendorMgt, setCloseVendorMgt] = useState(true);
+
+  const [openBasicVendorInfo, setOpenBasicVendorInfo] = useState(false);
+  const [closeBasicVendorInfo, setCloseBasicVendorInfo] = useState(true);
+
+  const [openBasicPaymentInfo, setOpenBasicPaymentInfo] = useState(false);
+  const [closeBasicPaymentInfo, setCloseBasicPaymentInfo] = useState(true);
+
+  const [openBasicInfoStatus, setOpenBasicInfoStatus] = useState(false);
+  const [closeBasicInfoStatus, setCloseBasicInfoStatus] = useState(true);
+
+  // Vendor Settlement
+  const [openVendorSettlement, setOpenVendorSettlement] = useState(false);
+  const [closeVendorSettlement, setCloseVendorSettlement] = useState(true);
+
+  const [openBillPayment, setOpenBillPayment] = useState(false);
+  const [closeBillPayment, setCloseBillPayment] = useState(true);
+
+  const [openItemSupplyPriceInquire, setOpenItemSupplyPriceInquire] =
+    useState(false);
+  const [closeItemSupplyPriceInquire, setCloseItemSupplyPriceInquire] =
+    useState(true);
+
+  const [openPinanceIF, setOpenPinanceIF] = useState(false);
+  const [closePinanceIF, setClosePinanceIF] = useState(true);
+
+  // Voucher Mgt
+  const [openVoucherMgt, setOpenVoucherMgt] = useState(false);
+  const [closeVoucherMgt, setCloseVoucherMgt] = useState(true);
+
+  const [openVoucherProcessing, setOpenVoucherProcessing] = useState(false);
+  const [closeVoucherProcessing, setCloseVoucherProcessing] = useState(true);
+
+  const [openVoucherStatus, setOpenVoucherStatus] = useState(false);
+  const [closeVoucherStatus, setCloseVoucherStatus] = useState(true);
+
+  // D/C Coupon
+  const [openDCCoupon, setOpenDCCoupon] = useState(false);
+  const [closeDCCoupon, setCloseDCCoupon] = useState(true);
+
+  const [openDCCouponMgt, setOpenDCCouponMgt] = useState(false);
+  const [closeDCCouponMgt, setCloseDCCouponMgt] = useState(true);
+
+  const [openDCCouponStatus, setOpenDCCouponStatus] = useState(false);
+  const [closeDCCouponStatus, setCloseDCCouponStatus] = useState(true);
+
+  // B2B Mgt
+  const [openB2BMgt, setOpenB2BMgt] = useState(false);
+  const [closeB2BMgt, setCloseB2BMgt] = useState(true);
+
+  const [openB2BProcessing, setOpenB2BProcessing] = useState(false);
+  const [closeB2BProcessing, setCloseB2BProcessing] = useState(true);
+
+  const [openB2BStatus, setOpenB2BStatus] = useState(false);
+  const [closeB2BStatus, setCloseB2BStatus] = useState(true);
+
+  // MotorBike Mgt
+  const [openMotorBikeMgt, setOpenMotorBikeMgt] = useState(false);
+  const [closeMotorBikeMgt, setCloseMotorBikeMgt] = useState(true);
+
+  const [openMotorBikeProcessing, setOpenMotorBikeProcessing] = useState(false);
+  const [closeMotorBikeProcessing, setCloseMotorBikeProcessing] =
+    useState(true);
+
+  // ----------------------------------handle-----------------
+
+  // Prepay Payment
+  const handleOpenPrepayPayment = (e) => {
+    setOpenPrepayPayment(!openPrepayPayment);
+    setClosePrepayPayment(!closePrepayPayment);
+  };
+
+  const handleOpenCMS = (e) => {
+    setOpenCMS(!openCMS);
+    setCloseCMS(!closeCMS);
+  };
+
+  const handleOpenCard = (e) => {
+    setOpenCard(!openCard);
+    setCloseCard(!closeCard);
+  };
+
+  const handleOpenSCJPoint = (e) => {
+    setOpenSCJPoint(!openSCJPoint);
+    setCloseSCJPoint(!closeSCJPoint);
+  };
+
+  const handleOpenDeposit = (e) => {
+    setOpenDeposit(!openDeposit);
+    setCloseDeposit(!closeDeposit);
+  };
+
+  const handleOpenCreditLoan = (e) => {
+    setOpenCreditLoan(!openCreditLoan);
+    setCloseCreditLoan(!closeCreditLoan);
+  };
+
+  const handleOpenPaymentOnline = (e) => {
+    setOpenPaymentOnline(!openPaymentOnline);
+    setClosePaymentOnline(!closePaymentOnline);
+  };
+
+  // Postpay Payment
+  const handleOpenPostpayPayment = (e) => {
+    setOpenPostpayPayment(!openPostpayPayment);
+    setClosePostpayPayment(!closePostpayPayment);
+  };
+
+  const handleOpenCOD = (e) => {
+    setOpenCOD(!openCOD);
+    setCloseCOD(!closeCOD);
+  };
+
+  const handleOpenStatusByPostpay = (e) => {
+    setOpenStatusByPostpay(!openStatusByPostpay);
+    setCloseStatusByPostpay(!closeStatusByPostpay);
+  };
+
+  // Refund
+  const handleOpenRefund = (e) => {
+    setOpenRefund(!openRefund);
+    setCloseRefund(!closeRefund);
+  };
+
+  const handleOpenRefundProc = (e) => {
+    setOpenRefundProc(!openRefundProc);
+    setCloseRefundProc(!closeRefundProc);
+  };
+
+  const handleOpenStatusByRefund = (e) => {
+    setOpenStatusByRefund(!openStatusByRefund);
+    setCloseStatusByRefund(!closeStatusByRefund);
+  };
+
+  // Other Anal
+  const handleOpenAccountOtherAnal = (e) => {
+    setOpenAccountOtherAnal(!openAccountOtherAnal);
+    setCloseAccountOtherAnal(!closeAccountOtherAnal);
+  };
+
+  const handleOpenSaleAndPaymentAnal = (e) => {
+    setOpenSaleAndPaymentAnal(!openSaleAndPaymentAnal);
+    setCloseSaleAndPaymentAnal(!closeSaleAndPaymentAnal);
+  };
+
+  const handleOpenOtherAnal = (e) => {
+    setOpenOtherAnal(!openOtherAnal);
+    setCloseOtherAnal(!closeOtherAnal);
+  };
+
+  // Receipt
+  const handleOpenReceipt = (e) => {
+    setOpenReceipt(!openReceipt);
+    setCloseReceipt(!closeReceipt);
+  };
+
+  const handleOpenReceiptsIssued = (e) => {
+    setOpenReceiptsIssued(!openReceiptsIssued);
+    setCloseReceiptsIssued(!closeReceiptsIssued);
+  };
+
+  const handleOpenCustomerDMIssued = (e) => {
+    setOpenCustomerDMIssued(!openCustomerDMIssued);
+    setCloseCustomerDMIssued(!closeCustomerDMIssued);
+  };
+
+  const handleOpenIndividualIncomeTax = (e) => {
+    setOpenIndividualIncomeTax(!openIndividualIncomeTax);
+    setCloseIndividualIncomeTax(!closeIndividualIncomeTax);
+  };
+
+  // Vendor Mgt
+  const handleOpenVendorMgt = (e) => {
+    setOpenVendorMgt(!openVendorMgt);
+    setCloseVendorMgt(!closeVendorMgt);
+  };
+
+  const handleOpenBasicVendorInfo = (e) => {
+    setOpenBasicVendorInfo(!openBasicVendorInfo);
+    setCloseBasicVendorInfo(!closeBasicVendorInfo);
+  };
+
+  const handleOpenBasicPaymentInfo = (e) => {
+    setOpenBasicPaymentInfo(!openBasicPaymentInfo);
+    setCloseBasicPaymentInfo(!closeBasicPaymentInfo);
+  };
+
+  const handleOpenBasicInfoStatus = (e) => {
+    setOpenBasicInfoStatus(!openBasicInfoStatus);
+    setCloseBasicInfoStatus(!closeBasicInfoStatus);
+  };
+
+  // Vendor Settlement
+  const handleOpenVendorSettlement = (e) => {
+    setOpenVendorSettlement(!openVendorSettlement);
+    setCloseVendorSettlement(!closeVendorSettlement);
+  };
+
+  const handleOpenBillPayment = (e) => {
+    setOpenBillPayment(!openBillPayment);
+    setCloseBillPayment(!closeBillPayment);
+  };
+
+  const handleOpenItemSupplyPriceInquire = (e) => {
+    setOpenItemSupplyPriceInquire(!openItemSupplyPriceInquire);
+    setCloseItemSupplyPriceInquire(!closeItemSupplyPriceInquire);
+  };
+
+  const handleOpenPinanceIF = (e) => {
+    setOpenPinanceIF(!openPinanceIF);
+    setClosePinanceIF(!closePinanceIF);
+  };
+
+  // Voucher Mgt
+  const handleOpenVoucherMgt = (e) => {
+    setOpenVoucherMgt(!openVoucherMgt);
+    setCloseVoucherMgt(!closeVoucherMgt);
+  };
+
+  const handleOpenVoucherProcessing = (e) => {
+    setOpenVoucherProcessing(!openVoucherProcessing);
+    setCloseVoucherProcessing(!closeVoucherProcessing);
+  };
+
+  const handleOpenVoucherStatus = (e) => {
+    setOpenVoucherStatus(!openVoucherStatus);
+    setCloseVoucherStatus(!closeVoucherStatus);
+  };
+
+  // D/C Coupon
+  const handleOpenDCCoupon = (e) => {
+    setOpenDCCoupon(!openDCCoupon);
+    setCloseDCCoupon(!closeDCCoupon);
+  };
+
+  const handleOpenDCCouponMgt = (e) => {
+    setOpenDCCouponMgt(!openDCCouponMgt);
+    setCloseDCCouponMgt(!closeDCCouponMgt);
+  };
+
+  const handleOpenDCCouponStatus = (e) => {
+    setOpenDCCouponStatus(!openDCCouponStatus);
+    setCloseDCCouponStatus(!closeDCCouponStatus);
+  };
+
+  // B2B Mgt
+  const handleOpenB2BMgt = (e) => {
+    setOpenB2BMgt(!openB2BMgt);
+    setCloseB2BMgt(!closeB2BMgt);
+  };
+
+  const handleOpenB2BProcessing = (e) => {
+    setOpenB2BProcessing(!openB2BProcessing);
+    setCloseB2BProcessing(!closeB2BProcessing);
+  };
+
+  const handleOpenB2BStatus = (e) => {
+    setOpenB2BStatus(!openB2BStatus);
+    setCloseB2BStatus(!closeB2BStatus);
+  };
+
+  // MotorBike Mgt
+  const handleOpenMotorBikeMgt = (e) => {
+    setOpenMotorBikeMgt(!openMotorBikeMgt);
+    setCloseMotorBikeMgt(!closeMotorBikeMgt);
+  };
+
+  const handleOpenMotorBikeProcessing = (e) => {
+    setOpenMotorBikeProcessing(!openMotorBikeProcessing);
+    setCloseMotorBikeProcessing(!closeMotorBikeProcessing);
+  };
+
   return (
     <div className="tree-view-com">
       <ul className="tree-view-parent">
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Prepay payment
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenPrepayPayment}>
+            <Add fontSize="small" hidden={openPrepayPayment} />
+            <HorizontalRule fontSize="small" hidden={closePrepayPayment} />
+            <Folder className="folder" hidden={openPrepayPayment} />
+            <FolderOpen className="folder" hidden={closePrepayPayment} />
+            Prepay Payment
+          </Typography>
+          <ul className="tree-view-child" hidden={closePrepayPayment}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenCMS}>
+                <Add fontSize="small" hidden={openCMS} />
+                <HorizontalRule fontSize="small" hidden={closeCMS} />
+                <Folder className="folder" hidden={openCMS} />
+                <FolderOpen className="folder" hidden={closeCMS} />
                 CMS
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeCMS}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký thanh toán bằng tiền mặt
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Giải quyết thanh toán bằng tiền mặt
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xử lý hủy bỏ trường hợp thanh toán bằng tiền mặt
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Hủy bỏ tất cả trường hợp chưa chuyển tiền
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Số trường hợp chưa được thanh toán bằng tiền mặt
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Giải quyết các trường hợp thanh toán bằng tiền mặt
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Số trường hợp hủy thanh toán bằng tiền mặt
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenCard}>
+                <Add fontSize="small" hidden={openCard} />
+                <HorizontalRule fontSize="small" hidden={closeCard} />
+                <Folder className="folder" hidden={openCard} />
+                <FolderOpen className="folder" hidden={closeCard} />
                 Card
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeCard}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Hoàn tất việc thanh toán bằng thẻ
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Lập tài liệu đăng ký thẻ
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký tài liệu yêu cầu thanh toán
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Yêu cầu hủy bỏ thẻ
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Trường hợp đặt hàng trả góp bằng thẻ
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Thống kê thanh toán bằng thẻ
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                SCJ point
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenSCJPoint}>
+                <Add fontSize="small" hidden={openSCJPoint} />
+                <HorizontalRule fontSize="small" hidden={closeSCJPoint} />
+                <Folder className="folder" hidden={openSCJPoint} />
+                <FolderOpen className="folder" hidden={closeSCJPoint} />
+                SCJ Point
+              </Typography>
+              <ul className="tree-view-child" hidden={closeSCJPoint}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý điểm tích lũy
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình điểm tích lũy của từng khách hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình tặng các dịch vụ cộng điểm khác
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Kỳ hạn sử dụng điểm tích lũy
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình sử dụng điểm tích lũy của nhân viên công ty
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tổng số điểm cộng được tặng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tổng số điểm tích lũy đã dùng
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenDeposit}>
+                <Add fontSize="small" hidden={openDeposit} />
+                <HorizontalRule fontSize="small" hidden={closeDeposit} />
+                <Folder className="folder" hidden={openDeposit} />
+                <FolderOpen className="folder" hidden={closeDeposit} />
                 Deposit
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeDeposit}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý số tiền đặt cọc
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình cấp tiền đặt cọc theo ngày
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình sử dụng tiền đặt cọc theo ngày
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình tiền đặt cọc của từng khách hàng
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenCreditLoan}>
+                <Add fontSize="small" hidden={openCreditLoan} />
+                <HorizontalRule fontSize="small" hidden={closeCreditLoan} />
+                <Folder className="folder" hidden={openCreditLoan} />
+                <FolderOpen className="folder" hidden={closeCreditLoan} />
                 CreditLoan
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeCreditLoan}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xử lý chấp nhận Creadit Loan
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Yêu cầu làm giấy tờ Creadit Loan
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng nhập giấy tờ gửi tiền Creadit Loan
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Thống kê gửi tiền Credit Loan
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenPaymentOnline}>
+                <Add fontSize="small" hidden={openPaymentOnline} />
+                <HorizontalRule fontSize="small" hidden={closePaymentOnline} />
+                <Folder className="folder" hidden={openPaymentOnline} />
+                <FolderOpen className="folder" hidden={closePaymentOnline} />
                 Payment Online
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closePaymentOnline}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xác nhận thu tiền Payment Online
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Hoàn trả tiền cho Payment Online
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xác nhận thu tiền trả góp (Payment Online)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Trường hợp đặt hàng trả góp bằng thẻ (Payment Online)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Thống kê thanh toán Payment Online
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Installment Payment Online
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -265,66 +636,79 @@ function Menu(props) {
         </li>
 
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Postpay payment
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenPostpayPayment}>
+            <Add fontSize="small" hidden={openPostpayPayment} />
+            <HorizontalRule fontSize="small" hidden={closePostpayPayment} />
+            <Folder className="folder" hidden={openPostpayPayment} />
+            <FolderOpen className="folder" hidden={closePostpayPayment} />
+            Postpay Payment
+          </Typography>
+          <ul className="tree-view-child" hidden={closePostpayPayment}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenCOD}>
+                <Add fontSize="small" hidden={openCOD} />
+                <HorizontalRule fontSize="small" hidden={closeCOD} />
+                <Folder className="folder" hidden={openCOD} />
+                <FolderOpen className="folder" hidden={closeCOD} />
                 COD
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeCOD}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Giải quyết thanh toán COD(Mới)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình đã nhận được tài liệu thanh toán theo công ty giao
                     hàng
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Status by Postpay
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenStatusByPostpay}>
+                <Add fontSize="small" hidden={openStatusByPostpay} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeStatusByPostpay}
+                />
+                <Folder className="folder" hidden={openStatusByPostpay} />
+                <FolderOpen className="folder" hidden={closeStatusByPostpay} />
+                Status By Postpay
+              </Typography>
+              <ul className="tree-view-child" hidden={closeStatusByPostpay}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình chưa thanh toán trả sau
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình thanh toán trả sau
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình xuất kho những sản phẩm được thanh toán trả sau
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình chưa thanh toán trả sau
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình dự kiến thanh toán COD
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -332,41 +716,51 @@ function Menu(props) {
         </li>
 
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Refund
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenRefund}>
+            <Add fontSize="small" hidden={openRefund} />
+            <HorizontalRule fontSize="small" hidden={closeRefund} />
+            <Folder className="folder" hidden={openRefund} />
+            <FolderOpen className="folder" hidden={closeRefund} />
+            Refund
+          </Typography>
+          <ul className="tree-view-child" hidden={closeRefund}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Refund proc
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenRefundProc}>
+                <Add fontSize="small" hidden={openRefundProc} />
+                <HorizontalRule fontSize="small" hidden={closeRefundProc} />
+                <Folder className="folder" hidden={openRefundProc} />
+                <FolderOpen className="folder" hidden={closeRefundProc} />
+                Refund Proc
+              </Typography>
+              <ul className="tree-view-child" hidden={closeRefundProc}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Trả lại tiền mặt
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Giải quyết việc trả lại tiền sau khi xác nhận thu hồi hàng
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Status by refund
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenStatusByRefund}>
+                <Add fontSize="small" hidden={openStatusByRefund} />
+                <HorizontalRule fontSize="small" hidden={closeStatusByRefund} />
+                <Folder className="folder" hidden={openStatusByRefund} />
+                <FolderOpen className="folder" hidden={closeStatusByRefund} />
+                Status By Refund
+              </Typography>
+              <ul className="tree-view-child" hidden={closeStatusByRefund}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Kết quả việc trả lại tiền
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -374,53 +768,69 @@ function Menu(props) {
         </li>
 
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Other Anal
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenAccountOtherAnal}>
+            <Add fontSize="small" hidden={openAccountOtherAnal} />
+            <HorizontalRule fontSize="small" hidden={closeAccountOtherAnal} />
+            <Folder className="folder" hidden={openAccountOtherAnal} />
+            <FolderOpen className="folder" hidden={closeAccountOtherAnal} />
+            Other Anal
+          </Typography>
+          <ul className="tree-view-child" hidden={closeAccountOtherAnal}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Sale and Payment Anal
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenSaleAndPaymentAnal}>
+                <Add fontSize="small" hidden={openSaleAndPaymentAnal} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeSaleAndPaymentAnal}
+                />
+                <Folder className="folder" hidden={openSaleAndPaymentAnal} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeSaleAndPaymentAnal}
+                />
+                Sale And Payment Anal
+              </Typography>
+              <ul className="tree-view-child" hidden={closeSaleAndPaymentAnal}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Báo cáo doanh thu và thanh toán bán hàng
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenOtherAnal}>
+                <Add fontSize="small" hidden={openOtherAnal} />
+                <HorizontalRule fontSize="small" hidden={closeOtherAnal} />
+                <Folder className="folder" hidden={openOtherAnal} />
+                <FolderOpen className="folder" hidden={closeOtherAnal} />
                 Other Anal
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeOtherAnal}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình đăng ký thanh toán theo từng loại thanh toán
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình xác nhận/thanh toán theo từng loại thanh toán
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Monthly dilivery cost report by companies
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Monthly dilivery cost report by item
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -428,85 +838,107 @@ function Menu(props) {
         </li>
 
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Receipt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenReceipt}>
+            <Add fontSize="small" hidden={openReceipt} />
+            <HorizontalRule fontSize="small" hidden={closeReceipt} />
+            <Folder className="folder" hidden={openReceipt} />
+            <FolderOpen className="folder" hidden={closeReceipt} />
+            Receipt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeReceipt}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Receipts issued
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenReceiptsIssued}>
+                <Add fontSize="small" hidden={openReceiptsIssued} />
+                <HorizontalRule fontSize="small" hidden={closeReceiptsIssued} />
+                <Folder className="folder" hidden={openReceiptsIssued} />
+                <FolderOpen className="folder" hidden={closeReceiptsIssued} />
+                Receipts Issued
+              </Typography>
+              <ul className="tree-view-child" hidden={closeReceiptsIssued}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký nhận biên lai
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In biên lai cho khách hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In biên lai của từng vận đơn
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In DM địa chỉ của khách hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In biên lai của từng vận đơn HĐĐT
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Customer DM issued
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenCustomerDMIssued}>
+                <Add fontSize="small" hidden={openCustomerDMIssued} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeCustomerDMIssued}
+                />
+                <Folder className="folder" hidden={openCustomerDMIssued} />
+                <FolderOpen className="folder" hidden={closeCustomerDMIssued} />
+                Customer DM Issued
+              </Typography>
+              <ul className="tree-view-child" hidden={closeCustomerDMIssued}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình đăng ký nhận biên lai
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình in biên lai
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Individual income tax
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenIndividualIncomeTax}>
+                <Add fontSize="small" hidden={openIndividualIncomeTax} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeIndividualIncomeTax}
+                />
+                <Folder className="folder" hidden={openIndividualIncomeTax} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeIndividualIncomeTax}
+                />
+                Individual Income Tax
+              </Typography>
+              <ul className="tree-view-child" hidden={closeIndividualIncomeTax}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Giải quyết việc chuyển tiền thuế thu nhập cá nhân
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình chuyển tiền thuế chu nhập cá nhân
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -514,115 +946,137 @@ function Menu(props) {
         </li>
 
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Vendor Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenVendorMgt}>
+            <Add fontSize="small" hidden={openVendorMgt} />
+            <HorizontalRule fontSize="small" hidden={closeVendorMgt} />
+            <Folder className="folder" hidden={openVendorMgt} />
+            <FolderOpen className="folder" hidden={closeVendorMgt} />
+            Vendor Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeVendorMgt}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Basic Vendor Info
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenBasicVendorInfo}>
+                <Add fontSize="small" hidden={openBasicVendorInfo} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeBasicVendorInfo}
+                />
+                <Folder className="folder" hidden={openBasicVendorInfo} />
+                <FolderOpen className="folder" hidden={closeBasicVendorInfo} />
+                Vendor Mgt
+              </Typography>
+              <ul className="tree-view-child" hidden={closeBasicVendorInfo}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký công ty ký gửi hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký mã số bảo lưu/số khấu từ
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý phân loại công ty ký gửi theo tháng
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenBasicPaymentInfo}>
+                <Add fontSize="small" hidden={openBasicPaymentInfo} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeBasicPaymentInfo}
+                />
+                <Folder className="folder" hidden={openBasicPaymentInfo} />
+                <FolderOpen className="folder" hidden={closeBasicPaymentInfo} />
                 Basic Payment Info
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeBasicPaymentInfo}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý mã số ngân hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý tài khoản chuyển tiền
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý mã số công ty thẻ
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý mã số thẻ
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý công ty cho vay tín dụng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký tiêu chuẩn vay tín dụng Rebate
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Basic info.status
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenBasicInfoStatus}>
+                <Add fontSize="small" hidden={openBasicInfoStatus} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeBasicInfoStatus}
+                />
+                <Folder className="folder" hidden={openBasicInfoStatus} />
+                <FolderOpen className="folder" hidden={closeBasicInfoStatus} />
+                Basic Info Status
+              </Typography>
+              <ul className="tree-view-child" hidden={closeBasicInfoStatus}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình đăng ký công ty ký gửi hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình ngân hàng của công ty ký gửi hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In DM của công ty ký gửi hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Kiểm tra tiêu chuẩn quyết toán của công ty ký gửi hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình hàng tồn của mỗi nhà cung cấp nhập hàng nguyên tắc
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -630,133 +1084,158 @@ function Menu(props) {
         </li>
 
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Vendor Settlement
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenVendorSettlement}>
+            <Add fontSize="small" hidden={openVendorSettlement} />
+            <HorizontalRule fontSize="small" hidden={closeVendorSettlement} />
+            <Folder className="folder" hidden={openVendorSettlement} />
+            <FolderOpen className="folder" hidden={closeVendorSettlement} />
+            Vendor Settlement
+          </Typography>
+          <ul className="tree-view-child" hidden={closeVendorSettlement}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenBillPayment}>
+                <Add fontSize="small" hidden={openBillPayment} />
+                <HorizontalRule fontSize="small" hidden={closeBillPayment} />
+                <Folder className="folder" hidden={openBillPayment} />
+                <FolderOpen className="folder" hidden={closeBillPayment} />
                 Bill Payment
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeBillPayment}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tiến hành thanh toán theo tiêu chuẩn phát sinh
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xác nhận hóa đơn thanh toán
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký hóa đơn
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tiến hành chi trả theo tiêu chuẩn thanh toán
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xác nhận việc chi trả
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký hóa đơn(Điều chỉnh hàng tồn kho)
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Item supply price inquire
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenItemSupplyPriceInquire}>
+                <Add fontSize="small" hidden={openItemSupplyPriceInquire} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeItemSupplyPriceInquire}
+                />
+                <Folder
+                  className="folder"
+                  hidden={openItemSupplyPriceInquire}
+                />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeItemSupplyPriceInquire}
+                />
+                Item Supply Price Inquire
+              </Typography>
+              <ul
+                className="tree-view-child"
+                hidden={closeItemSupplyPriceInquire}
+              >
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình chi trả của các công ký gửi hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình chi trả
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenPinanceIF}>
+                <Add fontSize="small" hidden={openPinanceIF} />
+                <HorizontalRule fontSize="small" hidden={closePinanceIF} />
+                <Folder className="folder" hidden={openPinanceIF} />
+                <FolderOpen className="folder" hidden={closePinanceIF} />
                 Pinance I/F
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closePinanceIF}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Sales data(Daily)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Vendor payment(Monthly)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Payment method closing(Daily)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     SCJ point payment closing(Monthly)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Accounting stock sheet
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     COD sales status(Monthly)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Yêu cầu nhập xuất tới kho
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình công nợ nhà cung cấp theo hóa đơn
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình chi tiết công nợ nhà cung cấp
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -764,90 +1243,106 @@ function Menu(props) {
         </li>
 
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Voucher Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenVoucherMgt}>
+            <Add fontSize="small" hidden={openVoucherMgt} />
+            <HorizontalRule fontSize="small" hidden={closeVoucherMgt} />
+            <Folder className="folder" hidden={openVoucherMgt} />
+            <FolderOpen className="folder" hidden={closeVoucherMgt} />
+            Voucher Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeVoucherMgt}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenVoucherProcessing}>
+                <Add fontSize="small" hidden={openVoucherProcessing} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeVoucherProcessing}
+                />
+                <Folder className="folder" hidden={openVoucherProcessing} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeVoucherProcessing}
+                />
                 Voucher Processing
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeVoucherProcessing}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký thông tin phiếu mua hàng tích lũy điểm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Yêu cầu kiểm tra đối tượng nhập kho phiếu mua hàng tích lũy
                     điểm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Nhập phiếu mua hàng tích lũy điểm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Bỏ phiếu mua hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Phê duyệt phát hành phiếu mua hàng tích lũy điểm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Xử lý việc xuất phiếu mua hàng tích lũy điểm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình phê duyệt phiếu mua hàng tích lũy điểm
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenVoucherStatus}>
+                <Add fontSize="small" hidden={openVoucherStatus} />
+                <HorizontalRule fontSize="small" hidden={closeVoucherStatus} />
+                <Folder className="folder" hidden={openVoucherStatus} />
+                <FolderOpen className="folder" hidden={closeVoucherStatus} />
                 Voucher Status
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeVoucherStatus}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình tiến hành phiếu mua hàng tích lũy điểm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình sử dụng phiếu mua hàng tích lũy điểm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình xuất nhập kho phiếu mua hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý phiếu mua hàng tích lũy điểm
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -855,65 +1350,75 @@ function Menu(props) {
         </li>
 
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> D/C Coupon
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenDCCoupon}>
+            <Add fontSize="small" hidden={openDCCoupon} />
+            <HorizontalRule fontSize="small" hidden={closeDCCoupon} />
+            <Folder className="folder" hidden={openDCCoupon} />
+            <FolderOpen className="folder" hidden={closeDCCoupon} />
+            D/C Coupon
+          </Typography>
+          <ul className="tree-view-child" hidden={closeDCCoupon}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenDCCouponMgt}>
+                <Add fontSize="small" hidden={openDCCouponMgt} />
+                <HorizontalRule fontSize="small" hidden={closeDCCouponMgt} />
+                <Folder className="folder" hidden={openDCCouponMgt} />
+                <FolderOpen className="folder" hidden={closeDCCouponMgt} />
                 D/C Coupon Mgt
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeDCCouponMgt}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký thông tin phiếu giảm giá
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Phê duyệt phiếu giảm giá
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Phát hành phiếu giảm giá (riêng lẻ)
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Phát hành phiếu giảm giá (đồng loạt)
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenDCCouponStatus}>
+                <Add fontSize="small" hidden={openDCCouponStatus} />
+                <HorizontalRule fontSize="small" hidden={closeDCCouponStatus} />
+                <Folder className="folder" hidden={openDCCouponStatus} />
+                <FolderOpen className="folder" hidden={closeDCCouponStatus} />
                 D/C Coupon Status
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeDCCouponStatus}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình sửu dụng phiếu giảm giá
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình phát hành phiếu giảm giá
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Kiểm tra tình hình phiếu giảm giá
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -921,96 +1426,106 @@ function Menu(props) {
         </li>
 
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> B2B Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenB2BMgt}>
+            <Add fontSize="small" hidden={openB2BMgt} />
+            <HorizontalRule fontSize="small" hidden={closeB2BMgt} />
+            <Folder className="folder" hidden={openB2BMgt} />
+            <FolderOpen className="folder" hidden={closeB2BMgt} />
+            B2B Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeB2BMgt}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenB2BProcessing}>
+                <Add fontSize="small" hidden={openB2BProcessing} />
+                <HorizontalRule fontSize="small" hidden={closeB2BProcessing} />
+                <Folder className="folder" hidden={openB2BProcessing} />
+                <FolderOpen className="folder" hidden={closeB2BProcessing} />
                 B2B Processing
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeB2BProcessing}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     B2B - Đăng ký thông tin khách hàng B2B
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     B2B - Đăng ký thanh toán bằng tiền mặt
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     B2B - Giải quyết thanh toán CMS đợt 1
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     B2B - Giải quyết thanh toán CMS đợt 2
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     B2B - Xử lý hủy bỏ trường hợp thanh toán bằng tiền mặt
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     B2B - Hủy bỏ tất cả trường hợp chưa chuyển tiền
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     B2B - Số trường hợp chưa được xác nhận thanh toán bằng tiền
                     mặt
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     B2B - Giải quyết các trường hợp thanh toán bằng tiền mặt
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     B2B - Số trường hợp hủy thanh toán bằng tiền mặt
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     B2B - Giải quyết thanh toán COD (Mới)
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenB2BStatus}>
+                <Add fontSize="small" hidden={openB2BStatus} />
+                <HorizontalRule fontSize="small" hidden={closeB2BStatus} />
+                <Folder className="folder" hidden={openB2BStatus} />
+                <FolderOpen className="folder" hidden={closeB2BStatus} />
                 B2B Status
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeB2BStatus}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     B2B - Tình hình công nợ
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     B2B - Tình hình thanh toán theo tháng
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
@@ -1018,21 +1533,34 @@ function Menu(props) {
         </li>
 
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> MotorBike Mgt
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenMotorBikeMgt}>
+            <Add fontSize="small" hidden={openMotorBikeMgt} />
+            <HorizontalRule fontSize="small" hidden={closeMotorBikeMgt} />
+            <Folder className="folder" hidden={openMotorBikeMgt} />
+            <FolderOpen className="folder" hidden={closeMotorBikeMgt} />
+            MotorBike Mgt
+          </Typography>
+          <ul className="tree-view-child" hidden={closeMotorBikeMgt}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenMotorBikeProcessing}>
+                <Add fontSize="small" hidden={openMotorBikeProcessing} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeMotorBikeProcessing}
+                />
+                <Folder className="folder" hidden={openMotorBikeProcessing} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeMotorBikeProcessing}
+                />
                 MotorBike Processing
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeMotorBikeProcessing}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     In hóa đơn xe máy
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
