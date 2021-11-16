@@ -54,8 +54,7 @@ function Header(props) {
       <div className="main__menu d-flex bg-success justify-content-around align-items-center mt-2">
         <Navbar expand="sm">
           <Container>
-            <Navbar.Brand href="#home">MD</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Typography style={{ marginRight: "20px" }}>MD</Typography>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <NavDropdown title="Basic Item Info" className="nav__root">
