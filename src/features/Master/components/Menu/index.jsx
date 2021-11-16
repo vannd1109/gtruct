@@ -1,187 +1,262 @@
-import { Description, Folder, Add } from "@mui/icons-material";
+import { useState } from "react";
+import {
+  Description,
+  Folder,
+  Add,
+  HorizontalRule,
+  FolderOpen,
+} from "@mui/icons-material";
+
+import { Typography } from "@material-ui/core";
 
 function Master(props) {
+  // Basic
+  const [openBasic, setOpenBasic] = useState(false);
+  const [closeBasic, setCloseBasic] = useState(true);
+
+  const [openBasicCode, setOpenBasicCode] = useState(false);
+  const [closeBasicCode, setCloseBasicCode] = useState(true);
+
+  const [openBasicOrganization, setOpenBasicOrganization] = useState(false);
+  const [closeBasicOrganization, setCloseBasicOrganization] = useState(true);
+
+  const [openPrivilegeMgt, setOpenPrivilegeMgt] = useState(false);
+  const [closePrivilegeMgt, setClosePrivilegeMgt] = useState(true);
+
+  const [openSystemMgt, setOpenSystemMgt] = useState(false);
+  const [closeSystemMgt, setCloseSystemMgt] = useState(true);
+
+  // ----------------------------------handle-----------------
+
+  // Basic
+  const handleOpenBasic = (e) => {
+    setOpenBasic(!openBasic);
+    setCloseBasic(!closeBasic);
+  };
+
+  const handleOpenBasicCode = (e) => {
+    setOpenBasicCode(!openBasicCode);
+    setCloseBasicCode(!closeBasicCode);
+  };
+
+  const handleOpenBasicOrganization = (e) => {
+    setOpenBasicOrganization(!openBasicOrganization);
+    setCloseBasicOrganization(!closeBasicOrganization);
+  };
+
+  const handleOpenPrivilegeMgt = (e) => {
+    setOpenPrivilegeMgt(!openPrivilegeMgt);
+    setClosePrivilegeMgt(!closePrivilegeMgt);
+  };
+
+  const handleOpenSystemMgt = (e) => {
+    setOpenSystemMgt(!openSystemMgt);
+    setCloseSystemMgt(!closeSystemMgt);
+  };
+
   return (
     <div className="tree-view-com">
       <ul className="tree-view-parent">
         <li>
-          <a href>
-            <Add /> <Folder className="folder" /> Basic Information
-          </a>
-          <ul className="tree-view-child">
+          <Typography onClick={handleOpenBasic}>
+            <Add fontSize="small" hidden={openBasic} />
+            <HorizontalRule fontSize="small" hidden={closeBasic} />
+            <Folder className="folder" hidden={openBasic} />
+            <FolderOpen className="folder" hidden={closeBasic} /> Basic
+            Information
+          </Typography>
+          <ul className="tree-view-child" hidden={closeBasic}>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
-                Basic Code
-              </a>
-              <ul className="tree-view-child">
+              <Typography onClick={handleOpenBasicCode}>
+                <Add fontSize="small" hidden={openBasicCode} />
+                <HorizontalRule fontSize="small" hidden={closeBasicCode} />
+                <Folder className="folder" hidden={openBasicCode} />
+                <FolderOpen className="folder" hidden={closeBasicCode} /> Basic
+                Code
+              </Typography>
+              <ul className="tree-view-child" hidden={closeBasicCode}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý kênh bán hàng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý mã số chung
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý số bưu điện
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý khu vực được phân tích
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenBasicOrganization}>
+                <Add fontSize="small" hidden={openBasicOrganization} />
+                <HorizontalRule
+                  fontSize="small"
+                  hidden={closeBasicOrganization}
+                />
+                <Folder className="folder" hidden={openBasicOrganization} />
+                <FolderOpen
+                  className="folder"
+                  hidden={closeBasicOrganization}
+                />
                 Basic Organization Info
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeBasicOrganization}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Đăng ký thông tin của công ty
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý các bộ phận
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý nhân viên
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý tổ chức theo tháng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý nhân viên của các công ty trực thuộc
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý mã số MD
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý các nhóm tiến hành
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Tình hình nhân viên
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenPrivilegeMgt}>
+                <Add fontSize="small" hidden={openPrivilegeMgt} />
+                <HorizontalRule fontSize="small" hidden={closePrivilegeMgt} />
+                <Folder className="folder" hidden={openPrivilegeMgt} />
+                <FolderOpen className="folder" hidden={closePrivilegeMgt} />
                 Privilege Mgt
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closePrivilegeMgt}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý nhóm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý thông tin nhóm
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Kiểm tra người sử dụng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý nhóm - người sử dụng
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý menu
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý đối tượng cần trợ giúp
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
             <li>
-              <a href className="document-title">
-                <Add /> <Folder className="folder" />
+              <Typography onClick={handleOpenSystemMgt}>
+                <Add fontSize="small" hidden={openSystemMgt} />
+                <HorizontalRule fontSize="small" hidden={closeSystemMgt} />
+                <Folder className="folder" hidden={openSystemMgt} />
+                <FolderOpen className="folder" hidden={closeSystemMgt} />
                 System Mgt
-              </a>
-              <ul className="tree-view-child">
+              </Typography>
+              <ul className="tree-view-child" hidden={closeSystemMgt}>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý các thông báo
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý nhóm từ trợ giúp
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý tin nhắn
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Quản lý log theo event
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Kiểm tra log theo event
-                  </a>
+                  </Typography>
                 </li>
                 <li>
-                  <a href className="document-title">
+                  <Typography className="document-title">
                     <Description className="file" />
                     Từ điển chuyên ngành
-                  </a>
+                  </Typography>
                 </li>
               </ul>
             </li>
