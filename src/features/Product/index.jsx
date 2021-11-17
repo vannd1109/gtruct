@@ -6,10 +6,8 @@ function Product(props) {
   return (
     <Container fluid>
       <Row>
-        <Col sm={3}>
-          <Menu />
-        </Col>
-        <Col sm={9}>
+        <Menu />
+        <Col>
           <Main />
         </Col>
       </Row>

@@ -1,39 +1,33 @@
 import {
-  Typography,
+  AdminPanelSettings,
+  Cancel,
+  CircleNotifications,
+  Close,
+  Help,
+  Info,
+  Inventory,
+  ZoomOutMap,
+} from "@mui/icons-material";
+import {
+  Badge,
+  Breadcrumbs,
   FormControl,
   InputLabel,
-  Select,
   MenuItem,
-  Link,
-  Breadcrumbs,
+  Select,
+  Tooltip,
+  Typography,
 } from "@mui/material";
-import { ZoomOutMap, Close } from "@mui/icons-material";
-import { Navbar, Container, Nav, NavDropdown, Button } from "react-bootstrap";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 function Header(props) {
   const handleChange = () => {};
 
-  const handleClick = () => {};
-
   const breadcrumbs = [
-    <Link
-      underline="hover"
-      key="1"
-      color="inherit"
-      href="/"
-      onClick={handleClick}
-    >
+    <Typography underline="hover" key="1" color="inherit">
       Item Mgt
-    </Link>,
-    <Link
-      underline="hover"
-      key="2"
-      color="inherit"
-      href="/getting-started/installation/"
-      onClick={handleClick}
-    >
-      Basic Item Info
-    </Link>,
+    </Typography>,
+    <Typography key="2">Basic Item Info</Typography>,
     <Typography key="3" color="text.primary">
       Mã số phân loại sản phẩm
     </Typography>,
@@ -50,7 +44,7 @@ function Header(props) {
           <Close className="border main__header--action-close" />
         </div>
       </div>
-      <div className="main__menu d-flex bg-success justify-content-around align-items-center mt-2">
+      <div className="main__menu d-flex bg-success justify-content-between align-items-center mt-2">
         <Navbar expand="sm">
           <Container>
             <Typography style={{ marginRight: "20px" }}>MD</Typography>
@@ -152,12 +146,48 @@ function Header(props) {
           </FormControl>
         </div>
         <div className="main__menu--close">
-          <Button variant="danger" size="small">
+          <Button variant="danger" className="btn-sm">
             <Close /> Close
           </Button>
         </div>
       </div>
-      <div className="main__option d-flex justify-content-between align-items-center mt-2 border-bottom">
+      <div className="main__action d-flex justify-content-between align-items-center">
+        <div className="main__action--notification">
+          <Tooltip title="Thông báo">
+            <Badge badgeContent={1} color="error">
+              <CircleNotifications color="action" />
+            </Badge>
+          </Tooltip>
+        </div>
+        <div className="main__action--option d-flex">
+          <div className="main__action--option-icon">
+            <Tooltip title="Bảng kỹ thuật đặc tả sản phẩm">
+              <Info />
+            </Tooltip>
+          </div>
+          <div className="main__action--option-icon">
+            <Tooltip title="Thông tin hàng tồn kho">
+              <Inventory />
+            </Tooltip>
+          </div>
+          <div className="main__action--option-icon">
+            <Tooltip title="Thay đổi mật mã">
+              <AdminPanelSettings />
+            </Tooltip>
+          </div>
+          <div className="main__action--option-icon">
+            <Tooltip title="Trợ giúp">
+              <Help />
+            </Tooltip>
+          </div>
+          <div className="main__action--option-icon">
+            <Tooltip title="Đóng">
+              <Cancel />
+            </Tooltip>
+          </div>
+        </div>
+      </div>
+      <div className="main__breadcrumb d-flex justify-content-between align-items-center mt-2 border-bottom">
         <div className="main__option--label">
           <Typography>Mã số phân loại sản phẩm</Typography>
         </div>
