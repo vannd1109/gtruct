@@ -9,6 +9,7 @@ import Account from "./features/Account";
 import Media from "./features/Media";
 import Analysis from "./features/Analysis";
 import Master from "./features/Master";
+import Home from "./features/Home";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
+          <Route exact path="/" element={<Home />} />
           <Route path="/product" element={<Product />} />
           <Route path="/order" element={<Order />} />
           <Route path="/synthetic" element={<Synthetic />} />

@@ -1,0 +1,1515 @@
+{
+    "data" : [
+      {
+        "id"    : 1,
+        "name"  : "product",
+        "label" : "Sản phẩm",
+        "items" : [
+          {
+            "id"    : "pro_1",
+            "name"  : "Item Mgt",
+            "items" : [
+              {
+                "id"    : "im_1",
+                "name"  : "Basic Item Info",
+                "items" : [
+                  {
+                    "id"    : "bii_1",
+                    "name"  : "Mã số phân loại sản phẩm"
+                  },
+                  {
+                    "id"    : "bii_2",
+                    "name"  : "Đăng nhập mô tả sản phẩm"
+                  },
+                  {
+                    "id"    : "bii_3",
+                    "name"  : "Đăng nhập nhãn hiệu"
+                  },
+                  {
+                    "id"    : "bii_4",
+                    "name"  : "Đăng nhập hãng sản xuất"
+                  }
+                ]
+              },
+              {
+                "id"    : "im_2",
+                "name"  : "Info Resgistration",
+                "items" : [
+                  {
+                    "id"    : "ir_1",
+                    "name"  : "Đăng nhập sản phẩm đại diện"
+                  },
+                  {
+                    "id"    : "ir_2",
+                    "name"  : "Quản lý thông tin Key của Item"
+                  },
+                  {
+                    "id"    : "ir_3",
+                    "name"  : "Đăng ký sản phẩm thông thường"
+                  },
+                  {
+                    "id"    : "ir_4",
+                    "name"  : "Đăng ký thông tin sản phẩm"
+                  },
+                  {
+                    "id"    : "ir_5",
+                    "name"  : "Đăng ký thông số kỹ thuật của sản phẩm"
+                  },
+                  {
+                    "id"    : "ir_6",
+                    "name"  : "Quá trình thay đổi thông số kỹ thuật của sản phẩm"
+                  },
+                  {
+                    "id"    : "ir_7",
+                    "name"  : "Đăng ký phê duyệt sản phẩm"
+                  },
+                  {
+                    "id"    : "ir_8",
+                    "name"  : "Sửa đổi thông tin phân tích sản phẩm"
+                  },
+                  {
+                    "id"    : "ir_9",
+                    "name"  : "Đăng ký xử lý sản phẩm đã ngừng bán"
+                  },
+                  {
+                    "id"    : "ir_10",
+                    "name"  : "Quản lý sản phẩm nhà cung cấp"
+                  }
+                ]
+              },
+              {
+                "id"    :   "im_3",
+                "name"  :   "Packing Info Resgistration",
+                "items" :   [
+                  {
+                    "id"  : "pir_1",
+                    "name": "Đăng nhập vật liệu đóng gói"
+                  }
+                ]
+              },
+              {
+                "id"    : "im_4",
+                "name"  : "Item Status",
+                "items" : [
+                  {
+                    "id"    : "is_1",
+                    "name"  : "Tình hình đăng ký sản phẩm"
+                  },
+                  {
+                    "id"    : "is_2",
+                    "name"  : "Tình hình sản phẩm không còn tồn kho"
+                  },
+                  {
+                    "id"    : "is_3",
+                    "name"  : "Tình hình bán sản phẩm mới"
+                  },
+                  {
+                    "id"    : "is_4",
+                    "name"  : "Tình trạng hàng tồn"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "pro_2",
+            "name"  : "Promotion",
+            "items" : [
+              {
+                "id"    : "p_1",
+                "name"  : "Promotion Registration",
+                "items" : [
+                  {
+                    "id"    : "pr_1",
+                    "name"  : "Hàng khuyến mãi"
+                  },
+                  {
+                    "id"    : "pr_2",
+                    "name"  : "Chương trình khuyến mãi có điều kiện"
+                  },
+                  {
+                    "id"    : "pr_3",
+                    "name"  : "Phê duyệt chương trình khuyến mãi"
+                  },
+                  {
+                    "id"    : "pr_4",
+                    "name"  : "Khuyến mãi bốc thăm trúng thưởng"
+                  },
+                  {
+                    "id"    : "pr_5",
+                    "name"  : "Đăng nhập thông tin người trúng thưởng"
+                  }
+                ]
+              },
+              {
+                "id"    : "p_2",
+                "name"  : "Promotion Status",
+                "items" : [
+                  {
+                    "id"    : "ps_1",
+                    "name"  : "Kiểm tra toàn bộ chương trình khuyến mãi"
+                  },
+                  {
+                    "id"    : "ps_2",
+                    "name"  : "Tình hình chương trình khuyến mãi có điều kiện"
+                  },
+                  {
+                    "id"    : "ps_3",
+                    "name"  : "Yêu cầu khuyến mãi bốc thăm theo từng khách hàng"
+                  }
+                ]
+              },
+              {
+                "id"    : "p_3",
+                "name"  : "Promotion Result",
+                "items" : [
+                  {
+                    "id"    : "pr_1",
+                    "name"  : "Kết quả chương trình khuyến mãi"
+                  },
+                  {
+                    "id"    : "pr_2",
+                    "name"  : "Tình hình chi phí chương trình khuyến mãi theo từng nhà cung cấp"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "pro_3",
+            "name"  : "Event",
+            "items" : [
+              {
+                "id"    : "e_1",
+                "name"  : "Event Rule Mgt",
+                "items" : [
+                  {
+                    "id"    : "evm_1",
+                    "name"  : "Đăng ký quy tắc"
+                  }
+                ]
+              },
+              {
+                "id"    : "e_2",
+                "name"  : "Event Registration",
+                "items" : [
+                  {
+                    "id"    : "er_1",
+                    "name"  : "Đăng ký sự kiện"
+                  },
+                  {
+                    "id"    : "er_2",
+                    "name"  : "Xác nhận sự kiện"
+                  },
+                  {
+                    "id"    : "er_3",
+                    "name"  : "Xác nhận khách hàng được hưởng sự kiện"
+                  }
+                ]
+              },
+              {
+                "id"    : "e_3",
+                "name"  : "Event Result",
+                "items" : [
+                  {
+                    "id"    : "er_1",
+                    "name"  : "Tình hình khách hàng được hưởng sự kiện"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id"    : 2,
+        "name"  : "order",
+        "label" : "Đặt hàng",
+        "items" : [
+          {
+            "id"    : "o_1",
+            "name"  : "Order Mgt",
+            "items" : [
+              {
+                "id"    : "om_1",
+                "name"  : "Order Processing",
+                "items" : [
+                  {
+                    "id"    : "op_1",
+                    "name"  : "Tiếp nhận đặt hàng"
+                  },
+                  {
+                    "id"    : "op_2",
+                    "name"  : "Tiến hành đặt hàng"
+                  },
+                  {
+                    "id"    : "op_3",
+                    "name"  : "Tiếp nhận khiếu nại của khách hàng"
+                  },
+                  {
+                    "id"    : "op_4",
+                    "name"  : "Giải quyết khiếu nại"
+                  },
+                  {
+                    "id"    : "op_5",
+                    "name"  : "Tiến hành thanh toán"
+                  },
+                  {
+                    "id"    : "op_6",
+                    "name"  : "Kiểm tra người nhận hàng"
+                  },
+                  {
+                    "id"    : "op_7",
+                    "name"  : "Xử lý đơn hàng COD"
+                  },
+                  {
+                    "id"    : "op_8",
+                    "name"  : "Thông tin khách hàng sử dụng Credit Loan"
+                  },
+                  {
+                    "id"    : "op_9",
+                    "name"  : "Kiểm tra trạng thái phe duyệt Credit Loan"
+                  },
+                  {
+                    "id"    : "op_10",
+                    "name"  : "Xử lý đơn hàng COD_Fastdely"
+                  }
+                ]
+              },
+              {
+                "id"    : "om_2",
+                "name"  : "Order/Complaint Status",
+                "items" : [
+                  {
+                    "id"    : "ocs_1",
+                    "name"  : "Tình hình tiếp nhận đơn đặt hàng TMR"
+                  },
+                  {
+                    "id"    : "ocs_2",
+                    "name"  : "Tình hình tiếp nhận đặt hàng theo nhóm làm việc"
+                  },
+                  {
+                    "id"    : "ocs_3",
+                    "name"  : "Tình hình khách hàng theo từng giai đoạn tiến hành đặt hàng"
+                  },
+                  {
+                    "id"    : "ocs_4",
+                    "name"  : "Tình hình chi tiết về đơn đặt hàng"
+                  },
+                  {
+                    "id"    : "ocs_5",
+                    "name"  : "Tình hình hủy đơn đặt hàng"
+                  },
+                  {
+                    "id"    : "ocs_6",
+                    "name"  : "Tình hình khách hàng đặt hàng theo sản phẩm"
+                  },
+                  {
+                    "id"    : "ocs_7",
+                    "name"  : "Lý do khiếu nại của khách hàng"
+                  },
+                  {
+                    "id"    : "ocs_8",
+                    "name"  : "Tình hình khiếu nại của khách hàng theo từng sản phẩm"
+                  },
+                  {
+                    "id"    : "ocs_9",
+                    "name"  : "Kiểm tra tình hình khiếu nại của khách hàng"
+                  },
+                  {
+                    "id"    : "ocs_10",
+                    "name"  : "Thống kê lượng sản phẩm bị lỗi"
+                  },
+                  {
+                    "id"    : "ocs_11",
+                    "name"  : "Tình trạng đặt hàng(Tổng cộng) của TMR"
+                  },
+                  {
+                    "id"    : "ocs_12",
+                    "name"  : "Tình trạng tiếp nhận đươn đặt hàng(nhóm) của TMR"
+                  },
+                  {
+                    "id"    : "ocs_13",
+                    "name"  : "Tình hình hàng tồn kho của đơn hàng đặt trước"
+                  },
+                  {
+                    "id"    : "ocs_14",
+                    "name"  : "Tình hình tiếp nhận đặt hàng Direct Delivery"
+                  },
+                  {
+                    "id"    : "ocs_15",
+                    "name"  : "Thống kê lý do hủy-trả hàng theo tháng"
+                  },
+                  {
+                    "id"    : "ocs_16",
+                    "name"  : "Tình hình tiếp nhận đặt hàng TMR - INSURANCE"
+                  }
+                ]
+              },
+              {
+                "id"    : "om_3",
+                "name"  : "Customer Performance",
+                "items" : [
+                  {
+                    "id"    : "cp_1",
+                    "name"  : "Tình hình thực tế tiếp nhận từng khách hàng"
+                  },
+                  {
+                    "id"    : "cp_2",
+                    "name"  : "Chọn lựa khách hàng theo tiêu chuẩn đặt hàng/doanh thu"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "o_2",
+            "name"  : "SR Mgt",
+            "items" : [
+              {
+                "id"    : "sm_1",
+                "name"  : "SR Processing",
+                "items" : [
+                  {
+                    "id"    : "sp_1",
+                    "name"  : "Xử lý SR"
+                  },
+                   {
+                    "id"    : "sp_2",
+                    "name"  : "Quản lý nhóm làm việc xử lý SR"
+                  },
+                   {
+                    "id"    : "sp_3",
+                    "name"  : "Kiểm tra tình trạng nhóm làm việc xử lý SR"
+                  }
+                ]
+              },
+              {
+                "id"    : "sm_2",
+                "name"  : "SR Status",
+                "items" : [
+                  {
+                    "id"    : "ss_1",
+                    "name"  : "Kiểm tra SR chưa được xử lý"
+                  },
+                  {
+                    "id"    : "ss_2",
+                    "name"  : "Tình hình chi tiết tiếp nhận SR"
+                  },
+                  {
+                    "id"    : "ss_3",
+                    "name"  : "Thời gian xử lý SR của từng cá nhân"
+                  },
+                  {
+                    "id"    : "ss_4",
+                    "name"  : "Tình hình từng bước xử lý SR"
+                  },
+                  {
+                    "id"    : "ss_5",
+                    "name"  : "Tình hình tổng hợp của từng người xử lý SR"
+                  },
+                  {
+                    "id"    : "ss_6",
+                    "name"  : "Tình hình xử lý theo từng lý do"
+                  },
+                  {
+                    "id"    : "ss_7",
+                    "name"  : "Tình hình giải quyết SR của đối tác"
+                  },
+                  {
+                    "id"    : "ss_8",
+                    "name"  : "Tình hình giải quyết SR theo từng đơn vị(Mới)"
+                  },
+                  {
+                    "id"    : "ss_9",
+                    "name"  : "Tình hình xử lý SR theo từng sản phẩm(Tỉ lệ)"
+                  },
+                  {
+                    "id"    : "ss_10",
+                    "name"  : "Tình hình giải quyết SR theo từng đơn vị"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "o_3",
+            "name"  : "OB Mgt",
+            "items" : [
+              {
+                "id"    : "om_1",
+                "name"  : "OB Processing",
+                "items" : [
+                  {
+                    "id"    : "op_1",
+                    "name"  : "Lấy dữ liệu OB"
+                  },
+                  {
+                    "id"    : "op_2",
+                    "name"  : "Phân bổ nhân viên xử lý"
+                  },
+                  {
+                    "id"    : "op_3",
+                    "name"  : "Xử lý OB"
+                  },
+                  {
+                    "id"    : "op_4",
+                    "name"  : "Xử lý bắt buộc"
+                  },
+                  {
+                    "id"    : "op_5",
+                    "name"  : "Phân bổ nhân vien xử lý OB đặt trước"
+                  }
+                ]
+              },
+              {
+                "id"    : "om_2",
+                "name"  : "OB Status",
+                "items" : [
+                  {
+                    "id"    : "os_1",
+                    "name"  : "Tình hình xử lý OB"
+                  },
+                  {
+                    "id"    : "os_2",
+                    "name"  : "Tình hình xử lý OB của khách hàng được chỉ định"
+                  },
+                  {
+                    "id"    : "os_3",
+                    "name"  : "Tình hình thống kê xử lý OB"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "o_4",
+            "name"  : "Customer Mgt",
+             "items" : [
+              {
+                "id"    : "cm_1",
+                "name"  : "Basic Customer Info",
+                "items" : [
+                  {
+                    "id"    : "bci_1",
+                    "name"  : "Đăng ký thông tin cơ bản của khách hàng"
+                  },
+                  {
+                    "id"    : "bci_2",
+                    "name"  : "Đăng ký thông tin chi tiết của khách hàng"
+                  },
+                  {
+                    "id"    : "bci_3",
+                    "name"  : "Kiểm tra thông tin khách hàng"
+                  },
+                  {
+                    "id"    : "bci_4",
+                    "name"  : "Quản lý thẻ/Ngân hàng của từng khách hàng"
+                  }
+                ]
+              },
+              {
+                "id"    : "cm_2",
+                "name"  : "VIP Card",
+                "items" : [
+                  {
+                    "id"    : "vc_1",
+                    "name"  : "Tạo dữ liệu khách hàng VIP"
+                  },
+                  {
+                    "id"    : "vc_2",
+                    "name"  : "Đăng ký khách hàng VIP"
+                  },
+                  {
+                    "id"    : "vc_3",
+                    "name"  : "Đăng nhập phát hành thẻ VIP"
+                  },
+                  {
+                    "id"    : "vc_4",
+                    "name"  : "Tình trạng phát hành thẻ VIP"
+                  },
+                  {
+                    "id"    : "vc_5",
+                    "name"  : "Tình trạng đặt hàng của khách VIP"
+                  },
+                  {
+                    "id"    : "vc_6",
+                    "name"  : "Đăng ký khuyễn mãi khách hàng VIP"
+                  }
+                ]
+              },
+              {
+                "id"    : "cm_3",
+                "name"  : "SMS",
+                "items" : [
+                  {
+                    "id"    : "sms_1",
+                    "name"  : "Gửi tin nhắn về sản phẩm mới"
+                  },
+                  {
+                    "id"    : "sms_2",
+                    "name"  : "Gửi tin nhắn"
+                  },
+                  {
+                    "id"    : "sms_3",
+                    "name"  : "Hủy gửi tin nhắn"
+                  },
+                  {
+                    "id"    : "sms_4",
+                    "name"  : "Số lượng tin nhắn được gửi"
+                  },
+                  {
+                    "id"    : "sms_5",
+                    "name"  : "Tình hình SMS đặt hàng của từng khách hàng"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "o_5",
+            "name"  : "Voucher Mgt",
+            "items" : [
+              {
+                "id"    : "vm_1",
+                "name"  : "Voucher Processing",
+                "items" : [
+                  {
+                    "id"    : "vp_1",
+                    "name"  : "Tiếp nhận đăng ký đặt hàng bằng phiếu mua hàng"
+                  },
+                  {
+                    "id"    : "vp_2",
+                    "name"  : "Hủy bỏ đặt hàng phiếu mua hàng tích lũy điểm"
+                  },
+                  {
+                    "id"    : "vp_3",
+                    "name"  : "Kiểm tra việc đặt phiếu mua hàng tích lũy điểm"
+                  },
+                  {
+                    "id"    : "vp_4",
+                    "name"  : "Tình hình hủy bỏ phiếu mua hàng tích lũy điểm"
+                  }
+                ]
+              },
+              {
+                "id"    : "vm_2",
+                "name"  : "Voucher Status",
+                "items" : [
+                  {
+                    "id"    : "vs_1",
+                    "name"  : "Tình hình tiếp nhận đặt hàng phiếu mua hàng"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "o_6",
+            "name"  : "B2B Order Mgt",
+            "items" : [
+              {
+                "id"    : "bom_1",
+                "name"  : "B2B Order Processing",
+                "items" : [
+                  {
+                    "id"    : "bop_1",
+                    "name"  : "B2B-Đăng ký hợp đồng"
+                  },
+                  {
+                    "id"    : "bop_2",
+                    "name"  : "B2B-Phê duyệt hợp đồng"
+                  },
+                  {
+                    "id"    : "bop_3",
+                    "name"  : "B2B-In hợp đồng"
+                  },
+                  {
+                    "id"    : "bop_4",
+                    "name"  : "B2B-Tiếp nhận đặt hàng"
+                  }
+                ]
+              },
+              {
+                "id"    : "bom_2",
+                "name"  : "B2B Order Status",
+                "items" : [
+                  {
+                    "id"    : "bos_1",
+                    "name"  : "B2B-Tình hình đặt hàng"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "o_7",
+            "name"  : "ScreenPop Mgt",
+            "items" : [
+              {
+                "id"    : "sm_1",
+                "name"  : "Agent ID Mgt",
+                "items" : [
+                  {
+                    "id"    : "aim_1",
+                    "name"  : "Perinfo Management (Only employee of CC Dept)"
+                  }
+                ]
+              },
+              {
+                "id"    : "sm_2",
+                "name"  : "Extension Mgt",
+                "items" : [
+                  {
+                    "id"    : "em_1",
+                    "name"  : "Extension Management"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id"    : 3,
+        "name"  : "synthetic",
+        "label" : "Tổng hợp"
+      },
+      {
+        "id"    : 4,
+        "name"  : "account",
+        "label" : "Kế toán"
+      },
+      {
+        "id"    : 5,
+        "name"  : "media",
+        "label" : "Truyền thông",
+        "items" : [
+          {
+            "id"    : "m_1",
+            "name"  : "TV section",
+            "items" : [
+              {
+                "id"    : "tvs_1",
+                "name"  : "Basic Info",
+                "items" : [
+                  {
+                    "id"    : "bi_1",
+                    "name"  : "Đăng kí chương trình"
+                  },
+                  {
+                    "id"    : "bi_2",
+                    "name"  : "Đăng ký khách mời đến dự chương trình"
+                  },
+                  {
+                    "id"    : "bi_3",
+                    "name"  : "Đăng ký băng ghi hình"
+                  }
+                ]
+              },
+              {
+                "id"    : "tvs_2",
+                "name"  : "Program Lineup",
+                "items" : [
+                  {
+                    "id"    : "pl_1",
+                    "name"  : "Đăng kí chương trình theo lịch phát sóng"
+                  },
+                  {
+                    "id"    : "pl_2",
+                    "name"  : "Quản lý nhân viên theo từng chương trình"
+                  },
+                  {
+                    "id"    : "pl_3",
+                    "name"  : "Đăng ký sản phẩm theo chương trình phát sóng"
+                  },
+                  {
+                    "id"    : "pl_4",
+                    "name"  : "Thay đổi thời gian phát sóng"
+                  },
+                  {
+                    "id"    : "pl_5",
+                    "name"  : "Đăng ký bố trí khách mời tham gia chương trình"
+                  }
+                ]
+              },
+              {
+                "id"    : "tvs_3",
+                "name"  : "On-Air",
+                "items" : [
+                  {
+                    "id"    : "oa_1",
+                    "name"  : "Đăng ký phát sóng trực tiếp"
+                  },
+                  {
+                    "id"    : "oa_2",
+                    "name"  : "Tình hình tiến hành phát sóng"
+                  },
+                  {
+                    "id"    : "oa_3",
+                    "name"  : "Tình hình phát sóng hiện tại"
+                  },
+                  {
+                    "id"    : "oa_3",
+                    "name"  : "Số lương bán trong chương trình Live"
+                  }
+                ]
+              },
+              {
+                "id"    : "tvs_4",
+                "name"  : "Result",
+                "items" : [
+                  {
+                    "id"    : "r_1",
+                    "name"  : "Nhận xét sau khi phát sóng"
+                  },
+                  {
+                    "id"    : "r_2",
+                    "name"  : "Đăng ký theo dõi chương trình phát sóng"
+                  }
+                ]
+              },
+              {
+                "id"    : "tvs_5",
+                "name"  : "Lineup Inquiry",
+                "items" : [
+                  {
+                    "id"    : "li_1",
+                    "name"  : "Kiểm tra lịch phát sóng theo tuần"
+                  },
+                  {
+                    "id"    : "li_2",
+                    "name"  : "Tình hình phát sóng sản phẩm"
+                  },
+                  {
+                    "id"    : "li_3",
+                    "name"  : "Tình hình băng ghi hình theo từng sản phẩm"
+                  },
+                  {
+                    "id"    : "li_3",
+                    "name"  : "Kiểm tra kết quả phát sóng theo ngày"
+                  },
+                  {
+                    "id"    : "li_3",
+                    "name"  : "Tình hình phát sóng của từng ngày phát sóng"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "m_2",
+            "name"  : "CATALOG",
+            "items" : [
+              {
+                "id"    : "c_1",
+                "name"  : "CATALOG Production",
+                "items" : [
+                  {
+                    "id"    : "cp_1",
+                    "name"  : "Đăng ký sản phẩm CATALOG"
+                  }
+                ]
+              },
+              {
+                "id"    : "c_2",
+                "name"  : "CATALOG Mgt",
+                "items" : [
+                  {
+                    "id"    : "cm_1",
+                    "name"  : "Lên danh sách khách hàng nhận CATALOG"
+                  },
+                  {
+                    "id"    : "cm_2",
+                    "name"  : "Tạo file CATALOG"
+                  },
+                  {
+                    "id"    : "cm_3",
+                    "name"  : "Giải quyết gửi lại CATALOG"
+                  },
+                  {
+                    "id"    : "cm_4",
+                    "name"  : "Đăng ký gửi lại CATALOG"
+                  }
+                ]
+              },
+              {
+                "id"    : "c_3",
+                "name"  : "CATALOG Status",
+                "items" : [
+                  {
+                    "id"    : "cs_1",
+                    "name"  : "Kiểm tra sản phẩm CATALOG"
+                  },
+                  {
+                    "id"    : "cs_2",
+                    "name"  : "Kiểm tra khách hàng được nhận CATALOG"
+                  },
+                  {
+                    "id"    : "cs_3",
+                    "name"  : "Tỷ lệ mua hàng qua CATALOG"
+                  },
+                  {
+                    "id"    : "cs_4",
+                    "name"  : "Tình hình mua hàng qua CATALOG"
+                  },
+                  {
+                    "id"    : "cs_5",
+                    "name"  : "Tỷ lệ phản ánh theo từng phu vực CATALOG"
+                  },
+                  {
+                    "id"    : "cs_6",
+                    "name"  : "Tỷ lệ phản hồi theo số lần gửi CATALOG"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "m_3",
+            "name"  : "INTERNET",
+            "items" : [
+              {
+                "id"    : "i_1",
+                "name"  : "WebSurvey",
+                "items" : [
+                  {
+                    "id"    : "w_1",
+                    "name"  : "Đăng ký WebSurvey"
+                  },
+                  {
+                    "id"    : "w_2",
+                    "name"  : "Đăng ký các vấn đề khảo sát"
+                  },
+                  {
+                    "id"    : "w_3",
+                    "name"  : "Chọn vấn đề khảo sát"
+                  },
+                  {
+                    "id"    : "w_4",
+                    "name"  : "Xem kết quả khảo sát"
+                  },
+                  {
+                    "id"    : "w_5",
+                    "name"  : "Xem hàng loạt kết quả khảo sát"
+                  }
+                ]
+              },
+              {
+                "id"    : "i_2",
+                "name"  : "Pre Order Mgt",
+                "items" : [
+                  {
+                    "id"    : "pom_1",
+                    "name"  : "Đăng ký số lượng có thể booking của sp internet"
+                  },
+                  {
+                    "id"    : "pom_2",
+                    "name"  : "Tình hình đặt hàng Pre-Order"
+                  }
+                ]
+              },
+              {
+                "id"    : "i_3",
+                "name"  : "B2E Company Mgt",
+                "items" : [
+                  {
+                    "id"    : "bcm_1",
+                    "name"  : "Đăng ký thông tin công ty B2E"
+                  },
+                  {
+                    "id"    : "bcm_2",
+                    "name"  : "Đăng ký thông tin nhân viên B2E"
+                  },
+                  {
+                    "id"    : "bcm_3",
+                    "name"  : "Tình hình doanh thu kênh B2E"
+                  }
+                ]
+              },
+              {
+                "id"    : "i_4",
+                "name"  : "MRO Company Mgt",
+                "items" : [
+                  {
+                    "id"    : "mcm_1",
+                    "name"  : "Đăng ký thông tin công ty MRO"
+                  },
+                  {
+                    "id"    : "mcm_2",
+                    "name"  : "Đăng ký thông tin nhân viên MRO"
+                  },
+                  {
+                    "id"    : "mcm_3",
+                    "name"  : "Tình hình doanh thu kênh MRO"
+                  },
+                  {
+                    "id"    : "mcm_4",
+                    "name"  : "Tình hình giao hàng phân theo sản phẩm MRO"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id"    : 6,
+        "name"  : "analysis",
+        "label" : "Phân tích",
+        "items" : [
+          {
+            "id"    : "a_1",
+            "name"  : "Master Data",
+            "items" : [
+              {
+                "id"    : "md_1",
+                "name"  : "BusinessPlan",
+                "items" : [
+                  {
+                    "id"    : "bp_1",
+                    "name"  : "Đăng kí kết quả kế hoạch kinh doanh"
+                  }
+                ]
+              },
+              {
+                "id"    : "md_2",
+                "name"  : "Master Data",
+                "items" : [
+                  {
+                    "id"    : "md_1",
+                    "name"  : "Đăng kí thông tin doanh thu thực tế"
+                  }
+                ]
+              },
+              {
+                "id"    : "md_3",
+                "name"  : "Marginal Profit Calculate",
+                "items" : [
+                  {
+                    "id"    : "mpc_1",
+                    "name"  : "Đăng ký thông tin chi phí ước tính"
+                  },
+                  {
+                    "id"    : "mpc_2",
+                    "name"  : "Đăng ký thông tin chi phí thực tế"
+                  },
+                  {
+                    "id"    : "mpc_3",
+                    "name"  : "Tạo dữ liệu marginal profit"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "a_2",
+            "name"  : "Actual Result Anal",
+            "items" : [
+              {
+                "id"    : "ara_1",
+                "name"  : "Daily Anal",
+                "items" : [
+                  {
+                    "id"    : "da_1",
+                    "name"  : "Tình hình tiếp nhận từng loại đơn đặt hàng(Lịch)"
+                  },
+                  {
+                    "id"    : "da_2",
+                    "name"  : "Doanh thu theo kênh bán hàng(Lịch)"
+                  },
+                  {
+                    "id"    : "da_3",
+                    "name"  : "So sánh tình hình doanh thu của mỗi tháng"
+                  },
+                  {
+                    "id"    : "da_4",
+                    "name"  : "Tình hình thực tế theo kế hoạch kinh doanh(Mới)"
+                  },
+                   {
+                    "id"    : "da_4",
+                    "name"  : "GUINNESS"
+                  }
+                ]
+              },
+              {
+                "id"    : "ara_2",
+                "name"  : "Sales Anal By Period",
+                "items" : [
+                  {
+                    "id"    : "sap_1",
+                    "name"  : "Kết quả bán mỗi ngày của từng kênh bán hàng"
+                  },
+                  {
+                    "id"    : "sap_2",
+                    "name"  : "Kiểm tra kết quả bán hàng mỗi ngày của từng kênh bán hàng"
+                  },
+                  {
+                    "id"    : "sap_3",
+                    "name"  : "Tình hình đặt hàng/xuất kho theo kênh bán hàng"
+                  },
+                  {
+                    "id"    : "sap_4",
+                    "name"  : "Tình hình đặt hàng/xuất kho theo sản phẩm và kênh bán"
+                  },
+                  {
+                    "id"    : "sap_5",
+                    "name"  : "Tình hình đặt hàng/xuất kho thực tế của từng đơn vị"
+                  },
+                  {
+                    "id"    : "sap_6",
+                    "name"  : "Tình hình đặt hàng/trả lại thực tế của từng đơn vị"
+                  },
+                  {
+                    "id"    : "sap_7",
+                    "name"  : "Tình hình doanh thu mua/bán theo từng đơn vị"
+                  },
+                  {
+                    "id"    : "sap_8",
+                    "name"  : "Bảng tổng hợp ngày đặt hàng"
+                  }
+                ]
+              },
+              {
+                "id"    : "ara_3",
+                "name"  : "Item Wise Anal",
+                "items" : [
+                  {
+                    "id"    : "iwa_1",
+                    "name"  : "Tình hình Best/Worst của sản phẩm"
+                  },
+                  {
+                    "id"    : "iwa_2",
+                    "name"  : "Tình hình thực tế theo từng nhãn hiệu"
+                  },
+                  {
+                    "id"    : "iwa_3",
+                    "name"  : "Tình hình đặt hàng theo tháng"
+                  },
+                  {
+                    "id"    : "iwa_4",
+                    "name"  : "Tình hình đặt hàng theo ngày/giờ của sản phẩm"
+                  }
+                ]
+              },
+              {
+                "id"    : "ara_4",
+                "name"  : "Marginal Anal",
+                "items" : [
+                  {
+                    "id"    : "ma_1",
+                    "name"  : "Tình hình lợi nhuận đặt hàng/xuất kho theo kênh bán"
+                  },
+                  {
+                    "id"    : "ma_2",
+                    "name"  : "Tình hình lợi nhuận đặt hàng/xuất kho thực tế theo từng đơn vị"
+                  }
+                ]
+              },
+              {
+                "id"    : "ara_5",
+                "name"  : "Time Anal",
+                "items" : [
+                  {
+                    "id"    : "ta_1",
+                    "name"  : "Phân tích khách hàng theo các ngày trong tuần"
+                  }
+                ]
+              },
+              {
+                "id"    : "ara_6",
+                "name"  : "Vendor Wise Anal",
+                "items" : [
+                  {
+                    "id"    : "vwa_1",
+                    "name"  : "Tình hình bán hàng theo tháng của từng nhà cung cấp"
+                  },
+                  {
+                    "id"    : "vwa_2",
+                    "name"  : "Tình hình thanh toán theo sản phẩm/nhà cung cấp"
+                  },
+                  {
+                    "id"    : "vwa_3",
+                    "name"  : "Tình hình chi tiết bán hàng của từng nhà cung cấp"
+                  },
+                  {
+                    "id"    : "vwa_4",
+                    "name"  : "Tình hình chi tiết bán hàng của từng nhà cung cấp_KM"
+                  }
+                ]
+              },
+              {
+                "id"    : "ara_7",
+                "name"  : "Complaint Anal",
+                "items" : [
+                  {
+                    "id"    : "ca_1",
+                    "name"  : "Lý do hủy đơn đặt hàng/trả lại hàng/đổi hàng"
+                  },
+                  {
+                    "id"    : "ca_2",
+                    "name"  : "Tình hình khiếu nại của khách hàng đối với từng sản phẩm"
+                  }
+                ]
+              },
+              {
+                "id"    : "ara_8",
+                "name"  : "Logistics Anal",
+                "items" : [
+                  {
+                    "id"    : "la_1",
+                    "name"  : "Tổng số sản phẩm/số lượng vận chuyển"
+                  },
+                  {
+                    "id"    : "la_2",
+                    "name"  : "Tổng số theo thời gian xuất kho"
+                  },
+                  {
+                    "id"    : "la_3",
+                    "name"  : "Tổng số theo thời gian thu hàng"
+                  },
+                  {
+                    "id"    : "la_4",
+                    "name"  : "Tổng số lượng xuất kho hàng ngày"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "a_3",
+            "name"  : "Media Anal",
+            "items" : [
+              {
+                "id"    : "ma_1",
+                "name"  : "TV",
+                "items" : [
+                  {
+                    "id"    : "tv_1",
+                    "name"  : "Tình hình phát sóng theo tổ chức"
+                  },
+                  {
+                    "id"    : "tv_2",
+                    "name"  : "Tình hình thực tế của từng chương trình"
+                  },
+                  {
+                    "id"    : "tv_3",
+                    "name"  : "Tình hình hủy hàng khi đang phát sóng"
+                  },
+                  {
+                    "id"    : "tv_4",
+                    "name"  : "Tình hình đặt hàng của từng chương trình"
+                  },
+                  {
+                    "id"    : "tv_5",
+                    "name"  : "Tình hình phân bố khách hàng theo sản phẩm của từng ngày phát sóng"
+                  },
+                  {
+                    "id"    : "tv_6",
+                    "name"  : "Tình hình phát sóng theo nhà cung cấp"
+                  }
+                ]
+              },
+              {
+                "id"    : "ma_2",
+                "name"  : "CATALOG",
+                "items" : [
+                  {
+                    "id"    : "c_1",
+                    "name"  : "Phân tích đơn đặt hàng của khách hàng gửi Catalogue"
+                  },
+                  {
+                    "id"    : "c_2",
+                    "name"  : "Phân tích tình hình đối tượng gửi Catalogue"
+                  },
+                  {
+                    "id"    : "c_3",
+                    "name"  : "Danh mục khách đặt hàng sản phẩm Catalogue"
+                  },
+                  {
+                    "id"    : "c_4",
+                    "name"  : "Kiểm tra sản phẩm được đặt qua Catalogue"
+                  },
+                  {
+                    "id"    : "c_5",
+                    "name"  : "Tỉ lệ đáp ứng tái phát hành Catalogue"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id"    : "a_4",
+            "name"  : "Customer Anal",
+            "items" : [
+              {
+                "id"    : "ca_1",
+                "name"  : "Customer Distribution",
+                "items" : [
+                  {
+                    "id"    : "cd_1",
+                    "name"  : "Tình hình đăng ký khách hàng theo khu vực"
+                  },
+                  {
+                    "id"    : "cd_2",
+                    "name"  : "Phân bố theo giới tính/phân loại/khu vực"
+                  },
+                  {
+                    "id"    : "cd_3",
+                    "name"  : "Phân bố khách hàng theo khu vực/độ tuổi trung bình"
+                  },
+                  {
+                    "id"    : "cd_4",
+                    "name"  : "Phân bố khách hàng theo độ tuổi/tiêu chuẩn đăng ký/giới tính"
+                  }
+                ]
+              },
+              {
+                "id"    : "ca_2",
+                "name"  : "Reginal Anal",
+                "items" : [
+                  {
+                    "id"    : "ra_1",
+                    "name"  : "Tình hình thực tế đặt hàng theo khu vực"
+                  },
+                  {
+                    "id"    : "ra_2",
+                    "name"  : "Số lượng đặt hàng/xuất kho theo từng khu vực"
+                  },
+                  {
+                    "id"    : "ra_3",
+                    "name"  : "Tình hình tiếp nhận đặt hàng theo sản phẩm/khu vực"
+                  }
+                ]
+              },
+              {
+                "id"    : "ca_3",
+                "name"  : "Class Anal",
+                "items" : [
+                  {
+                    "id"    : "ca_1",
+                    "name"  : "Tình hình đặt hàng/xuất kho theo phân loại khách hàng"
+                  }
+                ]
+              },
+              {
+                "id"    : "ca_4",
+                "name"  : "Customer Period Performance Distribution",
+                "items" : [
+                  {
+                    "id"    : "cpd_1",
+                    "name"  : "Phân bố khách hàng theo độ tuổi/tỉ lệ/giới tính"
+                  }
+                ]
+              },
+              {
+                "id"    : "ca_5",
+                "name"  : "Customer Performance Distribution By Month",
+                "items" : [
+                  {
+                    "id"    : "cpdm_1",
+                    "name"  : "Tình hình đặt hàng theo khu vực của từng tháng"
+                  },
+                  {
+                    "id"    : "cpdm_2",
+                    "name"  : "Kết quả Best/Worst sản phẩm của khách hàng VIP"
+                  },
+                  {
+                    "id"    : "cpdm_3",
+                    "name"  : "Doanh thu theo giá tiền đặt hàng từng tháng"
+                  }
+                ]
+              },
+              {
+                "id"    : "ca_6",
+                "name"  : "Customer Ranking Performance Analysis",
+                "items" : [
+                  {
+                    "id"    : "crpa_1",
+                    "name"  : "Tình hình thực tế của khách hàng thân thiết"
+                  },
+                  {
+                    "id"    : "crpa_2",
+                    "name"  : "Tình hình số lượng hiện tại của khách hàng thân thiết"
+                  },
+                  {
+                    "id"    : "crpa_3",
+                    "name"  : "Tình hình sinh nhật khách hàng"
+                  },
+                  {
+                    "id"    : "crpa_4",
+                    "name"  : "Tình hình hết hạn tích lũy của khách hàng"
+                  },
+                  {
+                    "id"    : "crpa_5",
+                    "name"  : "Tình hình email khách hàng"
+                  }
+                ]
+              },
+              {
+                "id"    : "ca_7",
+                "name"  : "Customer Anal With Repeated Order",
+                "items" : [
+                  {
+                    "id"    : "caro_1",
+                    "name"  : "Tình hình số lần đặt hàng của khách hàng đặt nhiều lần"
+                  },
+                  {
+                    "id"    : "caro_2",
+                    "name"  : "Phân bố tình hình đặt hàng theo độ tuổi/giới tính"
+                  },
+                  {
+                    "id"    : "caro_3",
+                    "name"  : "Tình hình khách hàng đặt hàng lại trong tháng"
+                  }
+                ]
+              },
+              {
+                "id"    : "ca_8",
+                "name"  : "Monthly Customer Data",
+                "items" : [
+                  {
+                    "id"    : "mcd_1",
+                    "name"  : "Monthly customer data"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id"    : 7,
+        "name"  : "master",
+        "label" : "Quản lý Master",
+         "items" : [
+          {
+            "id"    : "m_1",
+            "name"  : "Basic Information",
+            "items" : [
+              {
+                "id"    : "mi_1",
+                "name"  : "Basic Code",
+                "items" : [
+                  {
+                    "id"    : "bc_1",
+                    "name"  : "Quản lý kênh bán hàng"
+                  },
+                  {
+                    "id"    : "bc_2",
+                    "name"  : "Quản lý mã số chung"
+                  },
+                  {
+                    "id"    : "bc_3",
+                    "name"  : "Quản lý số bưu điện"
+                  },
+                  {
+                    "id"    : "bc_4",
+                    "name"  : "Quản lý khu vực được phân tích"
+                  }
+                ]
+              },
+              {
+                "id"    : "bi_2",
+                "name"  : "Basic Organization Info",
+                "items" : [
+                  {
+                    "id"    : "boi_1",
+                    "name"  : "Đăng ký thông tin của công ty"
+                  },
+                  {
+                    "id"    : "boi_2",
+                    "name"  : "Quản lý các bộ phận"
+                  },
+                  {
+                    "id"    : "boi_3",
+                    "name"  : "Quản lý nhân viên"
+                  },
+                  {
+                    "id"    : "boi_4",
+                    "name"  : "Quản lý tổ chức theo tháng"
+                  },
+                  {
+                    "id"    : "boi_5",
+                    "name"  : "Quản lý nhân viên của các công ty trực thuộc"
+                  },
+                  {
+                    "id"    : "boi_6",
+                    "name"  : "Quản lý mã số MD"
+                  },
+                  {
+                    "id"    : "boi_7",
+                    "name"  : "Quản lý các nhóm tiến hành"
+                  },
+                  {
+                    "id"    : "boi_8",
+                    "name"  : "Tình hình nhân viên"
+                  }
+                ]
+              },
+              {
+                "id"    : "bi_3",
+                "name"  : "Privilege Mgt",
+                "items" : [
+                  {
+                    "id"    : "pm_1",
+                    "name"  : "Quản lý nhóm"
+                  },
+                  {
+                    "id"    : "pm_2",
+                    "name"  : "Quản lý thông tin nhóm"
+                  },
+                  {
+                    "id"    : "pm_3",
+                    "name"  : "Kiểm tra người sử dụng"
+                  },
+                  {
+                    "id"    : "pm_4",
+                    "name"  : "Quản lý nhóm - người sử dụng"
+                  },
+                  {
+                    "id"    : "pm_5",
+                    "name"  : "Quản lý menu"
+                  },
+                  {
+                    "id"    : "pm_6",
+                    "name"  : "Quản lý đối tượng cần trợ giúp"
+                  }
+                ]
+              },
+              {
+                "id"    : "bi_4",
+                "name"  : "System Mgt",
+                "items" : [
+                  {
+                    "id"    : "sm_1",
+                    "name"  : "Quản lý các thông báo"
+                  },
+                  {
+                    "id"    : "sm_2",
+                    "name"  : "Quản lý nhóm từ trợ giúp"
+                  },
+                  {
+                    "id"    : "sm_3",
+                    "name"  : "Quản lý tin nhắn"
+                  },
+                  {
+                    "id"    : "sm_4",
+                    "name"  : "Quản lý log theo event"
+                  },
+                  {
+                    "id"    : "sm_5",
+                    "name"  : "Kiểm tra log theo event"
+                  },
+                  {
+                    "id"    : "sm_6",
+                    "name"  : "Từ điển chuyên ngành"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

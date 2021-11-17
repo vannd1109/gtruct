@@ -1,11 +1,11 @@
 .tree-view-com {
   background-color: #e9e9e9;
-    height: 100vh;
-    position: relative;
-    bottom: 0;
-    overflow: auto;
-    top: 0;
-    padding-top: 20px;
+  height: 100vh;
+  position: relative;
+  bottom: 0;
+  overflow: auto;
+  top: 60px;
+  padding-top: 20px;
 }
 
 .tree-view-com-icon {
@@ -50,4 +50,18 @@
 .folder {
   color: #efc426;
   margin-right: 5px;
+}
+
+.close__menu {
+  border: 1px solid black;
+  width: 30px !important;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 12px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 13;
 }

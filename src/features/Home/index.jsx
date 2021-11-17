@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Menu from "./components/Menu";
 import Main from "./components/Main";
 
-function Synthetic(props) {
+function Home(props) {
   return (
     <Container fluid>
       <Row>
@@ -15,4 +15,4 @@ function Synthetic(props) {
   );
 }
 
-export default Synthetic;
+export default Home;
