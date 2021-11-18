@@ -1,135 +1,102 @@
-import { useState } from "react";
-import "./styles.scss";
-import { Tooltip, Typography } from "@mui/material";
 import {
+  Add,
+  Dehaze,
   Description,
   Folder,
-  Add,
-  HorizontalRule,
   FolderOpen,
-  Dehaze,
+  HorizontalRule,
 } from "@mui/icons-material";
+import { Tooltip, Typography } from "@mui/material";
+import { useState } from "react";
 import { Col } from "react-bootstrap";
+import "./styles.scss";
 
 function Menu(props) {
   // open close menu
   const [closeMenu, setCloseMenu] = useState(false);
 
   // Item Mgt
-  const [openItem, setOpenItem] = useState(false);
-  const [closeItem, setCloseItem] = useState(true);
+  const [itemMgt, setItemMgt] = useState(false);
 
-  const [openItemBasic, setOpenItemBasic] = useState(false);
-  const [closeItemBasic, setCloseItemBasic] = useState(true);
+  const [basicItemInfo, setBasicItemInfo] = useState(false);
 
-  const [openItemInfo, setOpenItemInfo] = useState(false);
-  const [closeItemInfo, setCloseItemInfo] = useState(true);
+  const [infoResgistration, setInfoResgistration] = useState(false);
 
-  const [openItemPacking, setOpenItemPacking] = useState(false);
-  const [closeItemPacking, setCloseItemPacking] = useState(true);
-
-  const [openItemStatus, setOpenItemStatus] = useState(false);
-  const [closeItemStatus, setCloseItemStatus] = useState(true);
-
-  // Promotion
-
-  const [openPromotion, setOpenPromotion] = useState(false);
-  const [closePromotion, setClosePromotion] = useState(true);
-
-  const [openPromotionRegistation, setOpenPromotionRegistation] =
+  const [packingInfoResgistration, setPackingInfoResgistration] =
     useState(false);
-  const [closePromotionRegistation, setClosePromotionRegistation] =
-    useState(true);
 
-  const [openPromotionStatus, setOpenPromotionStatus] = useState(false);
-  const [closePromotionStatus, setClosePromotionStatus] = useState(true);
+  const [itemStatus, setItemStatus] = useState(false);
+  // Promotion
+  const [promotion, setPromotion] = useState(false);
 
-  const [openPromotionResult, setOpenPromotionResult] = useState(false);
-  const [closePromotionResult, setClosePromotionResult] = useState(true);
+  const [promotionRegistation, setPromotionRegistation] = useState(false);
+
+  const [promotionStatus, setPromotionStatus] = useState(false);
+
+  const [promotionResult, setPromotionResult] = useState(false);
 
   // Event
+  const [event, setEvent] = useState(false);
 
-  const [openEvent, setOpenEvent] = useState(false);
-  const [closeEvent, setCloseEvent] = useState(true);
+  const [eventRuleMgt, setEventRuleMgt] = useState(false);
 
-  const [openEventRule, setOpenEventRule] = useState(false);
-  const [closeEventRule, setCloseEventRule] = useState(true);
+  const [eventRegistration, setEventRegistration] = useState(false);
 
-  const [openEventRegistration, setOpenEventRegistration] = useState(false);
-  const [closeEventRegistration, setCloseEventRegistration] = useState(true);
-
-  const [openEventResult, setOpenEventResult] = useState(false);
-  const [closeEventResult, setCloseEventResult] = useState(true);
+  const [eventResult, setEventResult] = useState(false);
 
   // Item Mgt
-
-  const handleOpenItemMgt = (e) => {
-    setOpenItem(!openItem);
-    setCloseItem(!closeItem);
+  const handleItemMgt = (e) => {
+    setItemMgt(!itemMgt);
   };
 
-  const handleOpenItemBasic = (e) => {
-    setOpenItemBasic(!openItemBasic);
-    setCloseItemBasic(!closeItemBasic);
+  const handleBasicItemInfo = (e) => {
+    setBasicItemInfo(!basicItemInfo);
   };
 
-  const handleOpenItemInfo = (e) => {
-    setOpenItemInfo(!openItemInfo);
-    setCloseItemInfo(!closeItemInfo);
+  const handleInfoResgistration = (e) => {
+    setInfoResgistration(!infoResgistration);
   };
 
-  const handleOpenItemPacking = (e) => {
-    setOpenItemPacking(!openItemPacking);
-    setCloseItemPacking(!closeItemPacking);
+  const handlePackingInfoResgistration = (e) => {
+    setPackingInfoResgistration(!packingInfoResgistration);
   };
 
-  const handleOpenItemStatus = (e) => {
-    setOpenItemStatus(!openItemStatus);
-    setCloseItemStatus(!closeItemStatus);
+  const handleItemStatus = (e) => {
+    setItemStatus(!itemStatus);
   };
 
   // Promotion
-
-  const handleOpenPromotion = (e) => {
-    setOpenPromotion(!openPromotion);
-    setClosePromotion(!closePromotion);
+  const handlePromotion = (e) => {
+    setPromotion(!promotion);
   };
 
-  const handleOpenPromotionRegistration = (e) => {
-    setOpenPromotionRegistation(!openPromotionRegistation);
-    setClosePromotionRegistation(!closePromotionRegistation);
+  const handlePromotionRegistration = (e) => {
+    setPromotionRegistation(!promotionRegistation);
   };
 
-  const handleOpenPromotionStatus = (e) => {
-    setOpenPromotionStatus(!openPromotionStatus);
-    setClosePromotionStatus(!closePromotionStatus);
+  const handlePromotionStatus = (e) => {
+    setPromotionStatus(!promotionStatus);
   };
 
-  const handleOpenPromotionResult = (e) => {
-    setOpenPromotionResult(!openPromotionResult);
-    setClosePromotionResult(!closePromotionResult);
+  const handlePromotionResult = (e) => {
+    setPromotionResult(!promotionResult);
   };
 
   // Event
-
-  const handleOpenEvent = (e) => {
-    setOpenEvent(!openEvent);
-    setCloseEvent(!closeEvent);
+  const handleEvent = (e) => {
+    setEvent(!event);
   };
 
-  const handleOpenEventRule = (e) => {
-    setOpenEventRule(!openEventRule);
-    setCloseEventRule(!closeEventRule);
+  const handleEventRuleMgt = (e) => {
+    setEventRuleMgt(!eventRuleMgt);
   };
 
-  const handleOpenEventRegistration = (e) => {
-    setOpenEventRegistration(!openEventRegistration);
-    setCloseEventRegistration(!closeEventRegistration);
+  const handleEventRegistration = (e) => {
+    setEventRegistration(!eventRegistration);
   };
 
-  const handleOpenEventResult = (e) => {
-    setOpenEventResult(!openEventResult);
-    setCloseEventResult(!closeEventResult);
+  const handleEventResult = (e) => {
+    setEventResult(!eventResult);
   };
 
   const handleCloseMenu = () => {
@@ -159,29 +126,28 @@ function Menu(props) {
             <Dehaze />
           </Tooltip>
         </div>
-
         <ul className="tree-view-parent">
           <li
             className="category__root mb-2"
             data-status="false"
             data-open="false"
           >
-            <Typography onClick={handleOpenItemMgt}>
-              <Add fontSize="small" hidden={openItem} />
-              <HorizontalRule fontSize="small" hidden={closeItem} />
-              <Folder className="folder" hidden={openItem} />
-              <FolderOpen className="folder" hidden={closeItem} /> Item Mgt
+            <Typography onClick={handleItemMgt}>
+              <Add fontSize="small" hidden={itemMgt} />
+              <HorizontalRule fontSize="small" hidden={!itemMgt} />
+              <Folder className="folder" hidden={itemMgt} />
+              <FolderOpen className="folder" hidden={!itemMgt} /> Item Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeItem}>
+            <ul className="tree-view-child" hidden={!itemMgt}>
               <li>
-                <Typography onClick={handleOpenItemBasic}>
-                  <Add fontSize="small" hidden={openItemBasic} />
-                  <HorizontalRule fontSize="small" hidden={closeItemBasic} />
-                  <Folder className="folder" hidden={openItemBasic} />
-                  <FolderOpen className="folder" hidden={closeItemBasic} />
+                <Typography onClick={handleBasicItemInfo}>
+                  <Add fontSize="small" hidden={basicItemInfo} />
+                  <HorizontalRule fontSize="small" hidden={!basicItemInfo} />
+                  <Folder className="folder" hidden={basicItemInfo} />
+                  <FolderOpen className="folder" hidden={!basicItemInfo} />
                   Basic Item Info
                 </Typography>
-                <ul className="tree-view-child" hidden={closeItemBasic}>
+                <ul className="tree-view-child" hidden={!basicItemInfo}>
                   <li>
                     <Typography
                       className="document-title"
@@ -212,14 +178,17 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenItemInfo}>
-                  <Add fontSize="small" hidden={openItemInfo} />
-                  <HorizontalRule fontSize="small" hidden={closeItemInfo} />
-                  <Folder className="folder" hidden={openItemInfo} />
-                  <FolderOpen className="folder" hidden={closeItemInfo} /> Info
-                  Resgistration
+                <Typography onClick={handleInfoResgistration}>
+                  <Add fontSize="small" hidden={infoResgistration} />
+                  <HorizontalRule
+                    fontSize="small"
+                    hidden={!infoResgistration}
+                  />
+                  <Folder className="folder" hidden={infoResgistration} />
+                  <FolderOpen className="folder" hidden={!infoResgistration} />
+                  Info Resgistration
                 </Typography>
-                <ul className="tree-view-child" hidden={closeItemInfo}>
+                <ul className="tree-view-child" hidden={!infoResgistration}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -283,14 +252,26 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenItemPacking}>
-                  <Add fontSize="small" hidden={openItemPacking} />
-                  <HorizontalRule fontSize="small" hidden={closeItemPacking} />
-                  <Folder className="folder" hidden={openItemPacking} />
-                  <FolderOpen className="folder" hidden={closeItemPacking} />
+                <Typography onClick={handlePackingInfoResgistration}>
+                  <Add fontSize="small" hidden={packingInfoResgistration} />
+                  <HorizontalRule
+                    fontSize="small"
+                    hidden={!packingInfoResgistration}
+                  />
+                  <Folder
+                    className="folder"
+                    hidden={packingInfoResgistration}
+                  />
+                  <FolderOpen
+                    className="folder"
+                    hidden={!packingInfoResgistration}
+                  />
                   Packing Info Resgistration
                 </Typography>
-                <ul className="tree-view-child" hidden={closeItemPacking}>
+                <ul
+                  className="tree-view-child"
+                  hidden={!packingInfoResgistration}
+                >
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -300,14 +281,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenItemStatus}>
-                  <Add fontSize="small" hidden={openItemStatus} />
-                  <HorizontalRule fontSize="small" hidden={closeItemStatus} />
-                  <Folder className="folder" hidden={openItemStatus} />
-                  <FolderOpen className="folder" hidden={closeItemStatus} />
+                <Typography onClick={handleItemStatus}>
+                  <Add fontSize="small" hidden={itemStatus} />
+                  <HorizontalRule fontSize="small" hidden={!itemStatus} />
+                  <Folder className="folder" hidden={itemStatus} />
+                  <FolderOpen className="folder" hidden={!itemStatus} />
                   Item Status
                 </Typography>
-                <ul className="tree-view-child" hidden={closeItemStatus}>
+                <ul className="tree-view-child" hidden={!itemStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -336,36 +317,30 @@ function Menu(props) {
               </li>
             </ul>
           </li>
-          <li className="category__root mb-2" data-open="false">
-            <Typography onClick={handleOpenPromotion}>
-              <Add fontSize="small" hidden={openPromotion} />
-              <HorizontalRule fontSize="small" hidden={closePromotion} />
-              <Folder className="folder" hidden={openPromotion} />
-              <FolderOpen className="folder" hidden={closePromotion} />
+          <li className="category__root mb-2">
+            <Typography onClick={handlePromotion}>
+              <Add fontSize="small" hidden={promotion} />
+              <HorizontalRule fontSize="small" hidden={!promotion} />
+              <Folder className="folder" hidden={promotion} />
+              <Folder className="folder" hidden={!promotion} />
               Promotion
             </Typography>
-            <ul className="tree-view-child" hidden={closePromotion}>
+            <ul className="tree-view-child" hidden={!promotion}>
               <li>
-                <Typography onClick={handleOpenPromotionRegistration}>
-                  <Add fontSize="small" hidden={openPromotionRegistation} />
+                <Typography onClick={handlePromotionRegistration}>
+                  <Add fontSize="small" hidden={promotionRegistation} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closePromotionRegistation}
+                    hidden={!promotionRegistation}
                   />
-                  <Folder
-                    className="folder"
-                    hidden={openPromotionRegistation}
-                  />
+                  <Folder className="folder" hidden={promotionRegistation} />
                   <FolderOpen
                     className="folder"
-                    hidden={closePromotionRegistation}
+                    hidden={!promotionRegistation}
                   />
                   Promotion Registration
                 </Typography>
-                <ul
-                  className="tree-view-child"
-                  hidden={closePromotionRegistation}
-                >
+                <ul className="tree-view-child" hidden={!promotionRegistation}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -399,20 +374,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenPromotionStatus}>
-                  <Add fontSize="small" hidden={openPromotionStatus} />
-                  <HorizontalRule
-                    hidden={closePromotionStatus}
-                    fontSize="small"
-                  />
-                  <Folder className="folder" hidden={openPromotionStatus} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closePromotionStatus}
-                  />
+                <Typography onClick={handlePromotionStatus}>
+                  <Add fontSize="small" hidden={promotionStatus} />
+                  <HorizontalRule hidden={!promotionStatus} fontSize="small" />
+                  <Folder className="folder" hidden={promotionStatus} />
+                  <FolderOpen className="folder" hidden={!promotionStatus} />
                   Promotion Status
                 </Typography>
-                <ul className="tree-view-child" hidden={closePromotionStatus}>
+                <ul className="tree-view-child" hidden={!promotionStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -434,20 +403,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenPromotionResult}>
-                  <Add hidden={openPromotionResult} fontSize="small" />
-                  <HorizontalRule
-                    hidden={closePromotionResult}
-                    fontSize="small"
-                  />
-                  <Folder className="folder" hidden={openPromotionResult} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closePromotionResult}
-                  />
+                <Typography onClick={handlePromotionResult}>
+                  <Add hidden={promotionResult} fontSize="small" />
+                  <HorizontalRule hidden={!promotionResult} fontSize="small" />
+                  <Folder className="folder" hidden={promotionResult} />
+                  <FolderOpen className="folder" hidden={!promotionResult} />
                   Promotion Result
                 </Typography>
-                <ul className="tree-view-child" hidden={closePromotionResult}>
+                <ul className="tree-view-child" hidden={!promotionResult}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -465,23 +428,23 @@ function Menu(props) {
               </li>
             </ul>
           </li>
-          <li className="category__root mb-2" data-open="false">
-            <Typography onClick={handleOpenEvent}>
-              <Add hidden={openEvent} fontSize="small" />
-              <HorizontalRule hidden={closeEvent} fontSize="small" />
-              <Folder className="folder" hidden={openEvent} />
-              <FolderOpen className="folder" hidden={closeEvent} /> Event
+          <li className="category__root mb-2">
+            <Typography onClick={handleEvent}>
+              <Add hidden={event} fontSize="small" />
+              <HorizontalRule hidden={!event} fontSize="small" />
+              <Folder className="folder" hidden={event} />
+              <FolderOpen className="folder" hidden={!event} /> Event
             </Typography>
-            <ul className="tree-view-child" hidden={closeEvent}>
+            <ul className="tree-view-child" hidden={!event}>
               <li>
-                <Typography onClick={handleOpenEventRule}>
-                  <Add hidden={openEventRule} fontSize="small" />
-                  <HorizontalRule hidden={closeEventRule} fontSize="small" />
-                  <Folder className="folder" hidden={openEventRule} />
-                  <FolderOpen className="folder" hidden={closeEventRule} />
+                <Typography onClick={handleEventRuleMgt}>
+                  <Add hidden={eventRuleMgt} fontSize="small" />
+                  <HorizontalRule hidden={!eventRuleMgt} fontSize="small" />
+                  <Folder className="folder" hidden={eventRuleMgt} />
+                  <FolderOpen className="folder" hidden={!eventRuleMgt} />
                   Event Rule Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeEventRule}>
+                <ul className="tree-view-child" hidden={!eventRuleMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -491,20 +454,17 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenEventRegistration}>
-                  <Add hidden={openEventRegistration} fontSize="small" />
+                <Typography onClick={handleEventRegistration}>
+                  <Add hidden={eventRegistration} fontSize="small" />
                   <HorizontalRule
-                    hidden={closeEventRegistration}
+                    hidden={!eventRegistration}
                     fontSize="small"
                   />
-                  <Folder className="folder" hidden={openEventRegistration} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeEventRegistration}
-                  />
+                  <Folder className="folder" hidden={eventRegistration} />
+                  <FolderOpen className="folder" hidden={!eventRegistration} />
                   Event Registration
                 </Typography>
-                <ul className="tree-view-child" hidden={closeEventRegistration}>
+                <ul className="tree-view-child" hidden={!eventRegistration}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -526,14 +486,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenEventResult}>
-                  <Add hidden={openEventResult} fontSize="small" />
-                  <HorizontalRule hidden={closeEventResult} fontSize="small" />
-                  <Folder className="folder" hidden={openEventResult} />
-                  <FolderOpen className="folder" hidden={closeEventResult} />
+                <Typography onClick={handleEventResult}>
+                  <Add hidden={eventResult} fontSize="small" />
+                  <HorizontalRule hidden={!eventResult} fontSize="small" />
+                  <Folder className="folder" hidden={eventResult} />
+                  <FolderOpen className="folder" hidden={!eventResult} />
                   Event Result
                 </Typography>
-                <ul className="tree-view-child" hidden={closeEventResult}>
+                <ul className="tree-view-child" hidden={!eventResult}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
