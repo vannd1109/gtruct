@@ -15,254 +15,177 @@ function Menu(props) {
   const [closeMenu, setCloseMenu] = useState(false);
 
   // Master Data
-  const [openMasterData, setOpenMasterData] = useState(false);
-  const [closeMasterData, setCloseMasterData] = useState(true);
+  const [analysisMasterData, setAnalysisMasterData] = useState(false);
 
-  const [openBusinessPlan, setOpenBusinessPlan] = useState(false);
-  const [closeBusinessPlan, setCloseBusinessPlan] = useState(true);
+  const [businessPlan, setBusinessPlan] = useState(false);
 
-  const [openRevenueExpenses, setOpenRevenueExpenses] = useState(false);
-  const [closeRevenueExpenses, setCloseRevenueExpenses] = useState(true);
+  const [masterData, setMasterData] = useState(false);
 
-  const [openMarginalProfitCalculate, setOpenMarginalProfitCalculate] =
-    useState(false);
-  const [closeMarginalProfitCalculate, setCloseMarginalProfitCalculate] =
-    useState(true);
+  const [marginalProfitCalculate, setMarginalProfitCalculate] = useState(false);
 
   // Actual Result Anal
-  const [openActualResultAnal, setOpenActualResultAnal] = useState(false);
-  const [closeActualResultAnal, setCloseActualResultAnal] = useState(true);
+  const [actualResultAnal, setActualResultAnal] = useState(false);
 
-  const [openDailyAnal, setOpenDailyAnal] = useState(false);
-  const [closeDailyAnal, setCloseDailyAnal] = useState(true);
+  const [dailyAnal, setDailyAnal] = useState(false);
 
-  const [openSalesAnalByPeriod, setOpenSalesAnalByPeriod] = useState(false);
-  const [closeSalesAnalByPeriod, setCloseSalesAnalByPeriod] = useState(true);
+  const [salesAnalByPeriod, setSalesAnalByPeriod] = useState(false);
 
-  const [openItemWiseAnal, setOpenItemWiseAnal] = useState(false);
-  const [closeItemWiseAnal, setCloseItemWiseAnal] = useState(true);
+  const [itemWiseAnal, setItemWiseAnal] = useState(false);
 
-  const [openMarginalAnal, setOpenMarginalAnal] = useState(false);
-  const [closeMarginalAnal, setCloseMarginalAnal] = useState(true);
+  const [marginalAnal, setMarginalAnal] = useState(false);
 
-  const [openTimeAnal, setOpenTimeAnal] = useState(false);
-  const [closeTimeAnal, setCloseTimeAnal] = useState(true);
+  const [timeAnal, setTimeAnal] = useState(false);
 
-  const [openVendorWiseAnal, setOpenVendorWiseAnal] = useState(false);
-  const [closeVendorWiseAnal, setCloseVendorWiseAnal] = useState(true);
+  const [vendorWiseAnal, setVendorWiseAnal] = useState(false);
 
-  const [openComplaintAnal, setOpenComplaintAnal] = useState(false);
-  const [closeComplaintAnal, setCloseComplaintAnal] = useState(true);
+  const [complaintAnal, setComplaintAnal] = useState(false);
 
-  const [openLogisticsAnal, setOpenLogisticsAnal] = useState(false);
-  const [closeLogisticsAnal, setCloseLogisticsAnal] = useState(true);
+  const [logisticsAnal, setLogisticsAnal] = useState(false);
 
   // Media Anal
-  const [openMediaAnal, setOpenMediaAnal] = useState(false);
-  const [closeMediaAnal, setCloseMediaAnal] = useState(true);
+  const [mediaAnal, setMediaAnal] = useState(false);
 
-  const [openTV, setOpenTV] = useState(false);
-  const [closeTV, setCloseTV] = useState(true);
+  const [tv, setTV] = useState(false);
 
-  const [openCatalog, setOpenCatalog] = useState(false);
-  const [closeCatalog, setCloseCatalog] = useState(true);
+  const [catalog, setCatalog] = useState(false);
 
   // Customer Anal
-  const [openCustomerAnal, setOpenCustomerAnal] = useState(false);
-  const [closeCustomerAnal, setCloseCustomerAnal] = useState(true);
+  const [customerAnal, setCustomerAnal] = useState(false);
 
-  const [openCustomerDistribution, setOpenCustomerDistribution] =
+  const [customerDistribution, setCustomerDistribution] = useState(false);
+
+  const [reginalAnal, setReginalAnal] = useState(false);
+
+  const [classAnal, setClassAnal] = useState(false);
+
+  const [
+    customerPeriodPerformanceDistribution,
+    setCustomerPeriodPerformanceDistribution,
+  ] = useState(false);
+
+  const [
+    customerPerformanceDistributionByMonth,
+    setCustomerPerformanceDistributionByMonth,
+  ] = useState(false);
+
+  const [
+    customerRankingPerformanceAnalysis,
+    setCustomerRankingPerformanceAnalysis,
+  ] = useState(false);
+
+  const [customerAnalWithRepeatedOrder, setCustomerAnalWithRepeatedOrder] =
     useState(false);
-  const [closeCustomerDistribution, setCloseCustomerDistribution] =
-    useState(true);
 
-  const [openReginalAnal, setOpenReginalAnal] = useState(false);
-  const [closeReginalAnal, setCloseReginalAnal] = useState(true);
-
-  const [openClassAnal, setOpenClassAnal] = useState(false);
-  const [closeClassAnal, setCloseClassAnal] = useState(true);
-
-  const [
-    openCustomerPeriodPerformanceDistribution,
-    setOpenCustomerPeriodPerformanceDistribution,
-  ] = useState(false);
-  const [
-    closeCustomerPeriodPerformanceDistribution,
-    setCloseCustomerPeriodPerformanceDistribution,
-  ] = useState(true);
-
-  const [
-    openCustomerPerformanceDistributionByMonth,
-    setOpenCustomerPerformanceDistributionByMonth,
-  ] = useState(false);
-  const [
-    closeCustomerPerformanceDistributionByMonth,
-    setCloseCustomerPerformanceDistributionByMonth,
-  ] = useState(true);
-
-  const [
-    openCustomerRankingPerformanceAnalysis,
-    setOpenCustomerRankingPerformanceAnalysis,
-  ] = useState(false);
-  const [
-    closeCustomerRankingPerformanceAnalysis,
-    setCloseCustomerRankingPerformanceAnalysis,
-  ] = useState(true);
-
-  const [
-    openCustomerAnalWithRepeatedOrder,
-    setOpenCustomerAnalWithRepeatedOrder,
-  ] = useState(false);
-  const [
-    closeCustomerAnalWithRepeatedOrder,
-    setCloseCustomerAnalWithRepeatedOrder,
-  ] = useState(true);
-
-  const [openMonthlyCustomerData, setOpenMonthlyCustomerData] = useState(false);
-  const [closeMonthlyCustomerData, setCloseMonthlyCustomerData] =
-    useState(true);
+  const [monthlyCustomerData, setMonthlyCustomerData] = useState(false);
 
   // ----------------------------------handle-----------------
 
   // Master Data
-  const handleOpenMasterData = (e) => {
-    setOpenMasterData(!openMasterData);
-    setCloseMasterData(!closeMasterData);
+  const handleAnalysisMasterData = (e) => {
+    setAnalysisMasterData(!analysisMasterData);
   };
 
-  const handleOpenBusinessPlan = (e) => {
-    setOpenBusinessPlan(!openBusinessPlan);
-    setCloseBusinessPlan(!closeBusinessPlan);
+  const handleBusinessPlan = (e) => {
+    setBusinessPlan(!businessPlan);
   };
 
-  const handleOpenRevenueExpenses = (e) => {
-    setOpenRevenueExpenses(!openRevenueExpenses);
-    setCloseRevenueExpenses(!closeRevenueExpenses);
+  const handleMasterData = (e) => {
+    setMasterData(!masterData);
   };
 
-  const handleOpenMarginalProfitCalculate = (e) => {
-    setOpenMarginalProfitCalculate(!openMarginalProfitCalculate);
-    setCloseMarginalProfitCalculate(!closeMarginalProfitCalculate);
+  const handleMarginalProfitCalculate = (e) => {
+    setMarginalProfitCalculate(!marginalProfitCalculate);
   };
 
   // Actual Result Anal
-  const handleOpenActualResultAnal = (e) => {
-    setOpenActualResultAnal(!openActualResultAnal);
-    setCloseActualResultAnal(!closeActualResultAnal);
+  const handleActualResultAnal = (e) => {
+    setActualResultAnal(!actualResultAnal);
   };
 
-  const handleOpenDailyAnal = (e) => {
-    setOpenDailyAnal(!openDailyAnal);
-    setCloseDailyAnal(!closeDailyAnal);
+  const handleDailyAnal = (e) => {
+    setDailyAnal(!dailyAnal);
   };
 
-  const handleOpenSalesAnalByPeriod = (e) => {
-    setOpenSalesAnalByPeriod(!openSalesAnalByPeriod);
-    setCloseSalesAnalByPeriod(!closeSalesAnalByPeriod);
+  const handleSalesAnalByPeriod = (e) => {
+    setSalesAnalByPeriod(!salesAnalByPeriod);
   };
 
-  const handleOpenItemWiseAnal = (e) => {
-    setOpenItemWiseAnal(!openItemWiseAnal);
-    setCloseItemWiseAnal(!closeItemWiseAnal);
+  const handleItemWiseAnal = (e) => {
+    setItemWiseAnal(!itemWiseAnal);
   };
 
-  const handleOpenMarginalAnal = (e) => {
-    setOpenMarginalAnal(!openMarginalAnal);
-    setCloseMarginalAnal(!closeMarginalAnal);
+  const handleMarginalAnal = (e) => {
+    setMarginalAnal(!marginalAnal);
   };
 
-  const handleOpenTimeAnal = (e) => {
-    setOpenTimeAnal(!openTimeAnal);
-    setCloseTimeAnal(!closeTimeAnal);
+  const handleTimeAnal = (e) => {
+    setTimeAnal(!timeAnal);
   };
 
-  const handleOpenVendorWiseAnal = (e) => {
-    setOpenVendorWiseAnal(!openVendorWiseAnal);
-    setCloseVendorWiseAnal(!closeVendorWiseAnal);
+  const handleVendorWiseAnal = (e) => {
+    setVendorWiseAnal(!vendorWiseAnal);
   };
 
-  const handleOpenComplaintAnal = (e) => {
-    setOpenComplaintAnal(!openComplaintAnal);
-    setCloseComplaintAnal(!closeComplaintAnal);
+  const handleComplaintAnal = (e) => {
+    setComplaintAnal(!complaintAnal);
   };
 
-  const handleOpenLogisticsAnal = (e) => {
-    setOpenLogisticsAnal(!openLogisticsAnal);
-    setCloseLogisticsAnal(!closeLogisticsAnal);
+  const handleLogisticsAnal = (e) => {
+    setLogisticsAnal(!logisticsAnal);
   };
 
   // Media Anal
-  const handleOpenMediaAnal = (e) => {
-    setOpenMediaAnal(!openMediaAnal);
-    setCloseMediaAnal(!closeMediaAnal);
+  const handleMediaAnal = (e) => {
+    setMediaAnal(!mediaAnal);
   };
 
-  const handleOpenTV = (e) => {
-    setOpenTV(!openTV);
-    setCloseTV(!closeTV);
+  const handleTV = (e) => {
+    setTV(!tv);
   };
 
-  const handleOpenCatalog = (e) => {
-    setOpenCatalog(!openCatalog);
-    setCloseCatalog(!closeCatalog);
+  const handleCatalog = (e) => {
+    setCatalog(!catalog);
   };
 
   // Customer Anal
-  const handleOpenCustomerAnal = (e) => {
-    setOpenCustomerAnal(!openCustomerAnal);
-    setCloseCustomerAnal(!closeCustomerAnal);
+  const handleCustomerAnal = (e) => {
+    setCustomerAnal(!customerAnal);
   };
 
-  const handleOpenCustomerDistribution = (e) => {
-    setOpenCustomerDistribution(!openCustomerDistribution);
-    setCloseCustomerDistribution(!closeCustomerDistribution);
+  const handleCustomerDistribution = (e) => {
+    setCustomerDistribution(!customerDistribution);
   };
 
-  const handleOpenReginalAnal = (e) => {
-    setOpenReginalAnal(!openReginalAnal);
-    setCloseReginalAnal(!closeReginalAnal);
+  const handleReginalAnal = (e) => {
+    setReginalAnal(!reginalAnal);
   };
 
-  const handleOpenClassAnal = (e) => {
-    setOpenClassAnal(!openClassAnal);
-    setCloseClassAnal(!closeClassAnal);
+  const handleClassAnal = (e) => {
+    setClassAnal(!classAnal);
   };
 
-  const handleOpenCustomerPeriodPerformanceDistribution = (e) => {
-    setOpenCustomerPeriodPerformanceDistribution(
-      !openCustomerPeriodPerformanceDistribution
-    );
-    setCloseCustomerPeriodPerformanceDistribution(
-      !closeCustomerPeriodPerformanceDistribution
+  const handleCustomerPeriodPerformanceDistribution = (e) => {
+    setCustomerPeriodPerformanceDistribution(
+      !customerPeriodPerformanceDistribution
     );
   };
 
-  const handleOpenCustomerPerformanceDistributionByMonth = (e) => {
-    setOpenCustomerPerformanceDistributionByMonth(
-      !openCustomerPerformanceDistributionByMonth
-    );
-    setCloseCustomerPerformanceDistributionByMonth(
-      !closeCustomerPerformanceDistributionByMonth
+  const handleCustomerPerformanceDistributionByMonth = (e) => {
+    setCustomerPerformanceDistributionByMonth(
+      !customerPerformanceDistributionByMonth
     );
   };
 
-  const handleOpenCustomerRankingPerformanceAnalysis = (e) => {
-    setOpenCustomerRankingPerformanceAnalysis(
-      !openCustomerRankingPerformanceAnalysis
-    );
-    setCloseCustomerRankingPerformanceAnalysis(
-      !closeCustomerRankingPerformanceAnalysis
-    );
+  const handleCustomerRankingPerformanceAnalysis = (e) => {
+    setCustomerRankingPerformanceAnalysis(!customerRankingPerformanceAnalysis);
   };
 
-  const handleOpenCustomerAnalWithRepeatedOrder = (e) => {
-    setOpenCustomerAnalWithRepeatedOrder(!openCustomerAnalWithRepeatedOrder);
-    setCloseCustomerAnalWithRepeatedOrder(!closeCustomerAnalWithRepeatedOrder);
+  const handleCustomerAnalWithRepeatedOrder = (e) => {
+    setCustomerAnalWithRepeatedOrder(!customerAnalWithRepeatedOrder);
   };
 
-  const handleOpenMonthlyCustomerData = (e) => {
-    setOpenMonthlyCustomerData(!openMonthlyCustomerData);
-    setCloseMonthlyCustomerData(!closeMonthlyCustomerData);
+  const handleMonthlyCustomerData = (e) => {
+    setMonthlyCustomerData(!monthlyCustomerData);
   };
 
   // Open Close Menu
@@ -289,23 +212,23 @@ function Menu(props) {
         </div>
         <ul className="tree-view-parent">
           <li>
-            <Typography onClick={handleOpenMasterData}>
-              <Add fontSize="small" hidden={openMasterData} />
-              <HorizontalRule fontSize="small" hidden={closeMasterData} />
-              <Folder className="folder" hidden={openMasterData} />
-              <FolderOpen className="folder" hidden={closeMasterData} />
+            <Typography onClick={handleAnalysisMasterData}>
+              <Add fontSize="small" hidden={analysisMasterData} />
+              <HorizontalRule fontSize="small" hidden={!analysisMasterData} />
+              <Folder className="folder" hidden={analysisMasterData} />
+              <FolderOpen className="folder" hidden={!analysisMasterData} />
               Master Data
             </Typography>
-            <ul className="tree-view-child" hidden={closeMasterData}>
+            <ul className="tree-view-child" hidden={!analysisMasterData}>
               <li>
-                <Typography onClick={handleOpenBusinessPlan}>
-                  <Add fontSize="small" hidden={openBusinessPlan} />
-                  <HorizontalRule fontSize="small" hidden={closeBusinessPlan} />
-                  <Folder className="folder" hidden={openBusinessPlan} />
-                  <FolderOpen className="folder" hidden={closeBusinessPlan} />
+                <Typography onClick={handleBusinessPlan}>
+                  <Add fontSize="small" hidden={businessPlan} />
+                  <HorizontalRule fontSize="small" hidden={!businessPlan} />
+                  <Folder className="folder" hidden={businessPlan} />
+                  <FolderOpen className="folder" hidden={!businessPlan} />
                   BusinessPlan
                 </Typography>
-                <ul className="tree-view-child" hidden={closeBusinessPlan}>
+                <ul className="tree-view-child" hidden={!businessPlan}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -315,20 +238,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenRevenueExpenses}>
-                  <Add fontSize="small" hidden={openRevenueExpenses} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeRevenueExpenses}
-                  />
-                  <Folder className="folder" hidden={openRevenueExpenses} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeRevenueExpenses}
-                  />
+                <Typography onClick={handleMasterData}>
+                  <Add fontSize="small" hidden={masterData} />
+                  <HorizontalRule fontSize="small" hidden={!masterData} />
+                  <Folder className="folder" hidden={masterData} />
+                  <FolderOpen className="folder" hidden={!masterData} />
                   Master Data
                 </Typography>
-                <ul className="tree-view-child" hidden={closeRevenueExpenses}>
+                <ul className="tree-view-child" hidden={!masterData}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -338,25 +255,22 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenMarginalProfitCalculate}>
-                  <Add fontSize="small" hidden={openMarginalProfitCalculate} />
+                <Typography onClick={handleMarginalProfitCalculate}>
+                  <Add fontSize="small" hidden={marginalProfitCalculate} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeMarginalProfitCalculate}
+                    hidden={!marginalProfitCalculate}
                   />
-                  <Folder
-                    className="folder"
-                    hidden={openMarginalProfitCalculate}
-                  />
+                  <Folder className="folder" hidden={marginalProfitCalculate} />
                   <FolderOpen
                     className="folder"
-                    hidden={closeMarginalProfitCalculate}
+                    hidden={!marginalProfitCalculate}
                   />
                   Marginal Profit Calculate
                 </Typography>
                 <ul
                   className="tree-view-child"
-                  hidden={closeMarginalProfitCalculate}
+                  hidden={!marginalProfitCalculate}
                 >
                   <li>
                     <Typography className="document-title">
@@ -382,23 +296,23 @@ function Menu(props) {
           </li>
 
           <li className="mt-2">
-            <Typography onClick={handleOpenActualResultAnal}>
-              <Add fontSize="small" hidden={openActualResultAnal} />
-              <HorizontalRule fontSize="small" hidden={closeActualResultAnal} />
-              <Folder className="folder" hidden={openActualResultAnal} />
-              <FolderOpen className="folder" hidden={closeActualResultAnal} />
+            <Typography onClick={handleActualResultAnal}>
+              <Add fontSize="small" hidden={actualResultAnal} />
+              <HorizontalRule fontSize="small" hidden={!actualResultAnal} />
+              <Folder className="folder" hidden={actualResultAnal} />
+              <FolderOpen className="folder" hidden={!actualResultAnal} />
               Actual Result Anal
             </Typography>
-            <ul className="tree-view-child" hidden={closeActualResultAnal}>
+            <ul className="tree-view-child" hidden={!actualResultAnal}>
               <li>
-                <Typography onClick={handleOpenDailyAnal}>
-                  <Add fontSize="small" hidden={openDailyAnal} />
-                  <HorizontalRule fontSize="small" hidden={closeDailyAnal} />
-                  <Folder className="folder" hidden={openDailyAnal} />
-                  <FolderOpen className="folder" hidden={closeDailyAnal} />
+                <Typography onClick={handleDailyAnal}>
+                  <Add fontSize="small" hidden={dailyAnal} />
+                  <HorizontalRule fontSize="small" hidden={!dailyAnal} />
+                  <Folder className="folder" hidden={dailyAnal} />
+                  <FolderOpen className="folder" hidden={!dailyAnal} />
                   Daily Anal
                 </Typography>
-                <ul className="tree-view-child" hidden={closeDailyAnal}>
+                <ul className="tree-view-child" hidden={!dailyAnal}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -432,20 +346,17 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenSalesAnalByPeriod}>
-                  <Add fontSize="small" hidden={openSalesAnalByPeriod} />
+                <Typography onClick={handleSalesAnalByPeriod}>
+                  <Add fontSize="small" hidden={salesAnalByPeriod} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeSalesAnalByPeriod}
+                    hidden={!salesAnalByPeriod}
                   />
-                  <Folder className="folder" hidden={openSalesAnalByPeriod} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeSalesAnalByPeriod}
-                  />
+                  <Folder className="folder" hidden={salesAnalByPeriod} />
+                  <FolderOpen className="folder" hidden={!salesAnalByPeriod} />
                   Sales Anal By Period
                 </Typography>
-                <ul className="tree-view-child" hidden={closeSalesAnalByPeriod}>
+                <ul className="tree-view-child" hidden={!salesAnalByPeriod}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -497,14 +408,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenItemWiseAnal}>
-                  <Add fontSize="small" hidden={openItemWiseAnal} />
-                  <HorizontalRule fontSize="small" hidden={closeItemWiseAnal} />
-                  <Folder className="folder" hidden={openItemWiseAnal} />
-                  <FolderOpen className="folder" hidden={closeItemWiseAnal} />
+                <Typography onClick={handleItemWiseAnal}>
+                  <Add fontSize="small" hidden={itemWiseAnal} />
+                  <HorizontalRule fontSize="small" hidden={!itemWiseAnal} />
+                  <Folder className="folder" hidden={itemWiseAnal} />
+                  <FolderOpen className="folder" hidden={!itemWiseAnal} />
                   Item Wise Anal
                 </Typography>
-                <ul className="tree-view-child" hidden={closeItemWiseAnal}>
+                <ul className="tree-view-child" hidden={!itemWiseAnal}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -532,14 +443,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenMarginalAnal}>
-                  <Add fontSize="small" hidden={openMarginalAnal} />
-                  <HorizontalRule fontSize="small" hidden={closeMarginalAnal} />
-                  <Folder className="folder" hidden={openMarginalAnal} />
-                  <FolderOpen className="folder" hidden={closeMarginalAnal} />
+                <Typography onClick={handleMarginalAnal}>
+                  <Add fontSize="small" hidden={marginalAnal} />
+                  <HorizontalRule fontSize="small" hidden={!marginalAnal} />
+                  <Folder className="folder" hidden={marginalAnal} />
+                  <FolderOpen className="folder" hidden={!marginalAnal} />
                   Marginal Anal
                 </Typography>
-                <ul className="tree-view-child" hidden={closeMarginalAnal}>
+                <ul className="tree-view-child" hidden={!marginalAnal}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -556,14 +467,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenTimeAnal}>
-                  <Add fontSize="small" hidden={openTimeAnal} />
-                  <HorizontalRule fontSize="small" hidden={closeTimeAnal} />
-                  <Folder className="folder" hidden={openTimeAnal} />
-                  <FolderOpen className="folder" hidden={closeTimeAnal} />
+                <Typography onClick={handleTimeAnal}>
+                  <Add fontSize="small" hidden={timeAnal} />
+                  <HorizontalRule fontSize="small" hidden={!timeAnal} />
+                  <Folder className="folder" hidden={timeAnal} />
+                  <FolderOpen className="folder" hidden={!timeAnal} />
                   Time Anal
                 </Typography>
-                <ul className="tree-view-child" hidden={closeTimeAnal}>
+                <ul className="tree-view-child" hidden={!timeAnal}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -573,17 +484,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenVendorWiseAnal}>
-                  <Add fontSize="small" hidden={openVendorWiseAnal} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeVendorWiseAnal}
-                  />
-                  <Folder className="folder" hidden={openVendorWiseAnal} />
-                  <FolderOpen className="folder" hidden={closeVendorWiseAnal} />
+                <Typography onClick={handleVendorWiseAnal}>
+                  <Add fontSize="small" hidden={vendorWiseAnal} />
+                  <HorizontalRule fontSize="small" hidden={!vendorWiseAnal} />
+                  <Folder className="folder" hidden={vendorWiseAnal} />
+                  <FolderOpen className="folder" hidden={!vendorWiseAnal} />
                   Vendor Wise Anal
                 </Typography>
-                <ul className="tree-view-child" hidden={closeVendorWiseAnal}>
+                <ul className="tree-view-child" hidden={!vendorWiseAnal}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -611,17 +519,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenComplaintAnal}>
-                  <Add fontSize="small" hidden={openComplaintAnal} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeComplaintAnal}
-                  />
-                  <Folder className="folder" hidden={openComplaintAnal} />
-                  <FolderOpen className="folder" hidden={closeComplaintAnal} />
+                <Typography onClick={handleComplaintAnal}>
+                  <Add fontSize="small" hidden={complaintAnal} />
+                  <HorizontalRule fontSize="small" hidden={!complaintAnal} />
+                  <Folder className="folder" hidden={complaintAnal} />
+                  <FolderOpen className="folder" hidden={!complaintAnal} />
                   Complaint Anal
                 </Typography>
-                <ul className="tree-view-child" hidden={closeComplaintAnal}>
+                <ul className="tree-view-child" hidden={!complaintAnal}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -637,17 +542,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenLogisticsAnal}>
-                  <Add fontSize="small" hidden={openLogisticsAnal} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeLogisticsAnal}
-                  />
-                  <Folder className="folder" hidden={openLogisticsAnal} />
-                  <FolderOpen className="folder" hidden={closeLogisticsAnal} />
+                <Typography onClick={handleLogisticsAnal}>
+                  <Add fontSize="small" hidden={logisticsAnal} />
+                  <HorizontalRule fontSize="small" hidden={!logisticsAnal} />
+                  <Folder className="folder" hidden={logisticsAnal} />
+                  <FolderOpen className="folder" hidden={!logisticsAnal} />
                   Logistics Anal
                 </Typography>
-                <ul className="tree-view-child" hidden={closeLogisticsAnal}>
+                <ul className="tree-view-child" hidden={!logisticsAnal}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -678,23 +580,23 @@ function Menu(props) {
           </li>
 
           <li className="mt-2">
-            <Typography onClick={handleOpenMediaAnal}>
-              <Add fontSize="small" hidden={openMediaAnal} />
-              <HorizontalRule fontSize="small" hidden={closeMediaAnal} />
-              <Folder className="folder" hidden={openMediaAnal} />
-              <FolderOpen className="folder" hidden={closeMediaAnal} />
+            <Typography onClick={handleMediaAnal}>
+              <Add fontSize="small" hidden={mediaAnal} />
+              <HorizontalRule fontSize="small" hidden={!mediaAnal} />
+              <Folder className="folder" hidden={mediaAnal} />
+              <FolderOpen className="folder" hidden={!mediaAnal} />
               Media Anal
             </Typography>
-            <ul className="tree-view-child" hidden={closeMediaAnal}>
+            <ul className="tree-view-child" hidden={!mediaAnal}>
               <li>
-                <Typography onClick={handleOpenTV}>
-                  <Add fontSize="small" hidden={openTV} />
-                  <HorizontalRule fontSize="small" hidden={closeTV} />
-                  <Folder className="folder" hidden={openTV} />
-                  <FolderOpen className="folder" hidden={closeTV} />
+                <Typography onClick={handleTV}>
+                  <Add fontSize="small" hidden={tv} />
+                  <HorizontalRule fontSize="small" hidden={!tv} />
+                  <Folder className="folder" hidden={tv} />
+                  <FolderOpen className="folder" hidden={!tv} />
                   TV
                 </Typography>
-                <ul className="tree-view-child" hidden={closeTV}>
+                <ul className="tree-view-child" hidden={!tv}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -735,14 +637,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenCatalog}>
-                  <Add fontSize="small" hidden={openCatalog} />
-                  <HorizontalRule fontSize="small" hidden={closeCatalog} />
-                  <Folder className="folder" hidden={openCatalog} />
-                  <FolderOpen className="folder" hidden={closeCatalog} />
+                <Typography onClick={handleCatalog}>
+                  <Add fontSize="small" hidden={catalog} />
+                  <HorizontalRule fontSize="small" hidden={!catalog} />
+                  <Folder className="folder" hidden={catalog} />
+                  <FolderOpen className="folder" hidden={!catalog} />
                   CATALOG
                 </Typography>
-                <ul className="tree-view-child" hidden={closeCatalog}>
+                <ul className="tree-view-child" hidden={!catalog}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -779,35 +681,29 @@ function Menu(props) {
           </li>
 
           <li className="mt-2">
-            <Typography onClick={handleOpenCustomerAnal}>
-              <Add fontSize="small" hidden={openCustomerAnal} />
-              <HorizontalRule fontSize="small" hidden={closeCustomerAnal} />
-              <Folder className="folder" hidden={openCustomerAnal} />
-              <FolderOpen className="folder" hidden={closeCustomerAnal} />
+            <Typography onClick={handleCustomerAnal}>
+              <Add fontSize="small" hidden={customerAnal} />
+              <HorizontalRule fontSize="small" hidden={!customerAnal} />
+              <Folder className="folder" hidden={customerAnal} />
+              <FolderOpen className="folder" hidden={!customerAnal} />
               Customer Anal
             </Typography>
-            <ul className="tree-view-child" hidden={closeCustomerAnal}>
+            <ul className="tree-view-child" hidden={!customerAnal}>
               <li>
-                <Typography onClick={handleOpenCustomerDistribution}>
-                  <Add fontSize="small" hidden={openCustomerDistribution} />
+                <Typography onClick={handleCustomerDistribution}>
+                  <Add fontSize="small" hidden={customerDistribution} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeCustomerDistribution}
+                    hidden={!customerDistribution}
                   />
-                  <Folder
-                    className="folder"
-                    hidden={openCustomerDistribution}
-                  />
+                  <Folder className="folder" hidden={customerDistribution} />
                   <FolderOpen
                     className="folder"
-                    hidden={closeCustomerDistribution}
+                    hidden={!customerDistribution}
                   />
                   Customer Distribution
                 </Typography>
-                <ul
-                  className="tree-view-child"
-                  hidden={closeCustomerDistribution}
-                >
+                <ul className="tree-view-child" hidden={!customerDistribution}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -836,14 +732,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenReginalAnal}>
-                  <Add fontSize="small" hidden={openReginalAnal} />
-                  <HorizontalRule fontSize="small" hidden={closeReginalAnal} />
-                  <Folder className="folder" hidden={openReginalAnal} />
-                  <FolderOpen className="folder" hidden={closeReginalAnal} />
+                <Typography onClick={handleReginalAnal}>
+                  <Add fontSize="small" hidden={reginalAnal} />
+                  <HorizontalRule fontSize="small" hidden={!reginalAnal} />
+                  <Folder className="folder" hidden={reginalAnal} />
+                  <FolderOpen className="folder" hidden={!reginalAnal} />
                   Reginal Anal
                 </Typography>
-                <ul className="tree-view-child" hidden={closeReginalAnal}>
+                <ul className="tree-view-child" hidden={!reginalAnal}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -865,14 +761,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenClassAnal}>
-                  <Add fontSize="small" hidden={openClassAnal} />
-                  <HorizontalRule fontSize="small" hidden={closeClassAnal} />
-                  <Folder className="folder" hidden={openClassAnal} />
-                  <FolderOpen className="folder" hidden={closeClassAnal} />
+                <Typography onClick={handleClassAnal}>
+                  <Add fontSize="small" hidden={classAnal} />
+                  <HorizontalRule fontSize="small" hidden={!classAnal} />
+                  <Folder className="folder" hidden={classAnal} />
+                  <FolderOpen className="folder" hidden={!classAnal} />
                   Class Anal
                 </Typography>
-                <ul className="tree-view-child" hidden={closeClassAnal}>
+                <ul className="tree-view-child" hidden={!classAnal}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -883,29 +779,29 @@ function Menu(props) {
               </li>
               <li>
                 <Typography
-                  onClick={handleOpenCustomerPeriodPerformanceDistribution}
+                  onClick={handleCustomerPeriodPerformanceDistribution}
                 >
                   <Add
                     fontSize="small"
-                    hidden={openCustomerPeriodPerformanceDistribution}
+                    hidden={customerPeriodPerformanceDistribution}
                   />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeCustomerPeriodPerformanceDistribution}
+                    hidden={!customerPeriodPerformanceDistribution}
                   />
                   <Folder
                     className="folder"
-                    hidden={openCustomerPeriodPerformanceDistribution}
+                    hidden={customerPeriodPerformanceDistribution}
                   />
                   <FolderOpen
                     className="folder"
-                    hidden={closeCustomerPeriodPerformanceDistribution}
+                    hidden={!customerPeriodPerformanceDistribution}
                   />
                   Customer Period Performance Distribution
                 </Typography>
                 <ul
                   className="tree-view-child"
-                  hidden={closeCustomerPeriodPerformanceDistribution}
+                  hidden={!customerPeriodPerformanceDistribution}
                 >
                   <li>
                     <Typography className="document-title">
@@ -917,29 +813,29 @@ function Menu(props) {
               </li>
               <li>
                 <Typography
-                  onClick={handleOpenCustomerPerformanceDistributionByMonth}
+                  onClick={handleCustomerPerformanceDistributionByMonth}
                 >
                   <Add
                     fontSize="small"
-                    hidden={openCustomerPerformanceDistributionByMonth}
+                    hidden={customerPerformanceDistributionByMonth}
                   />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeCustomerPerformanceDistributionByMonth}
+                    hidden={!customerPerformanceDistributionByMonth}
                   />
                   <Folder
                     className="folder"
-                    hidden={openCustomerPerformanceDistributionByMonth}
+                    hidden={customerPerformanceDistributionByMonth}
                   />
                   <FolderOpen
                     className="folder"
-                    hidden={closeCustomerPerformanceDistributionByMonth}
+                    hidden={!customerPerformanceDistributionByMonth}
                   />
                   Customer Performance Distribution By Month
                 </Typography>
                 <ul
                   className="tree-view-child"
-                  hidden={closeCustomerPerformanceDistributionByMonth}
+                  hidden={!customerPerformanceDistributionByMonth}
                 >
                   <li>
                     <Typography className="document-title">
@@ -962,30 +858,28 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography
-                  onClick={handleOpenCustomerRankingPerformanceAnalysis}
-                >
+                <Typography onClick={handleCustomerRankingPerformanceAnalysis}>
                   <Add
                     fontSize="small"
-                    hidden={openCustomerRankingPerformanceAnalysis}
+                    hidden={customerRankingPerformanceAnalysis}
                   />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeCustomerRankingPerformanceAnalysis}
+                    hidden={!customerRankingPerformanceAnalysis}
                   />
                   <Folder
                     className="folder"
-                    hidden={openCustomerRankingPerformanceAnalysis}
+                    hidden={customerRankingPerformanceAnalysis}
                   />
                   <FolderOpen
                     className="folder"
-                    hidden={closeCustomerRankingPerformanceAnalysis}
+                    hidden={!customerRankingPerformanceAnalysis}
                   />
                   Customer Ranking Performance Analysis
                 </Typography>
                 <ul
                   className="tree-view-child"
-                  hidden={closeCustomerRankingPerformanceAnalysis}
+                  hidden={!customerRankingPerformanceAnalysis}
                 >
                   <li>
                     <Typography className="document-title">
@@ -1020,28 +914,28 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenCustomerAnalWithRepeatedOrder}>
+                <Typography onClick={handleCustomerAnalWithRepeatedOrder}>
                   <Add
                     fontSize="small"
-                    hidden={openCustomerAnalWithRepeatedOrder}
+                    hidden={customerAnalWithRepeatedOrder}
                   />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeCustomerAnalWithRepeatedOrder}
+                    hidden={!customerAnalWithRepeatedOrder}
                   />
                   <Folder
                     className="folder"
-                    hidden={openCustomerAnalWithRepeatedOrder}
+                    hidden={customerAnalWithRepeatedOrder}
                   />
                   <FolderOpen
                     className="folder"
-                    hidden={closeCustomerAnalWithRepeatedOrder}
+                    hidden={!customerAnalWithRepeatedOrder}
                   />
                   Customer Anal With Repeated Order
                 </Typography>
                 <ul
                   className="tree-view-child"
-                  hidden={closeCustomerAnalWithRepeatedOrder}
+                  hidden={!customerAnalWithRepeatedOrder}
                 >
                   <li>
                     <Typography className="document-title">
@@ -1064,23 +958,20 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenMonthlyCustomerData}>
-                  <Add fontSize="small" hidden={openMonthlyCustomerData} />
+                <Typography onClick={handleMonthlyCustomerData}>
+                  <Add fontSize="small" hidden={monthlyCustomerData} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeMonthlyCustomerData}
+                    hidden={!monthlyCustomerData}
                   />
-                  <Folder className="folder" hidden={openMonthlyCustomerData} />
+                  <Folder className="folder" hidden={monthlyCustomerData} />
                   <FolderOpen
                     className="folder"
-                    hidden={closeMonthlyCustomerData}
+                    hidden={!monthlyCustomerData}
                   />
                   Monthly Customer Data
                 </Typography>
-                <ul
-                  className="tree-view-child"
-                  hidden={closeMonthlyCustomerData}
-                >
+                <ul className="tree-view-child" hidden={!monthlyCustomerData}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />

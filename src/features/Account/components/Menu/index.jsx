@@ -15,343 +15,261 @@ function Menu(props) {
   const [closeMenu, setCloseMenu] = useState(false);
 
   // Prepay Payment
-  const [openPrepayPayment, setOpenPrepayPayment] = useState(false);
-  const [closePrepayPayment, setClosePrepayPayment] = useState(true);
+  const [prepayPayment, setPrepayPayment] = useState(false);
 
-  const [openCMS, setOpenCMS] = useState(false);
-  const [closeCMS, setCloseCMS] = useState(true);
+  const [cms, setCMS] = useState(false);
 
-  const [openCard, setOpenCard] = useState(false);
-  const [closeCard, setCloseCard] = useState(true);
+  const [card, setCard] = useState(false);
 
-  const [openSCJPoint, setOpenSCJPoint] = useState(false);
-  const [closeSCJPoint, setCloseSCJPoint] = useState(true);
+  const [scjPoint, setSCJPoint] = useState(false);
 
-  const [openDeposit, setOpenDeposit] = useState(false);
-  const [closeDeposit, setCloseDeposit] = useState(true);
+  const [deposit, setDeposit] = useState(false);
 
-  const [openCreditLoan, setOpenCreditLoan] = useState(false);
-  const [closeCreditLoan, setCloseCreditLoan] = useState(true);
+  const [creditLoan, setCreditLoan] = useState(false);
 
-  const [openPaymentOnline, setOpenPaymentOnline] = useState(false);
-  const [closePaymentOnline, setClosePaymentOnline] = useState(true);
+  const [paymentOnline, setPaymentOnline] = useState(false);
 
   // Postpay Payment
-  const [openPostpayPayment, setOpenPostpayPayment] = useState(false);
-  const [closePostpayPayment, setClosePostpayPayment] = useState(true);
+  const [postpayPayment, setPostpayPayment] = useState(false);
 
-  const [openCOD, setOpenCOD] = useState(false);
-  const [closeCOD, setCloseCOD] = useState(true);
+  const [cod, setCOD] = useState(false);
 
-  const [openStatusByPostpay, setOpenStatusByPostpay] = useState(false);
-  const [closeStatusByPostpay, setCloseStatusByPostpay] = useState(true);
+  const [statusByPostpay, setStatusByPostpay] = useState(false);
 
   // Refund
-  const [openRefund, setOpenRefund] = useState(false);
-  const [closeRefund, setCloseRefund] = useState(true);
+  const [refund, setRefund] = useState(false);
 
-  const [openRefundProc, setOpenRefundProc] = useState(false);
-  const [closeRefundProc, setCloseRefundProc] = useState(true);
+  const [refundProc, setRefundProc] = useState(false);
 
-  const [openStatusByRefund, setOpenStatusByRefund] = useState(false);
-  const [closeStatusByRefund, setCloseStatusByRefund] = useState(true);
+  const [statusByRefund, setStatusByRefund] = useState(false);
 
   // Other Anal
-  const [openAccountOtherAnal, setOpenAccountOtherAnal] = useState(false);
-  const [closeAccountOtherAnal, setCloseAccountOtherAnal] = useState(true);
+  const [accountOtherAnal, setAccountOtherAnal] = useState(false);
 
-  const [openSaleAndPaymentAnal, setOpenSaleAndPaymentAnal] = useState(false);
-  const [closeSaleAndPaymentAnal, setCloseSaleAndPaymentAnal] = useState(true);
+  const [saleAndPaymentAnal, setSaleAndPaymentAnal] = useState(false);
 
-  const [openOtherAnal, setOpenOtherAnal] = useState(false);
-  const [closeOtherAnal, setCloseOtherAnal] = useState(true);
+  const [otherAnal, setOtherAnal] = useState(false);
 
   // Receipt
-  const [openReceipt, setOpenReceipt] = useState(false);
-  const [closeReceipt, setCloseReceipt] = useState(true);
+  const [receipt, setReceipt] = useState(false);
 
-  const [openReceiptsIssued, setOpenReceiptsIssued] = useState(false);
-  const [closeReceiptsIssued, setCloseReceiptsIssued] = useState(true);
+  const [receiptsIssued, setReceiptsIssued] = useState(false);
 
-  const [openCustomerDMIssued, setOpenCustomerDMIssued] = useState(false);
-  const [closeCustomerDMIssued, setCloseCustomerDMIssued] = useState(true);
+  const [customerDMIssued, setCustomerDMIssued] = useState(false);
 
-  const [openIndividualIncomeTax, setOpenIndividualIncomeTax] = useState(false);
-  const [closeIndividualIncomeTax, setCloseIndividualIncomeTax] =
-    useState(true);
+  const [individualIncomeTax, setIndividualIncomeTax] = useState(false);
 
   // Vendor Mgt
-  const [openVendorMgt, setOpenVendorMgt] = useState(false);
-  const [closeVendorMgt, setCloseVendorMgt] = useState(true);
+  const [accountVendorMgt, setAccountVendorMgt] = useState(false);
 
-  const [openBasicVendorInfo, setOpenBasicVendorInfo] = useState(false);
-  const [closeBasicVendorInfo, setCloseBasicVendorInfo] = useState(true);
+  const [vendorMgt, setVendorMgt] = useState(false);
 
-  const [openBasicPaymentInfo, setOpenBasicPaymentInfo] = useState(false);
-  const [closeBasicPaymentInfo, setCloseBasicPaymentInfo] = useState(true);
+  const [basicPaymentInfo, setBasicPaymentInfo] = useState(false);
 
-  const [openBasicInfoStatus, setOpenBasicInfoStatus] = useState(false);
-  const [closeBasicInfoStatus, setCloseBasicInfoStatus] = useState(true);
+  const [basicInfoStatus, setBasicInfoStatus] = useState(false);
 
   // Vendor Settlement
-  const [openVendorSettlement, setOpenVendorSettlement] = useState(false);
-  const [closeVendorSettlement, setCloseVendorSettlement] = useState(true);
+  const [vendorSettlement, setVendorSettlement] = useState(false);
 
-  const [openBillPayment, setOpenBillPayment] = useState(false);
-  const [closeBillPayment, setCloseBillPayment] = useState(true);
+  const [billPayment, setBillPayment] = useState(false);
 
-  const [openItemSupplyPriceInquire, setOpenItemSupplyPriceInquire] =
-    useState(false);
-  const [closeItemSupplyPriceInquire, setCloseItemSupplyPriceInquire] =
-    useState(true);
+  const [itemSupplyPriceInquire, setItemSupplyPriceInquire] = useState(false);
 
-  const [openPinanceIF, setOpenPinanceIF] = useState(false);
-  const [closePinanceIF, setClosePinanceIF] = useState(true);
+  const [pinanceIF, setPinanceIF] = useState(false);
 
   // Voucher Mgt
-  const [openVoucherMgt, setOpenVoucherMgt] = useState(false);
-  const [closeVoucherMgt, setCloseVoucherMgt] = useState(true);
+  const [voucherMgt, setVoucherMgt] = useState(false);
 
-  const [openVoucherProcessing, setOpenVoucherProcessing] = useState(false);
-  const [closeVoucherProcessing, setCloseVoucherProcessing] = useState(true);
+  const [voucherProcessing, setVoucherProcessing] = useState(false);
 
-  const [openVoucherStatus, setOpenVoucherStatus] = useState(false);
-  const [closeVoucherStatus, setCloseVoucherStatus] = useState(true);
+  const [voucherStatus, setVoucherStatus] = useState(false);
 
   // D/C Coupon
-  const [openDCCoupon, setOpenDCCoupon] = useState(false);
-  const [closeDCCoupon, setCloseDCCoupon] = useState(true);
+  const [dcCoupon, setDCCoupon] = useState(false);
 
-  const [openDCCouponMgt, setOpenDCCouponMgt] = useState(false);
-  const [closeDCCouponMgt, setCloseDCCouponMgt] = useState(true);
+  const [dcCouponMgt, setDCCouponMgt] = useState(false);
 
-  const [openDCCouponStatus, setOpenDCCouponStatus] = useState(false);
-  const [closeDCCouponStatus, setCloseDCCouponStatus] = useState(true);
+  const [dcCouponStatus, setDCCouponStatus] = useState(false);
 
   // B2B Mgt
-  const [openB2BMgt, setOpenB2BMgt] = useState(false);
-  const [closeB2BMgt, setCloseB2BMgt] = useState(true);
+  const [b2bMgt, setB2BMgt] = useState(false);
 
-  const [openB2BProcessing, setOpenB2BProcessing] = useState(false);
-  const [closeB2BProcessing, setCloseB2BProcessing] = useState(true);
+  const [b2bProcessing, setB2BProcessing] = useState(false);
 
-  const [openB2BStatus, setOpenB2BStatus] = useState(false);
-  const [closeB2BStatus, setCloseB2BStatus] = useState(true);
+  const [b2bStatus, setB2BStatus] = useState(false);
 
   // MotorBike Mgt
-  const [openMotorBikeMgt, setOpenMotorBikeMgt] = useState(false);
-  const [closeMotorBikeMgt, setCloseMotorBikeMgt] = useState(true);
+  const [motorBikeMgt, setMotorBikeMgt] = useState(false);
 
-  const [openMotorBikeProcessing, setOpenMotorBikeProcessing] = useState(false);
-  const [closeMotorBikeProcessing, setCloseMotorBikeProcessing] =
-    useState(true);
+  const [motorBikeProcessing, setMotorBikeProcessing] = useState(false);
 
   // ----------------------------------handle-----------------
 
   // Prepay Payment
-  const handleOpenPrepayPayment = (e) => {
-    setOpenPrepayPayment(!openPrepayPayment);
-    setClosePrepayPayment(!closePrepayPayment);
+  const handlePrepayPayment = (e) => {
+    setPrepayPayment(!prepayPayment);
   };
 
-  const handleOpenCMS = (e) => {
-    setOpenCMS(!openCMS);
-    setCloseCMS(!closeCMS);
+  const handleCMS = (e) => {
+    setCMS(!cms);
   };
 
-  const handleOpenCard = (e) => {
-    setOpenCard(!openCard);
-    setCloseCard(!closeCard);
+  const handleCard = (e) => {
+    setCard(!card);
   };
 
-  const handleOpenSCJPoint = (e) => {
-    setOpenSCJPoint(!openSCJPoint);
-    setCloseSCJPoint(!closeSCJPoint);
+  const handleSCJPoint = (e) => {
+    setSCJPoint(!scjPoint);
   };
 
-  const handleOpenDeposit = (e) => {
-    setOpenDeposit(!openDeposit);
-    setCloseDeposit(!closeDeposit);
+  const handleDeposit = (e) => {
+    setDeposit(!deposit);
   };
 
-  const handleOpenCreditLoan = (e) => {
-    setOpenCreditLoan(!openCreditLoan);
-    setCloseCreditLoan(!closeCreditLoan);
+  const handleCreditLoan = (e) => {
+    setCreditLoan(!creditLoan);
   };
 
-  const handleOpenPaymentOnline = (e) => {
-    setOpenPaymentOnline(!openPaymentOnline);
-    setClosePaymentOnline(!closePaymentOnline);
+  const handlePaymentOnline = (e) => {
+    setPaymentOnline(!paymentOnline);
   };
 
   // Postpay Payment
-  const handleOpenPostpayPayment = (e) => {
-    setOpenPostpayPayment(!openPostpayPayment);
-    setClosePostpayPayment(!closePostpayPayment);
+  const handlePostpayPayment = (e) => {
+    setPostpayPayment(!postpayPayment);
   };
 
-  const handleOpenCOD = (e) => {
-    setOpenCOD(!openCOD);
-    setCloseCOD(!closeCOD);
+  const handleCOD = (e) => {
+    setCOD(!cod);
   };
 
-  const handleOpenStatusByPostpay = (e) => {
-    setOpenStatusByPostpay(!openStatusByPostpay);
-    setCloseStatusByPostpay(!closeStatusByPostpay);
+  const handleStatusByPostpay = (e) => {
+    setStatusByPostpay(!statusByPostpay);
   };
 
   // Refund
-  const handleOpenRefund = (e) => {
-    setOpenRefund(!openRefund);
-    setCloseRefund(!closeRefund);
+  const handleRefund = (e) => {
+    setRefund(!refund);
   };
 
-  const handleOpenRefundProc = (e) => {
-    setOpenRefundProc(!openRefundProc);
-    setCloseRefundProc(!closeRefundProc);
+  const handleRefundProc = (e) => {
+    setRefundProc(!refundProc);
   };
 
-  const handleOpenStatusByRefund = (e) => {
-    setOpenStatusByRefund(!openStatusByRefund);
-    setCloseStatusByRefund(!closeStatusByRefund);
+  const handleStatusByRefund = (e) => {
+    setStatusByRefund(!statusByRefund);
   };
 
   // Other Anal
-  const handleOpenAccountOtherAnal = (e) => {
-    setOpenAccountOtherAnal(!openAccountOtherAnal);
-    setCloseAccountOtherAnal(!closeAccountOtherAnal);
+  const handleAccountOtherAnal = (e) => {
+    setAccountOtherAnal(!accountOtherAnal);
   };
 
-  const handleOpenSaleAndPaymentAnal = (e) => {
-    setOpenSaleAndPaymentAnal(!openSaleAndPaymentAnal);
-    setCloseSaleAndPaymentAnal(!closeSaleAndPaymentAnal);
+  const handleSaleAndPaymentAnal = (e) => {
+    setSaleAndPaymentAnal(!saleAndPaymentAnal);
   };
 
-  const handleOpenOtherAnal = (e) => {
-    setOpenOtherAnal(!openOtherAnal);
-    setCloseOtherAnal(!closeOtherAnal);
+  const handleOtherAnal = (e) => {
+    setOtherAnal(!otherAnal);
   };
 
   // Receipt
-  const handleOpenReceipt = (e) => {
-    setOpenReceipt(!openReceipt);
-    setCloseReceipt(!closeReceipt);
+  const handleReceipt = (e) => {
+    setReceipt(!receipt);
   };
 
-  const handleOpenReceiptsIssued = (e) => {
-    setOpenReceiptsIssued(!openReceiptsIssued);
-    setCloseReceiptsIssued(!closeReceiptsIssued);
+  const handleReceiptsIssued = (e) => {
+    setReceiptsIssued(!receiptsIssued);
   };
 
-  const handleOpenCustomerDMIssued = (e) => {
-    setOpenCustomerDMIssued(!openCustomerDMIssued);
-    setCloseCustomerDMIssued(!closeCustomerDMIssued);
+  const handleCustomerDMIssued = (e) => {
+    setCustomerDMIssued(!customerDMIssued);
   };
 
-  const handleOpenIndividualIncomeTax = (e) => {
-    setOpenIndividualIncomeTax(!openIndividualIncomeTax);
-    setCloseIndividualIncomeTax(!closeIndividualIncomeTax);
+  const handleIndividualIncomeTax = (e) => {
+    setIndividualIncomeTax(!individualIncomeTax);
   };
 
   // Vendor Mgt
-  const handleOpenVendorMgt = (e) => {
-    setOpenVendorMgt(!openVendorMgt);
-    setCloseVendorMgt(!closeVendorMgt);
+  const handleAccountVendorMgt = (e) => {
+    setAccountVendorMgt(!accountVendorMgt);
   };
 
-  const handleOpenBasicVendorInfo = (e) => {
-    setOpenBasicVendorInfo(!openBasicVendorInfo);
-    setCloseBasicVendorInfo(!closeBasicVendorInfo);
+  const handleVendorMgt = (e) => {
+    setVendorMgt(!vendorMgt);
   };
 
-  const handleOpenBasicPaymentInfo = (e) => {
-    setOpenBasicPaymentInfo(!openBasicPaymentInfo);
-    setCloseBasicPaymentInfo(!closeBasicPaymentInfo);
+  const handleBasicPaymentInfo = (e) => {
+    setBasicPaymentInfo(!basicPaymentInfo);
   };
 
-  const handleOpenBasicInfoStatus = (e) => {
-    setOpenBasicInfoStatus(!openBasicInfoStatus);
-    setCloseBasicInfoStatus(!closeBasicInfoStatus);
+  const handleBasicInfoStatus = (e) => {
+    setBasicInfoStatus(!basicInfoStatus);
   };
 
   // Vendor Settlement
-  const handleOpenVendorSettlement = (e) => {
-    setOpenVendorSettlement(!openVendorSettlement);
-    setCloseVendorSettlement(!closeVendorSettlement);
+  const handleVendorSettlement = (e) => {
+    setVendorSettlement(!vendorSettlement);
   };
 
-  const handleOpenBillPayment = (e) => {
-    setOpenBillPayment(!openBillPayment);
-    setCloseBillPayment(!closeBillPayment);
+  const handleBillPayment = (e) => {
+    setBillPayment(!billPayment);
   };
 
-  const handleOpenItemSupplyPriceInquire = (e) => {
-    setOpenItemSupplyPriceInquire(!openItemSupplyPriceInquire);
-    setCloseItemSupplyPriceInquire(!closeItemSupplyPriceInquire);
+  const handleItemSupplyPriceInquire = (e) => {
+    setItemSupplyPriceInquire(!itemSupplyPriceInquire);
   };
 
-  const handleOpenPinanceIF = (e) => {
-    setOpenPinanceIF(!openPinanceIF);
-    setClosePinanceIF(!closePinanceIF);
+  const handlePinanceIF = (e) => {
+    setPinanceIF(!pinanceIF);
   };
 
   // Voucher Mgt
-  const handleOpenVoucherMgt = (e) => {
-    setOpenVoucherMgt(!openVoucherMgt);
-    setCloseVoucherMgt(!closeVoucherMgt);
+  const handleVoucherMgt = (e) => {
+    setVoucherMgt(!voucherMgt);
   };
 
-  const handleOpenVoucherProcessing = (e) => {
-    setOpenVoucherProcessing(!openVoucherProcessing);
-    setCloseVoucherProcessing(!closeVoucherProcessing);
+  const handleVoucherProcessing = (e) => {
+    setVoucherProcessing(!voucherProcessing);
   };
 
-  const handleOpenVoucherStatus = (e) => {
-    setOpenVoucherStatus(!openVoucherStatus);
-    setCloseVoucherStatus(!closeVoucherStatus);
+  const handleVoucherStatus = (e) => {
+    setVoucherStatus(!voucherStatus);
   };
 
   // D/C Coupon
-  const handleOpenDCCoupon = (e) => {
-    setOpenDCCoupon(!openDCCoupon);
-    setCloseDCCoupon(!closeDCCoupon);
+  const handleDCCoupon = (e) => {
+    setDCCoupon(!dcCoupon);
   };
 
-  const handleOpenDCCouponMgt = (e) => {
-    setOpenDCCouponMgt(!openDCCouponMgt);
-    setCloseDCCouponMgt(!closeDCCouponMgt);
+  const handleDCCouponMgt = (e) => {
+    setDCCouponMgt(!dcCouponMgt);
   };
 
-  const handleOpenDCCouponStatus = (e) => {
-    setOpenDCCouponStatus(!openDCCouponStatus);
-    setCloseDCCouponStatus(!closeDCCouponStatus);
+  const handleDCCouponStatus = (e) => {
+    setDCCouponStatus(!dcCouponStatus);
   };
 
   // B2B Mgt
-  const handleOpenB2BMgt = (e) => {
-    setOpenB2BMgt(!openB2BMgt);
-    setCloseB2BMgt(!closeB2BMgt);
+  const handleB2BMgt = (e) => {
+    setB2BMgt(!b2bMgt);
   };
 
-  const handleOpenB2BProcessing = (e) => {
-    setOpenB2BProcessing(!openB2BProcessing);
-    setCloseB2BProcessing(!closeB2BProcessing);
+  const handleB2BProcessing = (e) => {
+    setB2BProcessing(!b2bProcessing);
   };
 
-  const handleOpenB2BStatus = (e) => {
-    setOpenB2BStatus(!openB2BStatus);
-    setCloseB2BStatus(!closeB2BStatus);
+  const handleB2BStatus = (e) => {
+    setB2BStatus(!b2bStatus);
   };
 
   // MotorBike Mgt
-  const handleOpenMotorBikeMgt = (e) => {
-    setOpenMotorBikeMgt(!openMotorBikeMgt);
-    setCloseMotorBikeMgt(!closeMotorBikeMgt);
+  const handleMotorBikeMgt = (e) => {
+    setMotorBikeMgt(!motorBikeMgt);
   };
 
-  const handleOpenMotorBikeProcessing = (e) => {
-    setOpenMotorBikeProcessing(!openMotorBikeProcessing);
-    setCloseMotorBikeProcessing(!closeMotorBikeProcessing);
+  const handleMotorBikeProcessing = (e) => {
+    setMotorBikeProcessing(!motorBikeProcessing);
   };
 
   // Open Close Menu
@@ -378,23 +296,23 @@ function Menu(props) {
         </div>
         <ul className="tree-view-parent">
           <li>
-            <Typography onClick={handleOpenPrepayPayment}>
-              <Add fontSize="small" hidden={openPrepayPayment} />
-              <HorizontalRule fontSize="small" hidden={closePrepayPayment} />
-              <Folder className="folder" hidden={openPrepayPayment} />
-              <FolderOpen className="folder" hidden={closePrepayPayment} />
+            <Typography onClick={handlePrepayPayment}>
+              <Add fontSize="small" hidden={prepayPayment} />
+              <HorizontalRule fontSize="small" hidden={!prepayPayment} />
+              <Folder className="folder" hidden={prepayPayment} />
+              <FolderOpen className="folder" hidden={!prepayPayment} />
               Prepay Payment
             </Typography>
-            <ul className="tree-view-child" hidden={closePrepayPayment}>
+            <ul className="tree-view-child" hidden={!prepayPayment}>
               <li>
-                <Typography onClick={handleOpenCMS}>
-                  <Add fontSize="small" hidden={openCMS} />
-                  <HorizontalRule fontSize="small" hidden={closeCMS} />
-                  <Folder className="folder" hidden={openCMS} />
-                  <FolderOpen className="folder" hidden={closeCMS} />
+                <Typography onClick={handleCMS}>
+                  <Add fontSize="small" hidden={cms} />
+                  <HorizontalRule fontSize="small" hidden={!cms} />
+                  <Folder className="folder" hidden={cms} />
+                  <FolderOpen className="folder" hidden={!cms} />
                   CMS
                 </Typography>
-                <ul className="tree-view-child" hidden={closeCMS}>
+                <ul className="tree-view-child" hidden={!cms}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -440,14 +358,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenCard}>
-                  <Add fontSize="small" hidden={openCard} />
-                  <HorizontalRule fontSize="small" hidden={closeCard} />
-                  <Folder className="folder" hidden={openCard} />
-                  <FolderOpen className="folder" hidden={closeCard} />
+                <Typography onClick={handleCard}>
+                  <Add fontSize="small" hidden={card} />
+                  <HorizontalRule fontSize="small" hidden={!card} />
+                  <Folder className="folder" hidden={card} />
+                  <FolderOpen className="folder" hidden={!card} />
                   Card
                 </Typography>
-                <ul className="tree-view-child" hidden={closeCard}>
+                <ul className="tree-view-child" hidden={!card}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -487,14 +405,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenSCJPoint}>
-                  <Add fontSize="small" hidden={openSCJPoint} />
-                  <HorizontalRule fontSize="small" hidden={closeSCJPoint} />
-                  <Folder className="folder" hidden={openSCJPoint} />
-                  <FolderOpen className="folder" hidden={closeSCJPoint} />
+                <Typography onClick={handleSCJPoint}>
+                  <Add fontSize="small" hidden={scjPoint} />
+                  <HorizontalRule fontSize="small" hidden={!scjPoint} />
+                  <Folder className="folder" hidden={scjPoint} />
+                  <FolderOpen className="folder" hidden={!scjPoint} />
                   SCJ Point
                 </Typography>
-                <ul className="tree-view-child" hidden={closeSCJPoint}>
+                <ul className="tree-view-child" hidden={!scjPoint}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -540,14 +458,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenDeposit}>
-                  <Add fontSize="small" hidden={openDeposit} />
-                  <HorizontalRule fontSize="small" hidden={closeDeposit} />
-                  <Folder className="folder" hidden={openDeposit} />
-                  <FolderOpen className="folder" hidden={closeDeposit} />
+                <Typography onClick={handleDeposit}>
+                  <Add fontSize="small" hidden={deposit} />
+                  <HorizontalRule fontSize="small" hidden={!deposit} />
+                  <Folder className="folder" hidden={deposit} />
+                  <FolderOpen className="folder" hidden={!deposit} />
                   Deposit
                 </Typography>
-                <ul className="tree-view-child" hidden={closeDeposit}>
+                <ul className="tree-view-child" hidden={!deposit}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -575,14 +493,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenCreditLoan}>
-                  <Add fontSize="small" hidden={openCreditLoan} />
-                  <HorizontalRule fontSize="small" hidden={closeCreditLoan} />
-                  <Folder className="folder" hidden={openCreditLoan} />
-                  <FolderOpen className="folder" hidden={closeCreditLoan} />
+                <Typography onClick={handleCreditLoan}>
+                  <Add fontSize="small" hidden={creditLoan} />
+                  <HorizontalRule fontSize="small" hidden={!creditLoan} />
+                  <Folder className="folder" hidden={creditLoan} />
+                  <FolderOpen className="folder" hidden={!creditLoan} />
                   CreditLoan
                 </Typography>
-                <ul className="tree-view-child" hidden={closeCreditLoan}>
+                <ul className="tree-view-child" hidden={!creditLoan}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -610,17 +528,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenPaymentOnline}>
-                  <Add fontSize="small" hidden={openPaymentOnline} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closePaymentOnline}
-                  />
-                  <Folder className="folder" hidden={openPaymentOnline} />
-                  <FolderOpen className="folder" hidden={closePaymentOnline} />
+                <Typography onClick={handlePaymentOnline}>
+                  <Add fontSize="small" hidden={paymentOnline} />
+                  <HorizontalRule fontSize="small" hidden={!paymentOnline} />
+                  <Folder className="folder" hidden={paymentOnline} />
+                  <FolderOpen className="folder" hidden={!paymentOnline} />
                   Payment Online
                 </Typography>
-                <ul className="tree-view-child" hidden={closePaymentOnline}>
+                <ul className="tree-view-child" hidden={!paymentOnline}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -663,23 +578,23 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenPostpayPayment}>
-              <Add fontSize="small" hidden={openPostpayPayment} />
-              <HorizontalRule fontSize="small" hidden={closePostpayPayment} />
-              <Folder className="folder" hidden={openPostpayPayment} />
-              <FolderOpen className="folder" hidden={closePostpayPayment} />
+            <Typography onClick={handlePostpayPayment}>
+              <Add fontSize="small" hidden={postpayPayment} />
+              <HorizontalRule fontSize="small" hidden={!postpayPayment} />
+              <Folder className="folder" hidden={postpayPayment} />
+              <FolderOpen className="folder" hidden={!postpayPayment} />
               Postpay Payment
             </Typography>
-            <ul className="tree-view-child" hidden={closePostpayPayment}>
+            <ul className="tree-view-child" hidden={!postpayPayment}>
               <li>
-                <Typography onClick={handleOpenCOD}>
-                  <Add fontSize="small" hidden={openCOD} />
-                  <HorizontalRule fontSize="small" hidden={closeCOD} />
-                  <Folder className="folder" hidden={openCOD} />
-                  <FolderOpen className="folder" hidden={closeCOD} />
+                <Typography onClick={handleCOD}>
+                  <Add fontSize="small" hidden={cod} />
+                  <HorizontalRule fontSize="small" hidden={!cod} />
+                  <Folder className="folder" hidden={cod} />
+                  <FolderOpen className="folder" hidden={!cod} />
                   COD
                 </Typography>
-                <ul className="tree-view-child" hidden={closeCOD}>
+                <ul className="tree-view-child" hidden={!cod}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -696,20 +611,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenStatusByPostpay}>
-                  <Add fontSize="small" hidden={openStatusByPostpay} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeStatusByPostpay}
-                  />
-                  <Folder className="folder" hidden={openStatusByPostpay} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeStatusByPostpay}
-                  />
+                <Typography onClick={handleStatusByPostpay}>
+                  <Add fontSize="small" hidden={statusByPostpay} />
+                  <HorizontalRule fontSize="small" hidden={!statusByPostpay} />
+                  <Folder className="folder" hidden={statusByPostpay} />
+                  <FolderOpen className="folder" hidden={!statusByPostpay} />
                   Status By Postpay
                 </Typography>
-                <ul className="tree-view-child" hidden={closeStatusByPostpay}>
+                <ul className="tree-view-child" hidden={!statusByPostpay}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -746,23 +655,23 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenRefund}>
-              <Add fontSize="small" hidden={openRefund} />
-              <HorizontalRule fontSize="small" hidden={closeRefund} />
-              <Folder className="folder" hidden={openRefund} />
-              <FolderOpen className="folder" hidden={closeRefund} />
+            <Typography onClick={handleRefund}>
+              <Add fontSize="small" hidden={refund} />
+              <HorizontalRule fontSize="small" hidden={!refund} />
+              <Folder className="folder" hidden={refund} />
+              <FolderOpen className="folder" hidden={!refund} />
               Refund
             </Typography>
-            <ul className="tree-view-child" hidden={closeRefund}>
+            <ul className="tree-view-child" hidden={!refund}>
               <li>
-                <Typography onClick={handleOpenRefundProc}>
-                  <Add fontSize="small" hidden={openRefundProc} />
-                  <HorizontalRule fontSize="small" hidden={closeRefundProc} />
-                  <Folder className="folder" hidden={openRefundProc} />
-                  <FolderOpen className="folder" hidden={closeRefundProc} />
+                <Typography onClick={handleRefundProc}>
+                  <Add fontSize="small" hidden={refundProc} />
+                  <HorizontalRule fontSize="small" hidden={!refundProc} />
+                  <Folder className="folder" hidden={refundProc} />
+                  <FolderOpen className="folder" hidden={!refundProc} />
                   Refund Proc
                 </Typography>
-                <ul className="tree-view-child" hidden={closeRefundProc}>
+                <ul className="tree-view-child" hidden={!refundProc}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -778,17 +687,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenStatusByRefund}>
-                  <Add fontSize="small" hidden={openStatusByRefund} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeStatusByRefund}
-                  />
-                  <Folder className="folder" hidden={openStatusByRefund} />
-                  <FolderOpen className="folder" hidden={closeStatusByRefund} />
+                <Typography onClick={handleStatusByRefund}>
+                  <Add fontSize="small" hidden={statusByRefund} />
+                  <HorizontalRule fontSize="small" hidden={!statusByRefund} />
+                  <Folder className="folder" hidden={statusByRefund} />
+                  <FolderOpen className="folder" hidden={!statusByRefund} />
                   Status By Refund
                 </Typography>
-                <ul className="tree-view-child" hidden={closeStatusByRefund}>
+                <ul className="tree-view-child" hidden={!statusByRefund}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -801,32 +707,26 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenAccountOtherAnal}>
-              <Add fontSize="small" hidden={openAccountOtherAnal} />
-              <HorizontalRule fontSize="small" hidden={closeAccountOtherAnal} />
-              <Folder className="folder" hidden={openAccountOtherAnal} />
-              <FolderOpen className="folder" hidden={closeAccountOtherAnal} />
+            <Typography onClick={handleAccountOtherAnal}>
+              <Add fontSize="small" hidden={accountOtherAnal} />
+              <HorizontalRule fontSize="small" hidden={!accountOtherAnal} />
+              <Folder className="folder" hidden={accountOtherAnal} />
+              <FolderOpen className="folder" hidden={!accountOtherAnal} />
               Other Anal
             </Typography>
-            <ul className="tree-view-child" hidden={closeAccountOtherAnal}>
+            <ul className="tree-view-child" hidden={!accountOtherAnal}>
               <li>
-                <Typography onClick={handleOpenSaleAndPaymentAnal}>
-                  <Add fontSize="small" hidden={openSaleAndPaymentAnal} />
+                <Typography onClick={handleSaleAndPaymentAnal}>
+                  <Add fontSize="small" hidden={saleAndPaymentAnal} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeSaleAndPaymentAnal}
+                    hidden={!saleAndPaymentAnal}
                   />
-                  <Folder className="folder" hidden={openSaleAndPaymentAnal} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeSaleAndPaymentAnal}
-                  />
+                  <Folder className="folder" hidden={saleAndPaymentAnal} />
+                  <FolderOpen className="folder" hidden={!saleAndPaymentAnal} />
                   Sale And Payment Anal
                 </Typography>
-                <ul
-                  className="tree-view-child"
-                  hidden={closeSaleAndPaymentAnal}
-                >
+                <ul className="tree-view-child" hidden={!saleAndPaymentAnal}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -836,14 +736,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenOtherAnal}>
-                  <Add fontSize="small" hidden={openOtherAnal} />
-                  <HorizontalRule fontSize="small" hidden={closeOtherAnal} />
-                  <Folder className="folder" hidden={openOtherAnal} />
-                  <FolderOpen className="folder" hidden={closeOtherAnal} />
+                <Typography onClick={handleOtherAnal}>
+                  <Add fontSize="small" hidden={otherAnal} />
+                  <HorizontalRule fontSize="small" hidden={!otherAnal} />
+                  <Folder className="folder" hidden={otherAnal} />
+                  <FolderOpen className="folder" hidden={!otherAnal} />
                   Other Anal
                 </Typography>
-                <ul className="tree-view-child" hidden={closeOtherAnal}>
+                <ul className="tree-view-child" hidden={!otherAnal}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -874,26 +774,23 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenReceipt}>
-              <Add fontSize="small" hidden={openReceipt} />
-              <HorizontalRule fontSize="small" hidden={closeReceipt} />
-              <Folder className="folder" hidden={openReceipt} />
-              <FolderOpen className="folder" hidden={closeReceipt} />
+            <Typography onClick={handleReceipt}>
+              <Add fontSize="small" hidden={receipt} />
+              <HorizontalRule fontSize="small" hidden={!receipt} />
+              <Folder className="folder" hidden={receipt} />
+              <FolderOpen className="folder" hidden={!receipt} />
               Receipt
             </Typography>
-            <ul className="tree-view-child" hidden={closeReceipt}>
+            <ul className="tree-view-child" hidden={!receipt}>
               <li>
-                <Typography onClick={handleOpenReceiptsIssued}>
-                  <Add fontSize="small" hidden={openReceiptsIssued} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeReceiptsIssued}
-                  />
-                  <Folder className="folder" hidden={openReceiptsIssued} />
-                  <FolderOpen className="folder" hidden={closeReceiptsIssued} />
+                <Typography onClick={handleReceiptsIssued}>
+                  <Add fontSize="small" hidden={receiptsIssued} />
+                  <HorizontalRule fontSize="small" hidden={!receiptsIssued} />
+                  <Folder className="folder" hidden={receiptsIssued} />
+                  <FolderOpen className="folder" hidden={!receiptsIssued} />
                   Receipts Issued
                 </Typography>
-                <ul className="tree-view-child" hidden={closeReceiptsIssued}>
+                <ul className="tree-view-child" hidden={!receiptsIssued}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -927,20 +824,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenCustomerDMIssued}>
-                  <Add fontSize="small" hidden={openCustomerDMIssued} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeCustomerDMIssued}
-                  />
-                  <Folder className="folder" hidden={openCustomerDMIssued} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeCustomerDMIssued}
-                  />
+                <Typography onClick={handleCustomerDMIssued}>
+                  <Add fontSize="small" hidden={customerDMIssued} />
+                  <HorizontalRule fontSize="small" hidden={!customerDMIssued} />
+                  <Folder className="folder" hidden={customerDMIssued} />
+                  <FolderOpen className="folder" hidden={!customerDMIssued} />
                   Customer DM Issued
                 </Typography>
-                <ul className="tree-view-child" hidden={closeCustomerDMIssued}>
+                <ul className="tree-view-child" hidden={!customerDMIssued}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -956,23 +847,20 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenIndividualIncomeTax}>
-                  <Add fontSize="small" hidden={openIndividualIncomeTax} />
+                <Typography onClick={handleIndividualIncomeTax}>
+                  <Add fontSize="small" hidden={individualIncomeTax} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeIndividualIncomeTax}
+                    hidden={!individualIncomeTax}
                   />
-                  <Folder className="folder" hidden={openIndividualIncomeTax} />
+                  <Folder className="folder" hidden={individualIncomeTax} />
                   <FolderOpen
                     className="folder"
-                    hidden={closeIndividualIncomeTax}
+                    hidden={!individualIncomeTax}
                   />
                   Individual Income Tax
                 </Typography>
-                <ul
-                  className="tree-view-child"
-                  hidden={closeIndividualIncomeTax}
-                >
+                <ul className="tree-view-child" hidden={!individualIncomeTax}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -991,29 +879,23 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenVendorMgt}>
-              <Add fontSize="small" hidden={openVendorMgt} />
-              <HorizontalRule fontSize="small" hidden={closeVendorMgt} />
-              <Folder className="folder" hidden={openVendorMgt} />
-              <FolderOpen className="folder" hidden={closeVendorMgt} />
+            <Typography onClick={handleAccountVendorMgt}>
+              <Add fontSize="small" hidden={accountVendorMgt} />
+              <HorizontalRule fontSize="small" hidden={!accountVendorMgt} />
+              <Folder className="folder" hidden={accountVendorMgt} />
+              <FolderOpen className="folder" hidden={!accountVendorMgt} />
               Vendor Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeVendorMgt}>
+            <ul className="tree-view-child" hidden={!accountVendorMgt}>
               <li>
-                <Typography onClick={handleOpenBasicVendorInfo}>
-                  <Add fontSize="small" hidden={openBasicVendorInfo} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeBasicVendorInfo}
-                  />
-                  <Folder className="folder" hidden={openBasicVendorInfo} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeBasicVendorInfo}
-                  />
+                <Typography onClick={handleVendorMgt}>
+                  <Add fontSize="small" hidden={vendorMgt} />
+                  <HorizontalRule fontSize="small" hidden={!vendorMgt} />
+                  <Folder className="folder" hidden={vendorMgt} />
+                  <FolderOpen className="folder" hidden={!vendorMgt} />
                   Vendor Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeBasicVendorInfo}>
+                <ul className="tree-view-child" hidden={!vendorMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1035,20 +917,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenBasicPaymentInfo}>
-                  <Add fontSize="small" hidden={openBasicPaymentInfo} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeBasicPaymentInfo}
-                  />
-                  <Folder className="folder" hidden={openBasicPaymentInfo} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeBasicPaymentInfo}
-                  />
+                <Typography onClick={handleBasicPaymentInfo}>
+                  <Add fontSize="small" hidden={basicPaymentInfo} />
+                  <HorizontalRule fontSize="small" hidden={!basicPaymentInfo} />
+                  <Folder className="folder" hidden={basicPaymentInfo} />
+                  <FolderOpen className="folder" hidden={!basicPaymentInfo} />
                   Basic Payment Info
                 </Typography>
-                <ul className="tree-view-child" hidden={closeBasicPaymentInfo}>
+                <ul className="tree-view-child" hidden={!basicPaymentInfo}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1088,20 +964,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenBasicInfoStatus}>
-                  <Add fontSize="small" hidden={openBasicInfoStatus} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeBasicInfoStatus}
-                  />
-                  <Folder className="folder" hidden={openBasicInfoStatus} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeBasicInfoStatus}
-                  />
+                <Typography onClick={handleBasicInfoStatus}>
+                  <Add fontSize="small" hidden={basicInfoStatus} />
+                  <HorizontalRule fontSize="small" hidden={!basicInfoStatus} />
+                  <Folder className="folder" hidden={basicInfoStatus} />
+                  <FolderOpen className="folder" hidden={!basicInfoStatus} />
                   Basic Info Status
                 </Typography>
-                <ul className="tree-view-child" hidden={closeBasicInfoStatus}>
+                <ul className="tree-view-child" hidden={!basicInfoStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1139,23 +1009,23 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenVendorSettlement}>
-              <Add fontSize="small" hidden={openVendorSettlement} />
-              <HorizontalRule fontSize="small" hidden={closeVendorSettlement} />
-              <Folder className="folder" hidden={openVendorSettlement} />
-              <FolderOpen className="folder" hidden={closeVendorSettlement} />
+            <Typography onClick={handleVendorSettlement}>
+              <Add fontSize="small" hidden={vendorSettlement} />
+              <HorizontalRule fontSize="small" hidden={!vendorSettlement} />
+              <Folder className="folder" hidden={vendorSettlement} />
+              <FolderOpen className="folder" hidden={!vendorSettlement} />
               Vendor Settlement
             </Typography>
-            <ul className="tree-view-child" hidden={closeVendorSettlement}>
+            <ul className="tree-view-child" hidden={!vendorSettlement}>
               <li>
-                <Typography onClick={handleOpenBillPayment}>
-                  <Add fontSize="small" hidden={openBillPayment} />
-                  <HorizontalRule fontSize="small" hidden={closeBillPayment} />
-                  <Folder className="folder" hidden={openBillPayment} />
-                  <FolderOpen className="folder" hidden={closeBillPayment} />
+                <Typography onClick={handleBillPayment}>
+                  <Add fontSize="small" hidden={billPayment} />
+                  <HorizontalRule fontSize="small" hidden={!billPayment} />
+                  <Folder className="folder" hidden={billPayment} />
+                  <FolderOpen className="folder" hidden={!billPayment} />
                   Bill Payment
                 </Typography>
-                <ul className="tree-view-child" hidden={closeBillPayment}>
+                <ul className="tree-view-child" hidden={!billPayment}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1195,25 +1065,22 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenItemSupplyPriceInquire}>
-                  <Add fontSize="small" hidden={openItemSupplyPriceInquire} />
+                <Typography onClick={handleItemSupplyPriceInquire}>
+                  <Add fontSize="small" hidden={itemSupplyPriceInquire} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeItemSupplyPriceInquire}
+                    hidden={!itemSupplyPriceInquire}
                   />
-                  <Folder
-                    className="folder"
-                    hidden={openItemSupplyPriceInquire}
-                  />
+                  <Folder className="folder" hidden={itemSupplyPriceInquire} />
                   <FolderOpen
                     className="folder"
-                    hidden={closeItemSupplyPriceInquire}
+                    hidden={!itemSupplyPriceInquire}
                   />
                   Item Supply Price Inquire
                 </Typography>
                 <ul
                   className="tree-view-child"
-                  hidden={closeItemSupplyPriceInquire}
+                  hidden={!itemSupplyPriceInquire}
                 >
                   <li>
                     <Typography className="document-title">
@@ -1230,14 +1097,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenPinanceIF}>
-                  <Add fontSize="small" hidden={openPinanceIF} />
-                  <HorizontalRule fontSize="small" hidden={closePinanceIF} />
-                  <Folder className="folder" hidden={openPinanceIF} />
-                  <FolderOpen className="folder" hidden={closePinanceIF} />
+                <Typography onClick={handlePinanceIF}>
+                  <Add fontSize="small" hidden={pinanceIF} />
+                  <HorizontalRule fontSize="small" hidden={!pinanceIF} />
+                  <Folder className="folder" hidden={pinanceIF} />
+                  <FolderOpen className="folder" hidden={!pinanceIF} />
                   Pinance I/F
                 </Typography>
-                <ul className="tree-view-child" hidden={closePinanceIF}>
+                <ul className="tree-view-child" hidden={!pinanceIF}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1298,29 +1165,26 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenVoucherMgt}>
-              <Add fontSize="small" hidden={openVoucherMgt} />
-              <HorizontalRule fontSize="small" hidden={closeVoucherMgt} />
-              <Folder className="folder" hidden={openVoucherMgt} />
-              <FolderOpen className="folder" hidden={closeVoucherMgt} />
+            <Typography onClick={handleVoucherMgt}>
+              <Add fontSize="small" hidden={voucherMgt} />
+              <HorizontalRule fontSize="small" hidden={!voucherMgt} />
+              <Folder className="folder" hidden={voucherMgt} />
+              <FolderOpen className="folder" hidden={!voucherMgt} />
               Voucher Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeVoucherMgt}>
+            <ul className="tree-view-child" hidden={!voucherMgt}>
               <li>
-                <Typography onClick={handleOpenVoucherProcessing}>
-                  <Add fontSize="small" hidden={openVoucherProcessing} />
+                <Typography onClick={handleVoucherProcessing}>
+                  <Add fontSize="small" hidden={voucherProcessing} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeVoucherProcessing}
+                    hidden={!voucherProcessing}
                   />
-                  <Folder className="folder" hidden={openVoucherProcessing} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeVoucherProcessing}
-                  />
+                  <Folder className="folder" hidden={voucherProcessing} />
+                  <FolderOpen className="folder" hidden={!voucherProcessing} />
                   Voucher Processing
                 </Typography>
-                <ul className="tree-view-child" hidden={closeVoucherProcessing}>
+                <ul className="tree-view-child" hidden={!voucherProcessing}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1367,17 +1231,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenVoucherStatus}>
-                  <Add fontSize="small" hidden={openVoucherStatus} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeVoucherStatus}
-                  />
-                  <Folder className="folder" hidden={openVoucherStatus} />
-                  <FolderOpen className="folder" hidden={closeVoucherStatus} />
+                <Typography onClick={handleVoucherStatus}>
+                  <Add fontSize="small" hidden={voucherStatus} />
+                  <HorizontalRule fontSize="small" hidden={!voucherStatus} />
+                  <Folder className="folder" hidden={voucherStatus} />
+                  <FolderOpen className="folder" hidden={!voucherStatus} />
                   Voucher Status
                 </Typography>
-                <ul className="tree-view-child" hidden={closeVoucherStatus}>
+                <ul className="tree-view-child" hidden={!voucherStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1408,23 +1269,23 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenDCCoupon}>
-              <Add fontSize="small" hidden={openDCCoupon} />
-              <HorizontalRule fontSize="small" hidden={closeDCCoupon} />
-              <Folder className="folder" hidden={openDCCoupon} />
-              <FolderOpen className="folder" hidden={closeDCCoupon} />
+            <Typography onClick={handleDCCoupon}>
+              <Add fontSize="small" hidden={dcCoupon} />
+              <HorizontalRule fontSize="small" hidden={!dcCoupon} />
+              <Folder className="folder" hidden={dcCoupon} />
+              <FolderOpen className="folder" hidden={!dcCoupon} />
               D/C Coupon
             </Typography>
-            <ul className="tree-view-child" hidden={closeDCCoupon}>
+            <ul className="tree-view-child" hidden={!dcCoupon}>
               <li>
-                <Typography onClick={handleOpenDCCouponMgt}>
-                  <Add fontSize="small" hidden={openDCCouponMgt} />
-                  <HorizontalRule fontSize="small" hidden={closeDCCouponMgt} />
-                  <Folder className="folder" hidden={openDCCouponMgt} />
-                  <FolderOpen className="folder" hidden={closeDCCouponMgt} />
+                <Typography onClick={handleDCCouponMgt}>
+                  <Add fontSize="small" hidden={dcCouponMgt} />
+                  <HorizontalRule fontSize="small" hidden={!dcCouponMgt} />
+                  <Folder className="folder" hidden={dcCouponMgt} />
+                  <FolderOpen className="folder" hidden={!dcCouponMgt} />
                   D/C Coupon Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeDCCouponMgt}>
+                <ul className="tree-view-child" hidden={!dcCouponMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1452,17 +1313,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenDCCouponStatus}>
-                  <Add fontSize="small" hidden={openDCCouponStatus} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeDCCouponStatus}
-                  />
-                  <Folder className="folder" hidden={openDCCouponStatus} />
-                  <FolderOpen className="folder" hidden={closeDCCouponStatus} />
+                <Typography onClick={handleDCCouponStatus}>
+                  <Add fontSize="small" hidden={dcCouponStatus} />
+                  <HorizontalRule fontSize="small" hidden={!dcCouponStatus} />
+                  <Folder className="folder" hidden={dcCouponStatus} />
+                  <FolderOpen className="folder" hidden={!dcCouponStatus} />
                   D/C Coupon Status
                 </Typography>
-                <ul className="tree-view-child" hidden={closeDCCouponStatus}>
+                <ul className="tree-view-child" hidden={!dcCouponStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1487,26 +1345,23 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenB2BMgt}>
-              <Add fontSize="small" hidden={openB2BMgt} />
-              <HorizontalRule fontSize="small" hidden={closeB2BMgt} />
-              <Folder className="folder" hidden={openB2BMgt} />
-              <FolderOpen className="folder" hidden={closeB2BMgt} />
+            <Typography onClick={handleB2BMgt}>
+              <Add fontSize="small" hidden={b2bMgt} />
+              <HorizontalRule fontSize="small" hidden={!b2bMgt} />
+              <Folder className="folder" hidden={b2bMgt} />
+              <FolderOpen className="folder" hidden={!b2bMgt} />
               B2B Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeB2BMgt}>
+            <ul className="tree-view-child" hidden={!b2bMgt}>
               <li>
-                <Typography onClick={handleOpenB2BProcessing}>
-                  <Add fontSize="small" hidden={openB2BProcessing} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeB2BProcessing}
-                  />
-                  <Folder className="folder" hidden={openB2BProcessing} />
-                  <FolderOpen className="folder" hidden={closeB2BProcessing} />
+                <Typography onClick={handleB2BProcessing}>
+                  <Add fontSize="small" hidden={b2bProcessing} />
+                  <HorizontalRule fontSize="small" hidden={!b2bProcessing} />
+                  <Folder className="folder" hidden={b2bProcessing} />
+                  <FolderOpen className="folder" hidden={!b2bProcessing} />
                   B2B Processing
                 </Typography>
-                <ul className="tree-view-child" hidden={closeB2BProcessing}>
+                <ul className="tree-view-child" hidden={!b2bProcessing}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1571,14 +1426,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenB2BStatus}>
-                  <Add fontSize="small" hidden={openB2BStatus} />
-                  <HorizontalRule fontSize="small" hidden={closeB2BStatus} />
-                  <Folder className="folder" hidden={openB2BStatus} />
-                  <FolderOpen className="folder" hidden={closeB2BStatus} />
+                <Typography onClick={handleB2BStatus}>
+                  <Add fontSize="small" hidden={b2bStatus} />
+                  <HorizontalRule fontSize="small" hidden={!b2bStatus} />
+                  <Folder className="folder" hidden={b2bStatus} />
+                  <FolderOpen className="folder" hidden={!b2bStatus} />
                   B2B Status
                 </Typography>
-                <ul className="tree-view-child" hidden={closeB2BStatus}>
+                <ul className="tree-view-child" hidden={!b2bStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1597,32 +1452,29 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenMotorBikeMgt}>
-              <Add fontSize="small" hidden={openMotorBikeMgt} />
-              <HorizontalRule fontSize="small" hidden={closeMotorBikeMgt} />
-              <Folder className="folder" hidden={openMotorBikeMgt} />
-              <FolderOpen className="folder" hidden={closeMotorBikeMgt} />
+            <Typography onClick={handleMotorBikeMgt}>
+              <Add fontSize="small" hidden={motorBikeMgt} />
+              <HorizontalRule fontSize="small" hidden={!motorBikeMgt} />
+              <Folder className="folder" hidden={motorBikeMgt} />
+              <FolderOpen className="folder" hidden={!motorBikeMgt} />
               MotorBike Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeMotorBikeMgt}>
+            <ul className="tree-view-child" hidden={!motorBikeMgt}>
               <li>
-                <Typography onClick={handleOpenMotorBikeProcessing}>
-                  <Add fontSize="small" hidden={openMotorBikeProcessing} />
+                <Typography onClick={handleMotorBikeProcessing}>
+                  <Add fontSize="small" hidden={motorBikeProcessing} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeMotorBikeProcessing}
+                    hidden={!motorBikeProcessing}
                   />
-                  <Folder className="folder" hidden={openMotorBikeProcessing} />
+                  <Folder className="folder" hidden={motorBikeProcessing} />
                   <FolderOpen
                     className="folder"
-                    hidden={closeMotorBikeProcessing}
+                    hidden={!motorBikeProcessing}
                   />
                   MotorBike Processing
                 </Typography>
-                <ul
-                  className="tree-view-child"
-                  hidden={closeMotorBikeProcessing}
-                >
+                <ul className="tree-view-child" hidden={!motorBikeProcessing}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />

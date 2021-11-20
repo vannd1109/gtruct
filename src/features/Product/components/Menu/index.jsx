@@ -11,7 +11,7 @@ import { useState } from "react";
 import { Col } from "react-bootstrap";
 import "./styles.scss";
 
-function Menu(props) {
+function Menu({ setTitle, handleSetTitle }) {
   // open close menu
   const [closeMenu, setCloseMenu] = useState(false);
 
@@ -109,8 +109,31 @@ function Menu(props) {
 
   //Item Mgt
 
-  const handleOpenProductNumber = () => {
-    console.log("Mã số phân loại sản phẩm");
+  const handleProductNumber = () => {
+    if (handleSetTitle) {
+      handleSetTitle();
+      setTitle("Mã số phân loại sản phẩm");
+    }
+  };
+
+  const handleProductDescripton = () => {
+    if (handleSetTitle) {
+      handleSetTitle();
+      setTitle("Đăng nhập mô tả sản phẩm");
+    }
+  };
+
+  const handleProductBrand = () => {
+    if (handleSetTitle) {
+      handleSetTitle();
+      setTitle("Đăng nhập nhãn hiệu");
+    }
+  };
+  const handleProductManufacturer = () => {
+    if (handleSetTitle) {
+      handleSetTitle();
+      setTitle("Đăng nhập hãng sản xuất");
+    }
   };
 
   return (
@@ -151,26 +174,35 @@ function Menu(props) {
                   <li>
                     <Typography
                       className="document-title"
-                      onClick={handleOpenProductNumber}
+                      onClick={handleProductNumber}
                     >
                       <Description className="file" />
                       Mã số phân loại sản phẩm
                     </Typography>
                   </li>
                   <li>
-                    <Typography className="document-title">
+                    <Typography
+                      className="document-title"
+                      onClick={handleProductDescripton}
+                    >
                       <Description className="file" />
                       Đăng nhập mô tả sản phẩm
                     </Typography>
                   </li>
                   <li>
-                    <Typography className="document-title">
+                    <Typography
+                      className="document-title"
+                      onClick={handleProductBrand}
+                    >
                       <Description className="file" />
                       Đăng nhập nhãn hiệu
                     </Typography>
                   </li>
                   <li>
-                    <Typography className="document-title">
+                    <Typography
+                      className="document-title"
+                      onClick={handleProductManufacturer}
+                    >
                       <Description className="file" />
                       Đăng nhập hãng sản xuất
                     </Typography>

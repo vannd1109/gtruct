@@ -1,11 +1,11 @@
-import Header from "./components/Header";
-import Body from "./components/Body";
+import MainHeader from "../../../../components/MainHeader";
+import MainBody from "../../../../components/MainBody";
 
-function Main(props) {
+function Main({ title }) {
   return (
     <div className="main border">
-      <Header />
-      <Body />
+      <MainHeader title={title} />
+      <MainBody />
     </div>
   );
 }

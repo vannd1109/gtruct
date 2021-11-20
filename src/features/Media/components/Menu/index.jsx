@@ -15,131 +15,101 @@ function Menu(props) {
   const [closeMenu, setCloseMenu] = useState(false);
 
   // TV
-  const [openTV, setOpenTV] = useState(false);
-  const [closeTV, setCloseTV] = useState(true);
+  const [tvSection, setTVSection] = useState(false);
 
-  const [openBasicInfo, setOpenBasicInfo] = useState(false);
-  const [closeBasicInfo, setCloseBasicInfo] = useState(true);
+  const [basicInfo, setBasicInfo] = useState(false);
 
-  const [openProgramLineup, setOpenProgramLineup] = useState(false);
-  const [closeProgramLineup, setCloseProgramLineup] = useState(true);
+  const [programLineup, setProgramLineup] = useState(false);
 
-  const [openOnAir, setOpenOnAir] = useState(false);
-  const [closeOnAir, setCloseOnAir] = useState(true);
+  const [onAir, setOnAir] = useState(false);
 
-  const [openResult, setOpenResult] = useState(false);
-  const [closeResult, setCloseResult] = useState(true);
+  const [result, setResult] = useState(false);
 
-  const [openLineupInquiry, setOpenLineupInquiry] = useState(false);
-  const [closeLineupInquiry, setCloseLineupInquiry] = useState(true);
+  const [lineupInquiry, setLineupInquiry] = useState(false);
 
   // Catalog
-  const [openCatalog, setOpenCatalog] = useState(false);
-  const [closeCatalog, setCloseCatalog] = useState(true);
+  const [catalog, setCatalog] = useState(false);
 
-  const [openCatalogProduction, setOpenCatalogProduction] = useState(false);
-  const [closeCatalogProduction, setCloseCatalogProduction] = useState(true);
+  const [catalogProduction, setCatalogProduction] = useState(false);
 
-  const [openCatalogMgt, setOpenCatalogMgt] = useState(false);
-  const [closeCatalogMgt, setCloseCatalogMgt] = useState(true);
+  const [catalogMgt, setCatalogMgt] = useState(false);
 
-  const [openCatalogStatus, setOpenCatalogStatus] = useState(false);
-  const [closeCatalogStatus, setCloseCatalogStatus] = useState(true);
+  const [catalogStatus, setCatalogStatus] = useState(false);
 
   // Internet
-  const [openInternet, setOpenInternet] = useState(false);
-  const [closeInternet, setCloseInternet] = useState(true);
+  const [internet, setInternet] = useState(false);
 
-  const [openWebSurvey, setOpenWebSurvey] = useState(false);
-  const [closeWebSurvey, setCloseWebSurvey] = useState(true);
+  const [webSurvey, setWebSurvey] = useState(false);
 
-  const [openPreOrderMgt, setOpenPreOrderMgt] = useState(false);
-  const [closePreOrderMgt, setClosePreOrderMgt] = useState(true);
+  const [preOrderMgt, setPreOrderMgt] = useState(false);
 
-  const [openB2ECompanyMgt, setOpenB2ECompanyMgt] = useState(false);
-  const [closeB2ECompanyMgt, setCloseB2ECompanyMgt] = useState(true);
+  const [b2eCompanyMgt, setB2ECompanyMgt] = useState(false);
 
-  const [openMROCompanyMgt, setOpenMROCompanyMgt] = useState(false);
-  const [closeMROCompanyMgt, setCloseMROCompanyMgt] = useState(true);
+  const [mroCompanyMgt, setMROCompanyMgt] = useState(false);
 
   // ----------------------------------handle-----------------
 
   // TV
-  const handleOpenTV = (e) => {
-    setOpenTV(!openTV);
-    setCloseTV(!closeTV);
+  const handleTVSection = (e) => {
+    setTVSection(!tvSection);
   };
 
-  const handleOpenBasicInfo = (e) => {
-    setOpenBasicInfo(!openBasicInfo);
-    setCloseBasicInfo(!closeBasicInfo);
+  const handleBasicInfo = (e) => {
+    setBasicInfo(!basicInfo);
   };
 
-  const handleOpenProgramLineup = (e) => {
-    setOpenProgramLineup(!openProgramLineup);
-    setCloseProgramLineup(!closeProgramLineup);
+  const handleProgramLineup = (e) => {
+    setProgramLineup(!programLineup);
   };
 
-  const handleOpenOnAir = (e) => {
-    setOpenOnAir(!openOnAir);
-    setCloseOnAir(!closeOnAir);
+  const handleOnAir = (e) => {
+    setOnAir(!onAir);
   };
 
-  const handleOpenResult = (e) => {
-    setOpenResult(!openResult);
-    setCloseResult(!closeResult);
+  const handleResult = (e) => {
+    setResult(!result);
   };
 
-  const handleOpenLineupInquiry = (e) => {
-    setOpenLineupInquiry(!openLineupInquiry);
-    setCloseLineupInquiry(!closeLineupInquiry);
+  const handleLineupInquiry = (e) => {
+    setLineupInquiry(!lineupInquiry);
   };
 
   // CATALOG
-  const handleOpenCatalog = (e) => {
-    setOpenCatalog(!openCatalog);
-    setCloseCatalog(!closeCatalog);
+  const handleCatalog = (e) => {
+    setCatalog(!catalog);
   };
 
-  const handleOpenCatalogProduction = (e) => {
-    setOpenCatalogProduction(!openCatalogProduction);
-    setCloseCatalogProduction(!closeCatalogProduction);
+  const handleCatalogProduction = (e) => {
+    setCatalogProduction(!catalogProduction);
   };
 
-  const handleOpenCatalogMgt = (e) => {
-    setOpenCatalogMgt(!openCatalogMgt);
-    setCloseCatalogMgt(!closeCatalogMgt);
+  const handleCatalogMgt = (e) => {
+    setCatalogMgt(!catalogMgt);
   };
 
-  const handleOpenCatalogStatus = (e) => {
-    setOpenCatalogStatus(!openCatalogStatus);
-    setCloseCatalogStatus(!closeCatalogStatus);
+  const handleCatalogStatus = (e) => {
+    setCatalogStatus(!catalogStatus);
   };
 
   // INTERNET
-  const handleOpenInternet = (e) => {
-    setOpenInternet(!openInternet);
-    setCloseInternet(!closeInternet);
+  const handleInternet = (e) => {
+    setInternet(!internet);
   };
 
-  const handleOpenWebSurvey = (e) => {
-    setOpenWebSurvey(!openWebSurvey);
-    setCloseWebSurvey(!closeWebSurvey);
+  const handleWebSurvey = (e) => {
+    setWebSurvey(!webSurvey);
   };
 
-  const handleOpenPreOrderMgt = (e) => {
-    setOpenPreOrderMgt(!openPreOrderMgt);
-    setClosePreOrderMgt(!closePreOrderMgt);
+  const handlePreOrderMgt = (e) => {
+    setPreOrderMgt(!preOrderMgt);
   };
 
-  const handleOpenB2ECompanyMgt = (e) => {
-    setOpenB2ECompanyMgt(!openB2ECompanyMgt);
-    setCloseB2ECompanyMgt(!closeB2ECompanyMgt);
+  const handleB2ECompanyMgt = (e) => {
+    setB2ECompanyMgt(!b2eCompanyMgt);
   };
 
-  const handleOpenMROCompanyMgt = (e) => {
-    setOpenMROCompanyMgt(!openMROCompanyMgt);
-    setCloseMROCompanyMgt(!closeMROCompanyMgt);
+  const handleMROCompanyMgt = (e) => {
+    setMROCompanyMgt(!mroCompanyMgt);
   };
 
   // Open Close Menu
@@ -166,23 +136,23 @@ function Menu(props) {
         </div>
         <ul className="tree-view-parent">
           <li>
-            <Typography onClick={handleOpenTV}>
-              <Add fontSize="small" hidden={openTV} />
-              <HorizontalRule fontSize="small" hidden={closeTV} />
-              <Folder className="folder" hidden={openTV} />
-              <FolderOpen className="folder" hidden={closeTV} />
+            <Typography onClick={handleTVSection}>
+              <Add fontSize="small" hidden={tvSection} />
+              <HorizontalRule fontSize="small" hidden={!tvSection} />
+              <Folder className="folder" hidden={tvSection} />
+              <FolderOpen className="folder" hidden={!tvSection} />
               TV section
             </Typography>
-            <ul className="tree-view-child" hidden={closeTV}>
+            <ul className="tree-view-child" hidden={!tvSection}>
               <li>
-                <Typography onClick={handleOpenBasicInfo}>
-                  <Add fontSize="small" hidden={openBasicInfo} />
-                  <HorizontalRule fontSize="small" hidden={closeBasicInfo} />
-                  <Folder className="folder" hidden={openBasicInfo} />
-                  <FolderOpen className="folder" hidden={closeBasicInfo} />
+                <Typography onClick={handleBasicInfo}>
+                  <Add fontSize="small" hidden={basicInfo} />
+                  <HorizontalRule fontSize="small" hidden={!basicInfo} />
+                  <Folder className="folder" hidden={basicInfo} />
+                  <FolderOpen className="folder" hidden={!basicInfo} />
                   Basic Info
                 </Typography>
-                <ul className="tree-view-child" hidden={closeBasicInfo}>
+                <ul className="tree-view-child" hidden={!basicInfo}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -204,17 +174,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenProgramLineup}>
-                  <Add fontSize="small" hidden={openProgramLineup} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeProgramLineup}
-                  />
-                  <Folder className="folder" hidden={openProgramLineup} />
-                  <FolderOpen className="folder" hidden={closeProgramLineup} />
+                <Typography onClick={handleProgramLineup}>
+                  <Add fontSize="small" hidden={programLineup} />
+                  <HorizontalRule fontSize="small" hidden={!programLineup} />
+                  <Folder className="folder" hidden={programLineup} />
+                  <FolderOpen className="folder" hidden={!programLineup} />
                   Program Lineup
                 </Typography>
-                <ul className="tree-view-child" hidden={closeProgramLineup}>
+                <ul className="tree-view-child" hidden={!programLineup}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -248,14 +215,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenOnAir}>
-                  <Add fontSize="small" hidden={openOnAir} />
-                  <HorizontalRule fontSize="small" hidden={closeOnAir} />
-                  <Folder className="folder" hidden={openOnAir} />
-                  <FolderOpen className="folder" hidden={closeOnAir} />
+                <Typography onClick={handleOnAir}>
+                  <Add fontSize="small" hidden={onAir} />
+                  <HorizontalRule fontSize="small" hidden={!onAir} />
+                  <Folder className="folder" hidden={onAir} />
+                  <FolderOpen className="folder" hidden={!onAir} />
                   On-Air
                 </Typography>
-                <ul className="tree-view-child" hidden={closeOnAir}>
+                <ul className="tree-view-child" hidden={!onAir}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -283,14 +250,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenResult}>
-                  <Add fontSize="small" hidden={openResult} />
-                  <HorizontalRule fontSize="small" hidden={closeResult} />
-                  <Folder className="folder" hidden={openResult} />
-                  <FolderOpen className="folder" hidden={closeResult} />
+                <Typography onClick={handleResult}>
+                  <Add fontSize="small" hidden={result} />
+                  <HorizontalRule fontSize="small" hidden={!result} />
+                  <Folder className="folder" hidden={result} />
+                  <FolderOpen className="folder" hidden={!result} />
                   Result
                 </Typography>
-                <ul className="tree-view-child" hidden={closeResult}>
+                <ul className="tree-view-child" hidden={!result}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -306,17 +273,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenLineupInquiry}>
-                  <Add fontSize="small" hidden={openLineupInquiry} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeLineupInquiry}
-                  />
-                  <Folder className="folder" hidden={openLineupInquiry} />
-                  <FolderOpen className="folder" hidden={closeLineupInquiry} />
+                <Typography onClick={handleLineupInquiry}>
+                  <Add fontSize="small" hidden={lineupInquiry} />
+                  <HorizontalRule fontSize="small" hidden={!lineupInquiry} />
+                  <Folder className="folder" hidden={lineupInquiry} />
+                  <FolderOpen className="folder" hidden={!lineupInquiry} />
                   Lineup Inquiry
                 </Typography>
-                <ul className="tree-view-child" hidden={closeLineupInquiry}>
+                <ul className="tree-view-child" hidden={!lineupInquiry}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -353,29 +317,26 @@ function Menu(props) {
           </li>
 
           <li className="mt-2">
-            <Typography onClick={handleOpenCatalog}>
-              <Add fontSize="small" hidden={openCatalog} />
-              <HorizontalRule fontSize="small" hidden={closeCatalog} />
-              <Folder className="folder" hidden={openCatalog} />
-              <FolderOpen className="folder" hidden={closeCatalog} />
+            <Typography onClick={handleCatalog}>
+              <Add fontSize="small" hidden={catalog} />
+              <HorizontalRule fontSize="small" hidden={!catalog} />
+              <Folder className="folder" hidden={catalog} />
+              <FolderOpen className="folder" hidden={!catalog} />
               CATALOG
             </Typography>
-            <ul className="tree-view-child" hidden={closeCatalog}>
+            <ul className="tree-view-child" hidden={!catalog}>
               <li>
-                <Typography onClick={handleOpenCatalogProduction}>
-                  <Add fontSize="small" hidden={openCatalogProduction} />
+                <Typography onClick={handleCatalogProduction}>
+                  <Add fontSize="small" hidden={catalogProduction} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeCatalogProduction}
+                    hidden={!catalogProduction}
                   />
-                  <Folder className="folder" hidden={openCatalogProduction} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeCatalogProduction}
-                  />
+                  <Folder className="folder" hidden={catalogProduction} />
+                  <FolderOpen className="folder" hidden={!catalogProduction} />
                   CATALOG Production
                 </Typography>
-                <ul className="tree-view-child" hidden={closeCatalogProduction}>
+                <ul className="tree-view-child" hidden={!catalogProduction}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -385,14 +346,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenCatalogMgt}>
-                  <Add fontSize="small" hidden={openCatalogMgt} />
-                  <HorizontalRule fontSize="small" hidden={closeCatalogMgt} />
-                  <Folder className="folder" hidden={openCatalogMgt} />
-                  <FolderOpen className="folder" hidden={closeCatalogMgt} />
+                <Typography onClick={handleCatalogMgt}>
+                  <Add fontSize="small" hidden={catalogMgt} />
+                  <HorizontalRule fontSize="small" hidden={!catalogMgt} />
+                  <Folder className="folder" hidden={catalogMgt} />
+                  <FolderOpen className="folder" hidden={!catalogMgt} />
                   CATALOG Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeCatalogMgt}>
+                <ul className="tree-view-child" hidden={!catalogMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -420,17 +381,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenCatalogStatus}>
-                  <Add fontSize="small" hidden={openCatalogStatus} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeCatalogStatus}
-                  />
-                  <Folder className="folder" hidden={openCatalogStatus} />
-                  <FolderOpen className="folder" hidden={closeCatalogStatus} />
+                <Typography onClick={handleCatalogStatus}>
+                  <Add fontSize="small" hidden={catalogStatus} />
+                  <HorizontalRule fontSize="small" hidden={!catalogStatus} />
+                  <Folder className="folder" hidden={catalogStatus} />
+                  <FolderOpen className="folder" hidden={!catalogStatus} />
                   CATALOG Status
                 </Typography>
-                <ul className="tree-view-child" hidden={closeCatalogStatus}>
+                <ul className="tree-view-child" hidden={!catalogStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -473,23 +431,23 @@ function Menu(props) {
           </li>
 
           <li className="mt-2">
-            <Typography onClick={handleOpenInternet}>
-              <Add fontSize="small" hidden={openInternet} />
-              <HorizontalRule fontSize="small" hidden={closeInternet} />
-              <Folder className="folder" hidden={openInternet} />
-              <FolderOpen className="folder" hidden={closeInternet} />
+            <Typography onClick={handleInternet}>
+              <Add fontSize="small" hidden={internet} />
+              <HorizontalRule fontSize="small" hidden={!internet} />
+              <Folder className="folder" hidden={internet} />
+              <FolderOpen className="folder" hidden={!internet} />
               INTERNET
             </Typography>
-            <ul className="tree-view-child" hidden={closeInternet}>
+            <ul className="tree-view-child" hidden={!internet}>
               <li>
-                <Typography onClick={handleOpenWebSurvey}>
-                  <Add fontSize="small" hidden={openWebSurvey} />
-                  <HorizontalRule fontSize="small" hidden={closeWebSurvey} />
-                  <Folder className="folder" hidden={openWebSurvey} />
-                  <FolderOpen className="folder" hidden={closeWebSurvey} />
+                <Typography onClick={handleWebSurvey}>
+                  <Add fontSize="small" hidden={webSurvey} />
+                  <HorizontalRule fontSize="small" hidden={!webSurvey} />
+                  <Folder className="folder" hidden={webSurvey} />
+                  <FolderOpen className="folder" hidden={!webSurvey} />
                   WebSurvey
                 </Typography>
-                <ul className="tree-view-child" hidden={closeWebSurvey}>
+                <ul className="tree-view-child" hidden={!webSurvey}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -523,14 +481,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenPreOrderMgt}>
-                  <Add fontSize="small" hidden={openPreOrderMgt} />
-                  <HorizontalRule fontSize="small" hidden={closePreOrderMgt} />
-                  <Folder className="folder" hidden={openPreOrderMgt} />
-                  <FolderOpen className="folder" hidden={closePreOrderMgt} />
+                <Typography onClick={handlePreOrderMgt}>
+                  <Add fontSize="small" hidden={preOrderMgt} />
+                  <HorizontalRule fontSize="small" hidden={!preOrderMgt} />
+                  <Folder className="folder" hidden={preOrderMgt} />
+                  <FolderOpen className="folder" hidden={!preOrderMgt} />
                   Pre Order Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closePreOrderMgt}>
+                <ul className="tree-view-child" hidden={!preOrderMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -546,17 +504,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenB2ECompanyMgt}>
-                  <Add fontSize="small" hidden={openB2ECompanyMgt} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeB2ECompanyMgt}
-                  />
-                  <Folder className="folder" hidden={openB2ECompanyMgt} />
-                  <FolderOpen className="folder" hidden={closeB2ECompanyMgt} />
+                <Typography onClick={handleB2ECompanyMgt}>
+                  <Add fontSize="small" hidden={b2eCompanyMgt} />
+                  <HorizontalRule fontSize="small" hidden={!b2eCompanyMgt} />
+                  <Folder className="folder" hidden={b2eCompanyMgt} />
+                  <FolderOpen className="folder" hidden={!b2eCompanyMgt} />
                   B2E Company Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeB2ECompanyMgt}>
+                <ul className="tree-view-child" hidden={!b2eCompanyMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -578,17 +533,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenMROCompanyMgt}>
-                  <Add fontSize="small" hidden={openMROCompanyMgt} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeMROCompanyMgt}
-                  />
-                  <Folder className="folder" hidden={openMROCompanyMgt} />
-                  <FolderOpen className="folder" hidden={closeMROCompanyMgt} />
+                <Typography onClick={handleMROCompanyMgt}>
+                  <Add fontSize="small" hidden={mroCompanyMgt} />
+                  <HorizontalRule fontSize="small" hidden={!mroCompanyMgt} />
+                  <Folder className="folder" hidden={mroCompanyMgt} />
+                  <FolderOpen className="folder" hidden={!mroCompanyMgt} />
                   MRO Company Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeMROCompanyMgt}>
+                <ul className="tree-view-child" hidden={!mroCompanyMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />

@@ -15,350 +15,266 @@ function Menu(props) {
   const [closeMenu, setCloseMenu] = useState(false);
 
   // Master
-  const [openMaster, setOpenMaster] = useState(false);
-  const [closeMaster, setCloseMaster] = useState(true);
+  const [masterData, setMasterData] = useState(false);
 
-  const [openMasterBasicMgt, setOpenMasterBasicMgt] = useState(false);
-  const [closeMasterBasicMgt, setCloseMasterBasicMgt] = useState(true);
+  const [basicLogisticsMgt, setBasicLogisticsMgt] = useState(false);
 
-  const [openMasterInquiry, setOpenMasterInquiry] = useState(false);
-  const [closeMasterInquiry, setCloseMasterInquiry] = useState(true);
+  const [basicLogisticsInquiry, setBasicLogisticsInquiry] = useState(false);
 
-  const [openMasterRule, setOpenMasterRule] = useState(false);
-  const [closeMasterRule, setCloseMasterRule] = useState(true);
+  const [basicLogisticsRuleMgt, setBasicLogisticsRuleMgt] = useState(false);
 
   // QC
-  const [openQC, setOpenQC] = useState(false);
-  const [closeQC, setCloseQC] = useState(true);
+  const [qc, setQC] = useState(false);
 
-  const [openQCApproval, setOpenQCApproval] = useState(false);
-  const [closeQCApproval, setCloseQCApproval] = useState(true);
+  const [approvalInspection, setApprovalInspection] = useState(false);
 
-  const [openQCWarehousing, setOpenQCWarehousing] = useState(false);
-  const [closeQCWarehousing, setCloseQCWarehousing] = useState(true);
+  const [warehousingInspection, setWarehousingInspection] = useState(false);
 
-  const [openQCStatus, setOpenQCStatus] = useState(false);
-  const [closeQCStatus, setCloseQCStatus] = useState(true);
+  const [inspectionStatus, setInspectionStatus] = useState(false);
 
   // Warehousing
-  const [openWarehousing, setOpenWarehousing] = useState(false);
-  const [closeWarehousing, setCloseWarehousing] = useState(true);
+  const [warehousingShippingMgt, setWarehousingShippingMgt] = useState(false);
 
-  const [openWarehousingOrder, setOpenWarehousingOrder] = useState(false);
-  const [closeWarehousingOrder, setCloseWarehousingOrder] = useState(true);
+  const [warehousingOrderMgt, setWarehousingOrderMgt] = useState(false);
 
-  const [openWarehousingMgt, setOpenWarehousingMgt] = useState(false);
-  const [closeWarehousingMgt, setCloseWarehousingMgt] = useState(true);
+  const [warehousingMgt, setWarehousingMgt] = useState(false);
 
-  const [openWarehousingConsigment, setOpenWarehousingConsigment] =
-    useState(false);
-  const [closeWarehousingConsigment, setCloseWarehousingConsigment] =
-    useState(true);
+  const [consigmentMgt, setConsigmentMgt] = useState(false);
 
-  const [openWarehousingAdjustment, setOpenWarehousingAdjustment] =
-    useState(false);
-  const [closeWarehousingAdjustment, setCloseWarehousingAdjustment] =
-    useState(true);
+  const [consigmentAdjustment, setConsigmentAdjustment] = useState(false);
 
   // Shipping
-  const [openShipping, setOpenShipping] = useState(false);
-  const [closeShipping, setCloseShipping] = useState(true);
+  const [shippingOrderMgt, setShippingOrderMgt] = useState(false);
 
-  const [openShippingOrder, setOpenShippingOrder] = useState(false);
-  const [closeShippingOrder, setCloseShippingOrder] = useState(true);
+  const [shippingOrder, setShippingOrder] = useState(false);
 
-  const [openShippingSchedules, setOpenShippingSchedules] = useState(false);
-  const [closeShippingSchedules, setCloseShippingSchedules] = useState(true);
+  const [shippingSchedules, setShippingSchedules] = useState(false);
 
-  const [openShippingWaybill, setOpenShippingWaybill] = useState(false);
-  const [closeShippingWaybill, setCloseShippingWaybill] = useState(true);
+  const [waybillOutput, setWaybillOutput] = useState(false);
 
   // Shipment
-  const [openShipment, setOpenShipment] = useState(false);
-  const [closeShipment, setCloseShipment] = useState(true);
+  const [shipmentMgt, setShipmentMgt] = useState(false);
 
-  const [openShipmentProcess, setOpenShipmentProcess] = useState(false);
-  const [closeShipmentProcess, setCloseShipmentProcess] = useState(true);
+  const [shipmentProcess, setShipmentProcess] = useState(false);
 
-  const [openShipmentStatus, setOpenShipmentStatus] = useState(false);
-  const [closeShipmentStatus, setCloseShipmentStatus] = useState(true);
+  const [shipmentStatus, setShipmentStatus] = useState(false);
 
   // Direct
-  const [openDirect, setOpenDirect] = useState(false);
-  const [closeDirect, setCloseDirect] = useState(true);
+  const [directDeliveryMgt, setDirectDeliveryMgt] = useState(false);
 
-  const [openDirectDelivery, setOpenDirectDelivery] = useState(false);
-  const [closeDirectDelivery, setCloseDirectDelivery] = useState(true);
+  const [directDeliveryWarehousingMgt, setDirectDeliveryWarehousingMgt] =
+    useState(false);
 
-  const [openDirectShipment, setOpenDirectShipment] = useState(false);
-  const [closeDirectShipment, setCloseDirectShipment] = useState(true);
+  const [directDeliveryShipment, setDirectDeliveryShipment] = useState(false);
 
   // Collection
-  const [openCollection, setOpenCollection] = useState(false);
-  const [closeCollection, setCloseCollection] = useState(true);
+  const [collectionMgt, setCollectionMgt] = useState(false);
 
-  const [openCollectionProcess, setOpenCollectionProcess] = useState(false);
-  const [closeCollectionProcess, setCloseCollectionProcess] = useState(true);
+  const [collectionProcess, setCollectionProcess] = useState(false);
 
-  const [openCollectionStatus, setOpenCollectionStatus] = useState(false);
-  const [closeCollectionStatus, setCloseCollectionStatus] = useState(true);
+  const [collectionStatus, setCollectionStatus] = useState(false);
 
   // Vendor
-  const [openVendor, setOpenVendor] = useState(false);
-  const [closeVendor, setCloseVendor] = useState(true);
+  const [syntheticVendorOutMgt, setSyntheticVendorOutMgt] = useState(false);
 
-  const [openVendorOut, setOpenVendorOut] = useState(false);
-  const [closeVendorOut, setCloseVendorOut] = useState(true);
+  const [vendorOutMgt, setVendorOutMgt] = useState(false);
 
   // Other
-  const [openOther, setOpenOther] = useState(false);
-  const [closeOther, setCloseOther] = useState(true);
+  const [otherLogisticsMgt, setOtherLogisticsMgt] = useState(false);
 
-  const [openOtherPacking, setOpenOtherPacking] = useState(false);
-  const [closeOtherPacking, setCloseOtherPacking] = useState(true);
+  const [packingMaterialMgt, setPackingMaterialMgt] = useState(false);
 
   // Warehouse
-  const [openWarehouse, setOpenWarehouse] = useState(false);
-  const [closeWarehouse, setCloseWarehouse] = useState(true);
+  const [warehouseMgt, setWarehouseMgt] = useState(false);
 
-  const [openWarehouseInventory, setOpenWarehouseInventory] = useState(false);
-  const [closeWarehouseInventory, setCloseWarehouseInventory] = useState(true);
+  const [inventoryMgt, setInventoryMgt] = useState(false);
 
-  const [openWarehouseAdjustment, setOpenWarehouseAdjustment] = useState(false);
-  const [closeWarehouseAdjustment, setCloseWarehouseAdjustment] =
-    useState(true);
+  const [adjustmentStatus, setAdjustmentStatus] = useState(false);
 
-  const [openWarehouseStatus, setOpenWarehouseStatus] = useState(false);
-  const [closeWarehouseStatus, setCloseWarehouseStatus] = useState(true);
+  const [inventoryStatus, setInventoryStatus] = useState(false);
 
-  const [openWarehouseItem, setOpenWarehouseItem] = useState(false);
-  const [closeWarehouseItem, setCloseWarehouseItem] = useState(true);
+  const [itemMoveByWarehouse, setItemMoveByWarehouse] = useState(false);
 
   // Delivery
-  const [openDelivery, setOpenDelivery] = useState(false);
-  const [closeDelivery, setCloseDelivery] = useState(true);
+  const [deliveryCostMgt, setDeliveryCostMgt] = useState(false);
 
-  const [openDeliverySetting, setOpenDeliverySetting] = useState(false);
-  const [closeDeliverySetting, setCloseDeliverySetting] = useState(true);
+  const [deliveryCostSetting, setDeliveryCostSetting] = useState(false);
 
-  const [openDeliveryCalculate, setOpenDeliveryCalculate] = useState(false);
-  const [closeDeliveryCalculate, setCloseDeliveryCalculate] = useState(true);
+  const [deliveryCostCalculate, setDeliveryCostCalculate] = useState(false);
 
-  const [openDeliveryStatus, setOpenDeliveryStatus] = useState(false);
-  const [closeDeliveryStatus, setCloseDeliveryStatus] = useState(true);
+  const [deliveryCostStatus, setDeliveryCostStatus] = useState(false);
 
-  const [openDeliveryBasic, setOpenDeliveryBasic] = useState(false);
-  const [closeDeliveryBasic, setCloseDeliveryBasic] = useState(true);
+  const [basicInfo, setBasicInfo] = useState(false);
 
   // ----------------------------------handle-----------------
 
   // Master
-  const handleOpenMaster = (e) => {
-    setOpenMaster(!openMaster);
-    setCloseMaster(!closeMaster);
+  const handleMasterData = (e) => {
+    setMasterData(!masterData);
   };
 
-  const handleOpenMasterBasicMgt = (e) => {
-    setOpenMasterBasicMgt(!openMasterBasicMgt);
-    setCloseMasterBasicMgt(!closeMasterBasicMgt);
+  const handleBasicLogisticsMgt = (e) => {
+    setBasicLogisticsMgt(!basicLogisticsMgt);
   };
 
-  const handleOpenMasterInquiry = (e) => {
-    setOpenMasterInquiry(!openMasterInquiry);
-    setCloseMasterInquiry(!closeMasterInquiry);
+  const handleBasicLogisticsInquiry = (e) => {
+    setBasicLogisticsInquiry(!basicLogisticsInquiry);
   };
 
-  const handleOpenMasterRule = (e) => {
-    setOpenMasterRule(!openMasterRule);
-    setCloseMasterRule(!closeMasterRule);
+  const handleBasicLogisticsRuleMgt = (e) => {
+    setBasicLogisticsRuleMgt(!basicLogisticsRuleMgt);
   };
 
   // QC
-  const handleOpenQC = (e) => {
-    setOpenQC(!openQC);
-    setCloseQC(!closeQC);
+  const handleQC = (e) => {
+    setQC(!qc);
   };
 
-  const handleOpenQCApproval = (e) => {
-    setOpenQCApproval(!openQCApproval);
-    setCloseQCApproval(!closeQCApproval);
+  const handleApprovalInspection = (e) => {
+    setApprovalInspection(!approvalInspection);
   };
 
-  const handleOpenQCWarehousing = (e) => {
-    setOpenQCWarehousing(!openQCWarehousing);
-    setCloseQCWarehousing(!closeQCWarehousing);
+  const handleWarehousingInspection = (e) => {
+    setWarehousingInspection(!warehousingInspection);
   };
 
-  const handleOpenQCStatus = (e) => {
-    setOpenQCStatus(!openQCStatus);
-    setCloseQCStatus(!closeQCStatus);
+  const handleInspectionStatus = (e) => {
+    setInspectionStatus(!inspectionStatus);
   };
 
   // Warehousing
-  const handleOpenWarehousing = (e) => {
-    setOpenWarehousing(!openWarehousing);
-    setCloseWarehousing(!closeWarehousing);
+  const handleWarehousingShippingMgt = (e) => {
+    setWarehousingShippingMgt(!warehousingShippingMgt);
   };
 
-  const handleOpenWarehousingOrder = (e) => {
-    setOpenWarehousingOrder(!openWarehousingOrder);
-    setCloseWarehousingOrder(!closeWarehousingOrder);
+  const handleWarehousingOrderMgt = (e) => {
+    setWarehousingOrderMgt(!warehousingOrderMgt);
   };
 
-  const handleOpenWarehousingMgt = (e) => {
-    setOpenWarehousingMgt(!openWarehousingMgt);
-    setCloseWarehousingMgt(!closeWarehousingMgt);
+  const handleWarehousingMgt = (e) => {
+    setWarehousingMgt(!warehousingMgt);
   };
 
-  const handleOpenWarehousingConsigment = (e) => {
-    setOpenWarehousingConsigment(!openWarehousingConsigment);
-    setCloseWarehousingConsigment(!closeWarehousingConsigment);
+  const handleConsigmentMgt = (e) => {
+    setConsigmentMgt(!consigmentMgt);
   };
 
-  const handleOpenWarehousingAdjustment = (e) => {
-    setOpenWarehousingAdjustment(!openWarehousingAdjustment);
-    setCloseWarehousingAdjustment(!closeWarehousingAdjustment);
+  const handleConsigmentAdjustment = (e) => {
+    setConsigmentAdjustment(!consigmentAdjustment);
   };
 
   // Shipping
-  const handleOpenShipping = (e) => {
-    setOpenShipping(!openShipping);
-    setCloseShipping(!closeShipping);
+  const handleShippingOrderMgt = (e) => {
+    setShippingOrderMgt(!shippingOrderMgt);
   };
 
-  const handleOpenShippingOrder = (e) => {
-    setOpenShippingOrder(!openShippingOrder);
-    setCloseShippingOrder(!closeShippingOrder);
+  const handleShippingOrder = (e) => {
+    setShippingOrder(!shippingOrder);
   };
 
-  const handleOpenShippingSchedules = (e) => {
-    setOpenShippingSchedules(!openShippingSchedules);
-    setCloseShippingSchedules(!closeShippingSchedules);
+  const handleShippingSchedules = (e) => {
+    setShippingSchedules(!shippingSchedules);
   };
 
-  const handleOpenShippingWaybill = (e) => {
-    setOpenShippingWaybill(!openShippingWaybill);
-    setCloseShippingWaybill(!closeShippingWaybill);
+  const handleWaybillOutput = (e) => {
+    setWaybillOutput(!waybillOutput);
   };
 
   // Shipment
-  const handleOpenShipment = (e) => {
-    setOpenShipment(!openShipment);
-    setCloseShipment(!closeShipment);
+  const handleShipmentMgt = (e) => {
+    setShipmentMgt(!shipmentMgt);
   };
 
-  const handleOpenShipmentProcess = (e) => {
-    setOpenShipmentProcess(!openShipmentProcess);
-    setCloseShipmentProcess(!closeShipmentProcess);
+  const handleShipmentProcess = (e) => {
+    setShipmentProcess(!shipmentProcess);
   };
 
-  const handleOpenShipmentStatus = (e) => {
-    setOpenShipmentStatus(!openShipmentStatus);
-    setCloseShipmentStatus(!closeShipmentStatus);
+  const handleShipmentStatus = (e) => {
+    setShipmentStatus(!shipmentStatus);
   };
 
   // Direct
-  const handleOpenDirect = (e) => {
-    setOpenDirect(!openDirect);
-    setCloseDirect(!closeDirect);
+  const handleDirectDeliveryMgt = (e) => {
+    setDirectDeliveryMgt(!directDeliveryMgt);
   };
-  const handleOpenDirectDelivery = (e) => {
-    setOpenDirectDelivery(!openDirectDelivery);
-    setCloseDirectDelivery(!closeDirectDelivery);
+  const handleDirectDeliveryWarehousingMgt = (e) => {
+    setDirectDeliveryWarehousingMgt(!directDeliveryWarehousingMgt);
   };
-  const handleOpenDirectShipment = (e) => {
-    setOpenDirectShipment(!openDirectShipment);
-    setCloseDirectShipment(!closeDirectShipment);
+  const handleDirectDeliveryShipment = (e) => {
+    setDirectDeliveryShipment(!directDeliveryShipment);
   };
 
   // Collection
-  const handleOpenCollection = (e) => {
-    setOpenCollection(!openCollection);
-    setCloseCollection(!closeCollection);
+  const handleCollectionMgt = (e) => {
+    setCollectionMgt(!collectionMgt);
   };
 
-  const handleOpenCollectionProcess = (e) => {
-    setOpenCollectionProcess(!openCollectionProcess);
-    setCloseCollectionProcess(!closeCollectionProcess);
+  const handleCollectionProcess = (e) => {
+    setCollectionProcess(!collectionProcess);
   };
 
-  const handleOpenCollectionStatus = (e) => {
-    setOpenCollectionStatus(!openCollectionStatus);
-    setCloseCollectionStatus(!closeCollectionStatus);
+  const handleCollectionStatus = (e) => {
+    setCollectionStatus(!collectionStatus);
   };
 
   // Vendor
-  const handleOpenVendor = (e) => {
-    setOpenVendor(!openVendor);
-    setCloseVendor(!closeVendor);
+  const handleSyntheticVendorOutMgt = (e) => {
+    setSyntheticVendorOutMgt(!syntheticVendorOutMgt);
   };
 
-  const handleOpenVendorOut = (e) => {
-    setOpenVendorOut(!openVendorOut);
-    setCloseVendorOut(!closeVendorOut);
+  const handleVendorOutMgt = (e) => {
+    setVendorOutMgt(!vendorOutMgt);
   };
 
   // Other
-  const handleOpenOther = (e) => {
-    setOpenOther(!openOther);
-    setCloseOther(!closeOther);
+  const handleOtherLogisticsMgt = (e) => {
+    setOtherLogisticsMgt(!otherLogisticsMgt);
   };
 
-  const handleOpenOtherPacking = (e) => {
-    setOpenOtherPacking(!openOtherPacking);
-    setCloseOtherPacking(!closeOtherPacking);
+  const handlePackingMaterialMgt = (e) => {
+    setPackingMaterialMgt(!packingMaterialMgt);
   };
 
   // Warehouse
-  const handleOpenWarehouse = (e) => {
-    setOpenWarehouse(!openWarehouse);
-    setCloseWarehouse(!closeWarehouse);
+  const handleWarehouseMgt = (e) => {
+    setWarehouseMgt(!warehouseMgt);
   };
 
-  const handleOpenWarehouseInventory = (e) => {
-    setOpenWarehouseInventory(!openWarehouseInventory);
-    setCloseWarehouseInventory(!closeWarehouseInventory);
+  const handleInventoryMgt = (e) => {
+    setInventoryMgt(!inventoryMgt);
   };
 
-  const handleOpenWarehouseAdjustment = (e) => {
-    setOpenWarehouseAdjustment(!openWarehouseAdjustment);
-    setCloseWarehouseAdjustment(!closeWarehouseAdjustment);
+  const handleAdjustmentStatus = (e) => {
+    setAdjustmentStatus(!adjustmentStatus);
   };
 
-  const handleOpenWarehouseStatus = (e) => {
-    setOpenWarehouseStatus(!openWarehouseStatus);
-    setCloseWarehouseStatus(!closeWarehouseStatus);
+  const handleInventoryStatus = (e) => {
+    setInventoryStatus(!inventoryStatus);
   };
 
-  const handleOpenWarehouseItem = (e) => {
-    setOpenWarehouseItem(!openWarehouseItem);
-    setCloseWarehouseItem(!closeWarehouseItem);
+  const handleItemMoveByWarehouse = (e) => {
+    setItemMoveByWarehouse(!itemMoveByWarehouse);
   };
 
   // Delivery
-  const handleOpenDelivery = (e) => {
-    setOpenDelivery(!openDelivery);
-    setCloseDelivery(!closeDelivery);
+  const handleDeliveryCostMgt = (e) => {
+    setDeliveryCostMgt(!deliveryCostMgt);
   };
 
-  const handleOpenDeliverySetting = (e) => {
-    setOpenDeliverySetting(!openDeliverySetting);
-    setCloseDeliverySetting(!closeDeliverySetting);
+  const handleDeliveryCostSetting = (e) => {
+    setDeliveryCostSetting(!deliveryCostSetting);
   };
 
-  const handleOpenDeliveryCalculate = (e) => {
-    setOpenDeliveryCalculate(!openDeliveryCalculate);
-    setCloseDeliveryCalculate(!closeDeliveryCalculate);
+  const handleDeliveryCostCalculate = (e) => {
+    setDeliveryCostCalculate(!deliveryCostCalculate);
   };
 
-  const handleOpenDeliveryStatus = (e) => {
-    setOpenDeliveryStatus(!openDeliveryStatus);
-    setCloseDeliveryStatus(!closeDeliveryStatus);
+  const handleDeliveryCostStatus = (e) => {
+    setDeliveryCostStatus(!deliveryCostStatus);
   };
 
-  const handleOpenDeliveryBasic = (e) => {
-    setOpenDeliveryBasic(!openDeliveryBasic);
-    setCloseDeliveryBasic(!closeDeliveryBasic);
+  const handleBasicInfo = (e) => {
+    setBasicInfo(!basicInfo);
   };
 
   // Open Close Menu
@@ -385,25 +301,25 @@ function Menu(props) {
         </div>
         <ul className="tree-view-parent">
           <li>
-            <Typography onClick={handleOpenMaster}>
-              <Add fontSize="small" hidden={openMaster} />
-              <HorizontalRule fontSize="small" hidden={closeMaster} />
-              <Folder className="folder" hidden={openMaster} />
-              <FolderOpen className="folder" hidden={closeMaster} /> Master Data
+            <Typography onClick={handleMasterData}>
+              <Add fontSize="small" hidden={masterData} />
+              <HorizontalRule fontSize="small" hidden={!masterData} />
+              <Folder className="folder" hidden={masterData} />
+              <FolderOpen className="folder" hidden={!masterData} /> Master Data
             </Typography>
-            <ul className="tree-view-child" hidden={closeMaster}>
+            <ul className="tree-view-child" hidden={!masterData}>
               <li>
-                <Typography onClick={handleOpenMasterBasicMgt}>
-                  <Add fontSize="small" hidden={openMasterBasicMgt} />
+                <Typography onClick={handleBasicLogisticsMgt}>
+                  <Add fontSize="small" hidden={basicLogisticsMgt} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeMasterBasicMgt}
+                    hidden={!basicLogisticsMgt}
                   />
-                  <Folder className="folder" hidden={openMasterBasicMgt} />
-                  <FolderOpen className="folder" hidden={closeMasterBasicMgt} />
+                  <Folder className="folder" hidden={basicLogisticsMgt} />
+                  <FolderOpen className="folder" hidden={!basicLogisticsMgt} />
                   Basic Logistics Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeMasterBasicMgt}>
+                <ul className="tree-view-child" hidden={!basicLogisticsMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -455,17 +371,20 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenMasterInquiry}>
-                  <Add fontSize="small" hidden={openMasterInquiry} />
+                <Typography onClick={handleBasicLogisticsInquiry}>
+                  <Add fontSize="small" hidden={basicLogisticsInquiry} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeMasterInquiry}
+                    hidden={!basicLogisticsInquiry}
                   />
-                  <Folder className="folder" hidden={openMasterInquiry} />
-                  <FolderOpen className="folder" hidden={closeMasterInquiry} />
+                  <Folder className="folder" hidden={basicLogisticsInquiry} />
+                  <FolderOpen
+                    className="folder"
+                    hidden={!basicLogisticsInquiry}
+                  />
                   Basic Logistics Inquiry
                 </Typography>
-                <ul className="tree-view-child" hidden={closeMasterInquiry}>
+                <ul className="tree-view-child" hidden={!basicLogisticsInquiry}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -481,14 +400,20 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenMasterRule}>
-                  <Add fontSize="small" hidden={openMasterRule} />
-                  <HorizontalRule fontSize="small" hidden={closeMasterRule} />
-                  <Folder className="folder" hidden={openMasterRule} />
-                  <FolderOpen className="folder" hidden={closeMasterRule} />
+                <Typography onClick={handleBasicLogisticsRuleMgt}>
+                  <Add fontSize="small" hidden={basicLogisticsRuleMgt} />
+                  <HorizontalRule
+                    fontSize="small"
+                    hidden={!basicLogisticsRuleMgt}
+                  />
+                  <Folder className="folder" hidden={basicLogisticsRuleMgt} />
+                  <FolderOpen
+                    className="folder"
+                    hidden={!basicLogisticsRuleMgt}
+                  />
                   Basic Logistics Rule Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeMasterRule}>
+                <ul className="tree-view-child" hidden={!basicLogisticsRuleMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -507,22 +432,25 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenQC}>
-              <Add fontSize="small" hidden={openQC} />
-              <HorizontalRule fontSize="small" hidden={closeQC} />
-              <Folder className="folder" hidden={openQC} />
-              <FolderOpen className="folder" hidden={closeQC} /> QC
+            <Typography onClick={handleQC}>
+              <Add fontSize="small" hidden={qc} />
+              <HorizontalRule fontSize="small" hidden={!qc} />
+              <Folder className="folder" hidden={qc} />
+              <FolderOpen className="folder" hidden={!qc} /> QC
             </Typography>
-            <ul className="tree-view-child" hidden={closeQC}>
+            <ul className="tree-view-child" hidden={!qc}>
               <li>
-                <Typography onClick={handleOpenQCApproval}>
-                  <Add fontSize="small" hidden={openQCApproval} />
-                  <HorizontalRule fontSize="small" hidden={closeQCApproval} />
-                  <Folder className="folder" hidden={openQCApproval} />
-                  <FolderOpen className="folder" hidden={closeQCApproval} />
+                <Typography onClick={handleApprovalInspection}>
+                  <Add fontSize="small" hidden={approvalInspection} />
+                  <HorizontalRule
+                    fontSize="small"
+                    hidden={!approvalInspection}
+                  />
+                  <Folder className="folder" hidden={approvalInspection} />
+                  <FolderOpen className="folder" hidden={!approvalInspection} />
                   Approval Inspection
                 </Typography>
-                <ul className="tree-view-child" hidden={closeQCApproval}>
+                <ul className="tree-view-child" hidden={!approvalInspection}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -544,17 +472,20 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenQCWarehousing}>
-                  <Add fontSize="small" hidden={openQCWarehousing} />
+                <Typography onClick={handleWarehousingInspection}>
+                  <Add fontSize="small" hidden={warehousingInspection} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeQCWarehousing}
+                    hidden={!warehousingInspection}
                   />
-                  <Folder className="folder" hidden={openQCWarehousing} />
-                  <FolderOpen className="folder" hidden={closeQCWarehousing} />
+                  <Folder className="folder" hidden={warehousingInspection} />
+                  <FolderOpen
+                    className="folder"
+                    hidden={!warehousingInspection}
+                  />
                   Warehousing Inspection
                 </Typography>
-                <ul className="tree-view-child" hidden={closeQCWarehousing}>
+                <ul className="tree-view-child" hidden={!warehousingInspection}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -564,14 +495,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenQCStatus}>
-                  <Add fontSize="small" hidden={openQCStatus} />
-                  <HorizontalRule fontSize="small" hidden={closeQCStatus} />
-                  <Folder className="folder" hidden={openQCStatus} />
-                  <FolderOpen className="folder" hidden={closeQCStatus} />
+                <Typography onClick={handleInspectionStatus}>
+                  <Add fontSize="small" hidden={inspectionStatus} />
+                  <HorizontalRule fontSize="small" hidden={!inspectionStatus} />
+                  <Folder className="folder" hidden={inspectionStatus} />
+                  <FolderOpen className="folder" hidden={!inspectionStatus} />
                   Inspection Status
                 </Typography>
-                <ul className="tree-view-child" hidden={closeQCStatus}>
+                <ul className="tree-view-child" hidden={!inspectionStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -608,29 +539,32 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenWarehousing}>
-              <Add fontSize="small" hidden={openWarehousing} />
-              <HorizontalRule fontSize="small" hidden={closeWarehousing} />
-              <Folder className="folder" hidden={openWarehousing} />
-              <FolderOpen className="folder" hidden={closeWarehousing} />
+            <Typography onClick={handleWarehousingShippingMgt}>
+              <Add fontSize="small" hidden={warehousingShippingMgt} />
+              <HorizontalRule
+                fontSize="small"
+                hidden={!warehousingShippingMgt}
+              />
+              <Folder className="folder" hidden={warehousingShippingMgt} />
+              <FolderOpen className="folder" hidden={!warehousingShippingMgt} />
               Warehousing/Shipping Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeWarehousing}>
+            <ul className="tree-view-child" hidden={!warehousingShippingMgt}>
               <li>
-                <Typography onClick={handleOpenWarehousingOrder}>
-                  <Add fontSize="small" hidden={openWarehousingOrder} />
+                <Typography onClick={handleWarehousingOrderMgt}>
+                  <Add fontSize="small" hidden={warehousingOrderMgt} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeWarehousingOrder}
+                    hidden={!warehousingOrderMgt}
                   />
-                  <Folder className="folder" hidden={openWarehousingOrder} />
+                  <Folder className="folder" hidden={warehousingOrderMgt} />
                   <FolderOpen
                     className="folder"
-                    hidden={closeWarehousingOrder}
+                    hidden={!warehousingOrderMgt}
                   />
                   Warehousing Order Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeWarehousingOrder}>
+                <ul className="tree-view-child" hidden={!warehousingOrderMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -665,17 +599,14 @@ function Menu(props) {
               </li>
 
               <li>
-                <Typography onClick={handleOpenWarehousingMgt}>
-                  <Add fontSize="small" hidden={openWarehousingMgt} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeWarehousingMgt}
-                  />
-                  <Folder className="folder" hidden={openWarehousingMgt} />
-                  <FolderOpen className="folder" hidden={closeWarehousingMgt} />
+                <Typography onClick={handleWarehousingMgt}>
+                  <Add fontSize="small" hidden={warehousingMgt} />
+                  <HorizontalRule fontSize="small" hidden={!warehousingMgt} />
+                  <Folder className="folder" hidden={warehousingMgt} />
+                  <FolderOpen className="folder" hidden={!warehousingMgt} />
                   Warehousing Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeWarehousingMgt}>
+                <ul className="tree-view-child" hidden={!warehousingMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -692,26 +623,14 @@ function Menu(props) {
               </li>
 
               <li>
-                <Typography onClick={handleOpenWarehousingConsigment}>
-                  <Add fontSize="small" hidden={openWarehousingConsigment} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeWarehousingConsigment}
-                  />
-                  <Folder
-                    className="folder"
-                    hidden={openWarehousingConsigment}
-                  />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeWarehousingConsigment}
-                  />
+                <Typography onClick={handleConsigmentMgt}>
+                  <Add fontSize="small" hidden={consigmentMgt} />
+                  <HorizontalRule fontSize="small" hidden={!consigmentMgt} />
+                  <Folder className="folder" hidden={consigmentMgt} />
+                  <FolderOpen className="folder" hidden={!consigmentMgt} />
                   Consigment Mgt
                 </Typography>
-                <ul
-                  className="tree-view-child"
-                  hidden={closeWarehousingConsigment}
-                >
+                <ul className="tree-view-child" hidden={!consigmentMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -740,26 +659,20 @@ function Menu(props) {
               </li>
 
               <li>
-                <Typography onClick={handleOpenWarehousingAdjustment}>
-                  <Add fontSize="small" hidden={openWarehousingAdjustment} />
+                <Typography onClick={handleConsigmentAdjustment}>
+                  <Add fontSize="small" hidden={consigmentAdjustment} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeWarehousingAdjustment}
+                    hidden={!consigmentAdjustment}
                   />
-                  <Folder
-                    className="folder"
-                    hidden={openWarehousingAdjustment}
-                  />
+                  <Folder className="folder" hidden={consigmentAdjustment} />
                   <FolderOpen
                     className="folder"
-                    hidden={closeWarehousingAdjustment}
+                    hidden={!consigmentAdjustment}
                   />
                   Consigment Adjustment
                 </Typography>
-                <ul
-                  className="tree-view-child"
-                  hidden={closeWarehousingAdjustment}
-                >
+                <ul className="tree-view-child" hidden={!consigmentAdjustment}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -778,26 +691,23 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenShipping}>
-              <Add fontSize="small" hidden={openShipping} />
-              <HorizontalRule fontSize="small" hidden={closeShipping} />
-              <Folder className="folder" hidden={openShipping} />
-              <FolderOpen className="folder" hidden={closeShipping} /> Shipping
-              Order Mgt
+            <Typography onClick={handleShippingOrderMgt}>
+              <Add fontSize="small" hidden={shippingOrderMgt} />
+              <HorizontalRule fontSize="small" hidden={!shippingOrderMgt} />
+              <Folder className="folder" hidden={shippingOrderMgt} />
+              <FolderOpen className="folder" hidden={!shippingOrderMgt} />{" "}
+              Shipping Order Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeShipping}>
+            <ul className="tree-view-child" hidden={!shippingOrderMgt}>
               <li>
-                <Typography onClick={handleOpenShippingOrder}>
-                  <Add fontSize="small" hidden={openShippingOrder} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeShippingOrder}
-                  />
-                  <Folder className="folder" hidden={openShippingOrder} />
-                  <FolderOpen className="folder" hidden={closeShippingOrder} />
+                <Typography onClick={handleShippingOrder}>
+                  <Add fontSize="small" hidden={shippingOrder} />
+                  <HorizontalRule fontSize="small" hidden={!shippingOrder} />
+                  <Folder className="folder" hidden={shippingOrder} />
+                  <FolderOpen className="folder" hidden={!shippingOrder} />
                   Shipping Order
                 </Typography>
-                <ul className="tree-view-child" hidden={closeShippingOrder}>
+                <ul className="tree-view-child" hidden={!shippingOrder}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -837,20 +747,17 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenShippingSchedules}>
-                  <Add fontSize="small" hidden={openShippingSchedules} />
+                <Typography onClick={handleShippingSchedules}>
+                  <Add fontSize="small" hidden={shippingSchedules} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeShippingSchedules}
+                    hidden={!shippingSchedules}
                   />
-                  <Folder className="folder" hidden={openShippingSchedules} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeShippingSchedules}
-                  />
+                  <Folder className="folder" hidden={shippingSchedules} />
+                  <FolderOpen className="folder" hidden={!shippingSchedules} />
                   Shipping Schedules
                 </Typography>
-                <ul className="tree-view-child" hidden={closeShippingSchedules}>
+                <ul className="tree-view-child" hidden={!shippingSchedules}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -897,20 +804,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenShippingWaybill}>
-                  <Add fontSize="small" hidden={openShippingWaybill} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeShippingWaybill}
-                  />
-                  <Folder className="folder" hidden={openShippingWaybill} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeShippingWaybill}
-                  />
+                <Typography onClick={handleWaybillOutput}>
+                  <Add fontSize="small" hidden={waybillOutput} />
+                  <HorizontalRule fontSize="small" hidden={!waybillOutput} />
+                  <Folder className="folder" hidden={waybillOutput} />
+                  <FolderOpen className="folder" hidden={!waybillOutput} />
                   Waybill Output
                 </Typography>
-                <ul className="tree-view-child" hidden={closeShippingWaybill}>
+                <ul className="tree-view-child" hidden={!waybillOutput}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -983,29 +884,23 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenShipment}>
-              <Add fontSize="small" hidden={openShipment} />
-              <HorizontalRule fontSize="small" hidden={closeShipment} />
-              <Folder className="folder" hidden={openShipment} />
-              <FolderOpen className="folder" hidden={closeShipment} /> Shipment
+            <Typography onClick={handleShipmentMgt}>
+              <Add fontSize="small" hidden={shipmentMgt} />
+              <HorizontalRule fontSize="small" hidden={!shipmentMgt} />
+              <Folder className="folder" hidden={shipmentMgt} />
+              <FolderOpen className="folder" hidden={!shipmentMgt} /> Shipment
               Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeShipment}>
+            <ul className="tree-view-child" hidden={!shipmentMgt}>
               <li>
-                <Typography onClick={handleOpenShipmentProcess}>
-                  <Add fontSize="small" hidden={openShipmentProcess} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeShipmentProcess}
-                  />
-                  <Folder className="folder" hidden={openShipmentProcess} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeShipmentProcess}
-                  />
+                <Typography onClick={handleShipmentProcess}>
+                  <Add fontSize="small" hidden={shipmentProcess} />
+                  <HorizontalRule fontSize="small" hidden={!shipmentProcess} />
+                  <Folder className="folder" hidden={shipmentProcess} />
+                  <FolderOpen className="folder" hidden={!shipmentProcess} />
                   Shipment Process
                 </Typography>
-                <ul className="tree-view-child" hidden={closeShipmentProcess}>
+                <ul className="tree-view-child" hidden={!shipmentProcess}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1045,17 +940,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenShipmentStatus}>
-                  <Add fontSize="small" hidden={openShipmentStatus} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeShipmentStatus}
-                  />
-                  <Folder className="folder" hidden={openShipmentStatus} />
-                  <FolderOpen className="folder" hidden={closeShipmentStatus} />
+                <Typography onClick={handleShipmentStatus}>
+                  <Add fontSize="small" hidden={shipmentStatus} />
+                  <HorizontalRule fontSize="small" hidden={!shipmentStatus} />
+                  <Folder className="folder" hidden={shipmentStatus} />
+                  <FolderOpen className="folder" hidden={!shipmentStatus} />
                   Shipment Status
                 </Typography>
-                <ul className="tree-view-child" hidden={closeShipmentStatus}>
+                <ul className="tree-view-child" hidden={!shipmentStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1218,26 +1110,35 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenDirect}>
-              <Add fontSize="small" hidden={openDirect} />
-              <HorizontalRule fontSize="small" hidden={closeDirect} />
-              <Folder className="folder" hidden={openDirect} />
-              <FolderOpen className="folder" hidden={closeDirect} /> Direct
-              Delivery Mgt
+            <Typography onClick={handleDirectDeliveryMgt}>
+              <Add fontSize="small" hidden={directDeliveryMgt} />
+              <HorizontalRule fontSize="small" hidden={!directDeliveryMgt} />
+              <Folder className="folder" hidden={directDeliveryMgt} />
+              <FolderOpen className="folder" hidden={!directDeliveryMgt} />{" "}
+              Direct Delivery Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeDirect}>
+            <ul className="tree-view-child" hidden={!directDeliveryMgt}>
               <li>
-                <Typography onClick={handleOpenDirectDelivery}>
-                  <Add fontSize="small" hidden={openDirectDelivery} />
+                <Typography onClick={handleDirectDeliveryWarehousingMgt}>
+                  <Add fontSize="small" hidden={directDeliveryWarehousingMgt} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeDirectDelivery}
+                    hidden={!directDeliveryWarehousingMgt}
                   />
-                  <Folder className="folder" hidden={openDirectDelivery} />
-                  <FolderOpen className="folder" hidden={closeDirectDelivery} />
+                  <Folder
+                    className="folder"
+                    hidden={directDeliveryWarehousingMgt}
+                  />
+                  <FolderOpen
+                    className="folder"
+                    hidden={!directDeliveryWarehousingMgt}
+                  />
                   Direct Delivery Warehousing Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeDirectDelivery}>
+                <ul
+                  className="tree-view-child"
+                  hidden={!directDeliveryWarehousingMgt}
+                >
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1259,17 +1160,23 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenDirectShipment}>
-                  <Add fontSize="small" hidden={openDirectShipment} />
+                <Typography onClick={handleDirectDeliveryShipment}>
+                  <Add fontSize="small" hidden={directDeliveryShipment} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeDirectShipment}
+                    hidden={!directDeliveryShipment}
                   />
-                  <Folder className="folder" hidden={openDirectShipment} />
-                  <FolderOpen className="folder" hidden={closeDirectShipment} />
+                  <Folder className="folder" hidden={directDeliveryShipment} />
+                  <FolderOpen
+                    className="folder"
+                    hidden={!directDeliveryShipment}
+                  />
                   Direct Delivery Shipment
                 </Typography>
-                <ul className="tree-view-child" hidden={closeDirectShipment}>
+                <ul
+                  className="tree-view-child"
+                  hidden={!directDeliveryShipment}
+                >
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1288,29 +1195,26 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenCollection}>
-              <Add fontSize="small" hidden={openCollection} />
-              <HorizontalRule fontSize="small" hidden={closeCollection} />
-              <Folder className="folder" hidden={openCollection} />
-              <FolderOpen className="folder" hidden={closeCollection} />
+            <Typography onClick={handleCollectionMgt}>
+              <Add fontSize="small" hidden={collectionMgt} />
+              <HorizontalRule fontSize="small" hidden={!collectionMgt} />
+              <Folder className="folder" hidden={collectionMgt} />
+              <FolderOpen className="folder" hidden={!collectionMgt} />
               Collection Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeCollection}>
+            <ul className="tree-view-child" hidden={!collectionMgt}>
               <li>
-                <Typography onClick={handleOpenCollectionProcess}>
-                  <Add fontSize="small" hidden={openCollectionProcess} />
+                <Typography onClick={handleCollectionProcess}>
+                  <Add fontSize="small" hidden={collectionProcess} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeCollectionProcess}
+                    hidden={!collectionProcess}
                   />
-                  <Folder className="folder" hidden={openCollectionProcess} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeCollectionProcess}
-                  />
+                  <Folder className="folder" hidden={collectionProcess} />
+                  <FolderOpen className="folder" hidden={!collectionProcess} />
                   Collection Process
                 </Typography>
-                <ul className="tree-view-child" hidden={closeCollectionProcess}>
+                <ul className="tree-view-child" hidden={!collectionProcess}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1344,20 +1248,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenCollectionStatus}>
-                  <Add fontSize="small" hidden={openCollectionStatus} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeCollectionStatus}
-                  />
-                  <Folder className="folder" hidden={openCollectionStatus} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeCollectionStatus}
-                  />
+                <Typography onClick={handleCollectionStatus}>
+                  <Add fontSize="small" hidden={collectionStatus} />
+                  <HorizontalRule fontSize="small" hidden={!collectionStatus} />
+                  <Folder className="folder" hidden={collectionStatus} />
+                  <FolderOpen className="folder" hidden={!collectionStatus} />
                   Collection Status
                 </Typography>
-                <ul className="tree-view-child" hidden={closeCollectionStatus}>
+                <ul className="tree-view-child" hidden={!collectionStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1424,23 +1322,29 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenVendor}>
-              <Add fontSize="small" hidden={openVendor} />
-              <HorizontalRule fontSize="small" hidden={closeVendor} />
-              <Folder className="folder" hidden={openVendor} />
-              <FolderOpen className="folder" hidden={closeVendor} /> Vendor Out
-              Mgt
+            <Typography onClick={handleSyntheticVendorOutMgt}>
+              <Add fontSize="small" hidden={syntheticVendorOutMgt} />
+              <HorizontalRule
+                fontSize="small"
+                hidden={!syntheticVendorOutMgt}
+              />
+              <Folder className="folder" hidden={syntheticVendorOutMgt} />
+              <FolderOpen
+                className="folder"
+                hidden={!syntheticVendorOutMgt}
+              />{" "}
+              Vendor Out Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeVendor}>
+            <ul className="tree-view-child" hidden={!syntheticVendorOutMgt}>
               <li>
-                <Typography onClick={handleOpenVendorOut}>
-                  <Add fontSize="small" hidden={openVendorOut} />
-                  <HorizontalRule fontSize="small" hidden={closeVendorOut} />
-                  <Folder className="folder" hidden={openVendorOut} />
-                  <FolderOpen className="folder" hidden={closeVendorOut} />
+                <Typography onClick={handleVendorOutMgt}>
+                  <Add fontSize="small" hidden={vendorOutMgt} />
+                  <HorizontalRule fontSize="small" hidden={!vendorOutMgt} />
+                  <Folder className="folder" hidden={vendorOutMgt} />
+                  <FolderOpen className="folder" hidden={!vendorOutMgt} />
                   Vendor Out Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeVendorOut}>
+                <ul className="tree-view-child" hidden={!vendorOutMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1459,23 +1363,26 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenOther}>
-              <Add fontSize="small" hidden={openOther} />
-              <HorizontalRule fontSize="small" hidden={closeOther} />
-              <Folder className="folder" hidden={openOther} />
-              <FolderOpen className="folder" hidden={closeOther} /> Other
-              Logistics Mgt
+            <Typography onClick={handleOtherLogisticsMgt}>
+              <Add fontSize="small" hidden={otherLogisticsMgt} />
+              <HorizontalRule fontSize="small" hidden={!otherLogisticsMgt} />
+              <Folder className="folder" hidden={otherLogisticsMgt} />
+              <FolderOpen className="folder" hidden={!otherLogisticsMgt} />{" "}
+              Other Logistics Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeOther}>
+            <ul className="tree-view-child" hidden={!otherLogisticsMgt}>
               <li>
-                <Typography onClick={handleOpenOtherPacking}>
-                  <Add fontSize="small" hidden={openOtherPacking} />
-                  <HorizontalRule fontSize="small" hidden={closeOtherPacking} />
-                  <Folder className="folder" hidden={openOtherPacking} />
-                  <FolderOpen className="folder" hidden={closeOtherPacking} />
+                <Typography onClick={handlePackingMaterialMgt}>
+                  <Add fontSize="small" hidden={packingMaterialMgt} />
+                  <HorizontalRule
+                    fontSize="small"
+                    hidden={!packingMaterialMgt}
+                  />
+                  <Folder className="folder" hidden={packingMaterialMgt} />
+                  <FolderOpen className="folder" hidden={!packingMaterialMgt} />
                   Packing Material Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeOtherPacking}>
+                <ul className="tree-view-child" hidden={!packingMaterialMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1506,32 +1413,23 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenWarehouse}>
-              <Add fontSize="small" hidden={openWarehouse} />
-              <HorizontalRule fontSize="small" hidden={closeWarehouse} />
-              <Folder className="folder" hidden={openWarehouse} />
-              <FolderOpen className="folder" hidden={closeWarehouse} />
+            <Typography onClick={handleWarehouseMgt}>
+              <Add fontSize="small" hidden={warehouseMgt} />
+              <HorizontalRule fontSize="small" hidden={!warehouseMgt} />
+              <Folder className="folder" hidden={warehouseMgt} />
+              <FolderOpen className="folder" hidden={!warehouseMgt} />
               Warehouse Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeWarehouse}>
+            <ul className="tree-view-child" hidden={!warehouseMgt}>
               <li>
-                <Typography onClick={handleOpenWarehouseInventory}>
-                  <Add fontSize="small" hidden={openWarehouseInventory} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeWarehouseInventory}
-                  />
-                  <Folder className="folder" hidden={openWarehouseInventory} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeWarehouseInventory}
-                  />
+                <Typography onClick={handleInventoryMgt}>
+                  <Add fontSize="small" hidden={inventoryMgt} />
+                  <HorizontalRule fontSize="small" hidden={!inventoryMgt} />
+                  <Folder className="folder" hidden={inventoryMgt} />
+                  <FolderOpen className="folder" hidden={!inventoryMgt} />
                   Inventory Mgt
                 </Typography>
-                <ul
-                  className="tree-view-child"
-                  hidden={closeWarehouseInventory}
-                >
+                <ul className="tree-view-child" hidden={!inventoryMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1559,23 +1457,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenWarehouseAdjustment}>
-                  <Add fontSize="small" hidden={openWarehouseAdjustment} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeWarehouseAdjustment}
-                  />
-                  <Folder className="folder" hidden={openWarehouseAdjustment} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeWarehouseAdjustment}
-                  />
+                <Typography onClick={handleAdjustmentStatus}>
+                  <Add fontSize="small" hidden={adjustmentStatus} />
+                  <HorizontalRule fontSize="small" hidden={!adjustmentStatus} />
+                  <Folder className="folder" hidden={adjustmentStatus} />
+                  <FolderOpen className="folder" hidden={!adjustmentStatus} />
                   Adjustment Status
                 </Typography>
-                <ul
-                  className="tree-view-child"
-                  hidden={closeWarehouseAdjustment}
-                >
+                <ul className="tree-view-child" hidden={!adjustmentStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1603,20 +1492,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenWarehouseStatus}>
-                  <Add fontSize="small" hidden={openWarehouseStatus} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeWarehouseStatus}
-                  />
-                  <Folder className="folder" hidden={openWarehouseStatus} />
-                  <FolderOpen
-                    className="folder"
-                    hidden={closeWarehouseStatus}
-                  />
+                <Typography onClick={handleInventoryStatus}>
+                  <Add fontSize="small" hidden={inventoryStatus} />
+                  <HorizontalRule fontSize="small" hidden={!inventoryStatus} />
+                  <Folder className="folder" hidden={inventoryStatus} />
+                  <FolderOpen className="folder" hidden={!inventoryStatus} />
                   Inventory Status
                 </Typography>
-                <ul className="tree-view-child" hidden={closeWarehouseStatus}>
+                <ul className="tree-view-child" hidden={!inventoryStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1675,17 +1558,20 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenWarehouseItem}>
-                  <Add fontSize="small" hidden={openWarehouseItem} />
+                <Typography onClick={handleItemMoveByWarehouse}>
+                  <Add fontSize="small" hidden={itemMoveByWarehouse} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeWarehouseItem}
+                    hidden={!itemMoveByWarehouse}
                   />
-                  <Folder className="folder" hidden={openWarehouseItem} />
-                  <FolderOpen className="folder" hidden={closeWarehouseItem} />
-                  Item move by Warehouse
+                  <Folder className="folder" hidden={itemMoveByWarehouse} />
+                  <FolderOpen
+                    className="folder"
+                    hidden={!itemMoveByWarehouse}
+                  />
+                  Item Move By Warehouse
                 </Typography>
-                <ul className="tree-view-child" hidden={closeWarehouseItem}>
+                <ul className="tree-view-child" hidden={!itemMoveByWarehouse}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1716,29 +1602,29 @@ function Menu(props) {
           </li>
 
           <li>
-            <Typography onClick={handleOpenDelivery}>
-              <Add fontSize="small" hidden={openDelivery} />
-              <HorizontalRule fontSize="small" hidden={closeDelivery} />
-              <Folder className="folder" hidden={openDelivery} />
-              <FolderOpen className="folder" hidden={closeDelivery} /> Delivery
-              Cost Mgt
+            <Typography onClick={handleDeliveryCostMgt}>
+              <Add fontSize="small" hidden={deliveryCostMgt} />
+              <HorizontalRule fontSize="small" hidden={!deliveryCostMgt} />
+              <Folder className="folder" hidden={deliveryCostMgt} />
+              <FolderOpen className="folder" hidden={!deliveryCostMgt} />{" "}
+              Delivery Cost Mgt
             </Typography>
-            <ul className="tree-view-child" hidden={closeDelivery}>
+            <ul className="tree-view-child" hidden={!deliveryCostMgt}>
               <li>
-                <Typography onClick={handleOpenDeliverySetting}>
-                  <Add fontSize="small" hidden={openDeliverySetting} />
+                <Typography onClick={handleDeliveryCostSetting}>
+                  <Add fontSize="small" hidden={deliveryCostSetting} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeDeliverySetting}
+                    hidden={!deliveryCostSetting}
                   />
-                  <Folder className="folder" hidden={openDeliverySetting} />
+                  <Folder className="folder" hidden={deliveryCostSetting} />
                   <FolderOpen
                     className="folder"
-                    hidden={closeDeliverySetting}
+                    hidden={!deliveryCostSetting}
                   />
                   Delivery Cost Setting
                 </Typography>
-                <ul className="tree-view-child" hidden={closeDeliverySetting}>
+                <ul className="tree-view-child" hidden={!deliveryCostSetting}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1772,20 +1658,20 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenDeliveryCalculate}>
-                  <Add fontSize="small" hidden={openDeliveryCalculate} />
+                <Typography onClick={handleDeliveryCostCalculate}>
+                  <Add fontSize="small" hidden={deliveryCostCalculate} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeDeliveryCalculate}
+                    hidden={!deliveryCostCalculate}
                   />
-                  <Folder className="folder" hidden={openDeliveryCalculate} />
+                  <Folder className="folder" hidden={deliveryCostCalculate} />
                   <FolderOpen
                     className="folder"
-                    hidden={closeDeliveryCalculate}
+                    hidden={!deliveryCostCalculate}
                   />
                   Delivery Cost Calculate
                 </Typography>
-                <ul className="tree-view-child" hidden={closeDeliveryCalculate}>
+                <ul className="tree-view-child" hidden={!deliveryCostCalculate}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1813,17 +1699,17 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenDeliveryStatus}>
-                  <Add fontSize="small" hidden={openDeliveryStatus} />
+                <Typography onClick={handleDeliveryCostStatus}>
+                  <Add fontSize="small" hidden={deliveryCostStatus} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeDeliveryStatus}
+                    hidden={!deliveryCostStatus}
                   />
-                  <Folder className="folder" hidden={openDeliveryStatus} />
-                  <FolderOpen className="folder" hidden={closeDeliveryStatus} />
+                  <Folder className="folder" hidden={deliveryCostStatus} />
+                  <FolderOpen className="folder" hidden={!deliveryCostStatus} />
                   Delivery Cost Status
                 </Typography>
-                <ul className="tree-view-child" hidden={closeDeliveryStatus}>
+                <ul className="tree-view-child" hidden={!deliveryCostStatus}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -1857,17 +1743,14 @@ function Menu(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenDeliveryBasic}>
-                  <Add fontSize="small" hidden={openDeliveryBasic} />
-                  <HorizontalRule
-                    fontSize="small"
-                    hidden={closeDeliveryBasic}
-                  />
-                  <Folder className="folder" hidden={openDeliveryBasic} />
-                  <FolderOpen className="folder" hidden={closeDeliveryBasic} />
+                <Typography onClick={handleBasicInfo}>
+                  <Add fontSize="small" hidden={basicInfo} />
+                  <HorizontalRule fontSize="small" hidden={!basicInfo} />
+                  <Folder className="folder" hidden={basicInfo} />
+                  <FolderOpen className="folder" hidden={!basicInfo} />
                   Basic Info
                 </Typography>
-                <ul className="tree-view-child" hidden={closeDeliveryBasic}>
+                <ul className="tree-view-child" hidden={!basicInfo}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
