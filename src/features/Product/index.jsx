@@ -2,13 +2,13 @@ import { Container, Row, Col } from "react-bootstrap";
 import Menu from "./components/Menu";
 import Main from "./components/Main";
 
-function Product(props) {
+function Product({ title, setTitle, handleSetTitle }) {
   return (
     <Container fluid>
       <Row>
-        <Menu />
+        <Menu handleSetTitle={handleSetTitle} setTitle={setTitle} />
         <Col>
-          <Main />
+          <Main title={title} />
         </Col>
       </Row>
     </Container>

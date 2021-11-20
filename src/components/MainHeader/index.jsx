@@ -19,8 +19,9 @@ import {
   Typography,
 } from "@mui/material";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import "./styles.scss";
 
-function Header(props) {
+function MainHeader({ title }) {
   const handleChange = () => {};
 
   const breadcrumbs = [
@@ -29,7 +30,7 @@ function Header(props) {
     </Typography>,
     <Typography key="2">Basic Item Info</Typography>,
     <Typography key="3" color="text.primary">
-      Mã số phân loại sản phẩm
+      {title}
     </Typography>,
   ];
 
@@ -37,7 +38,7 @@ function Header(props) {
     <section>
       <div className="main__header d-flex justify-content-between align-items-center">
         <div className="main__header--label">
-          <Typography>SCJ GTRUCT-MD-[Mã số phân loại sản phẩm]</Typography>
+          <Typography>SCJ GTRUCT-MD-[{title}]</Typography>
         </div>
         <div className="main__header--action">
           <ZoomOutMap className="border main__header--action-zoom" />
@@ -189,7 +190,7 @@ function Header(props) {
       </div>
       <div className="main__breadcrumb d-flex justify-content-between align-items-center mt-2 border-bottom">
         <div className="main__option--label">
-          <Typography>Mã số phân loại sản phẩm</Typography>
+          <Typography>{title}</Typography>
         </div>
         <Breadcrumbs separator="›" aria-label="breadcrumb">
           {breadcrumbs}
@@ -199,4 +200,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default MainHeader;

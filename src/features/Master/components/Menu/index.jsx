@@ -14,47 +14,37 @@ function Master(props) {
   // open close menu
   const [closeMenu, setCloseMenu] = useState(false);
   // Basic
-  const [openBasic, setOpenBasic] = useState(false);
-  const [closeBasic, setCloseBasic] = useState(true);
+  const [basicInformation, setBasicInformation] = useState(false);
 
-  const [openBasicCode, setOpenBasicCode] = useState(false);
-  const [closeBasicCode, setCloseBasicCode] = useState(true);
+  const [basicCode, setBasicCode] = useState(false);
 
-  const [openBasicOrganization, setOpenBasicOrganization] = useState(false);
-  const [closeBasicOrganization, setCloseBasicOrganization] = useState(true);
+  const [basicOrganizationInfo, setBasicOrganizationInfo] = useState(false);
 
-  const [openPrivilegeMgt, setOpenPrivilegeMgt] = useState(false);
-  const [closePrivilegeMgt, setClosePrivilegeMgt] = useState(true);
+  const [privilegeMgt, setPrivilegeMgt] = useState(false);
 
-  const [openSystemMgt, setOpenSystemMgt] = useState(false);
-  const [closeSystemMgt, setCloseSystemMgt] = useState(true);
+  const [systemMgt, setSystemMgt] = useState(false);
 
   // ----------------------------------handle-----------------
 
   // Basic
-  const handleOpenBasic = (e) => {
-    setOpenBasic(!openBasic);
-    setCloseBasic(!closeBasic);
+  const handleBasicInformation = (e) => {
+    setBasicInformation(!basicInformation);
   };
 
-  const handleOpenBasicCode = (e) => {
-    setOpenBasicCode(!openBasicCode);
-    setCloseBasicCode(!closeBasicCode);
+  const handleBasicCode = (e) => {
+    setBasicCode(!basicCode);
   };
 
-  const handleOpenBasicOrganization = (e) => {
-    setOpenBasicOrganization(!openBasicOrganization);
-    setCloseBasicOrganization(!closeBasicOrganization);
+  const handleBasicOrganizationInfo = (e) => {
+    setBasicOrganizationInfo(!basicOrganizationInfo);
   };
 
-  const handleOpenPrivilegeMgt = (e) => {
-    setOpenPrivilegeMgt(!openPrivilegeMgt);
-    setClosePrivilegeMgt(!closePrivilegeMgt);
+  const handlePrivilegeMgt = (e) => {
+    setPrivilegeMgt(!privilegeMgt);
   };
 
-  const handleOpenSystemMgt = (e) => {
-    setOpenSystemMgt(!openSystemMgt);
-    setCloseSystemMgt(!closeSystemMgt);
+  const handleSystemMgt = (e) => {
+    setSystemMgt(!systemMgt);
   };
 
   // Open Close Menu
@@ -81,23 +71,23 @@ function Master(props) {
         </div>
         <ul className="tree-view-parent">
           <li>
-            <Typography onClick={handleOpenBasic}>
-              <Add fontSize="small" hidden={openBasic} />
-              <HorizontalRule fontSize="small" hidden={closeBasic} />
-              <Folder className="folder" hidden={openBasic} />
-              <FolderOpen className="folder" hidden={closeBasic} /> Basic
+            <Typography onClick={handleBasicInformation}>
+              <Add fontSize="small" hidden={basicInformation} />
+              <HorizontalRule fontSize="small" hidden={!basicInformation} />
+              <Folder className="folder" hidden={basicInformation} />
+              <FolderOpen className="folder" hidden={!basicInformation} /> Basic
               Information
             </Typography>
-            <ul className="tree-view-child" hidden={closeBasic}>
+            <ul className="tree-view-child" hidden={!basicInformation}>
               <li>
-                <Typography onClick={handleOpenBasicCode}>
-                  <Add fontSize="small" hidden={openBasicCode} />
-                  <HorizontalRule fontSize="small" hidden={closeBasicCode} />
-                  <Folder className="folder" hidden={openBasicCode} />
-                  <FolderOpen className="folder" hidden={closeBasicCode} />{" "}
-                  Basic Code
+                <Typography onClick={handleBasicCode}>
+                  <Add fontSize="small" hidden={basicCode} />
+                  <HorizontalRule fontSize="small" hidden={!basicCode} />
+                  <Folder className="folder" hidden={basicCode} />
+                  <FolderOpen className="folder" hidden={!basicCode} /> Basic
+                  Code
                 </Typography>
-                <ul className="tree-view-child" hidden={closeBasicCode}>
+                <ul className="tree-view-child" hidden={!basicCode}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -125,20 +115,20 @@ function Master(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenBasicOrganization}>
-                  <Add fontSize="small" hidden={openBasicOrganization} />
+                <Typography onClick={handleBasicOrganizationInfo}>
+                  <Add fontSize="small" hidden={basicOrganizationInfo} />
                   <HorizontalRule
                     fontSize="small"
-                    hidden={closeBasicOrganization}
+                    hidden={!basicOrganizationInfo}
                   />
-                  <Folder className="folder" hidden={openBasicOrganization} />
+                  <Folder className="folder" hidden={basicOrganizationInfo} />
                   <FolderOpen
                     className="folder"
-                    hidden={closeBasicOrganization}
+                    hidden={!basicOrganizationInfo}
                   />
                   Basic Organization Info
                 </Typography>
-                <ul className="tree-view-child" hidden={closeBasicOrganization}>
+                <ul className="tree-view-child" hidden={!basicOrganizationInfo}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -190,14 +180,14 @@ function Master(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenPrivilegeMgt}>
-                  <Add fontSize="small" hidden={openPrivilegeMgt} />
-                  <HorizontalRule fontSize="small" hidden={closePrivilegeMgt} />
-                  <Folder className="folder" hidden={openPrivilegeMgt} />
-                  <FolderOpen className="folder" hidden={closePrivilegeMgt} />
+                <Typography onClick={handlePrivilegeMgt}>
+                  <Add fontSize="small" hidden={privilegeMgt} />
+                  <HorizontalRule fontSize="small" hidden={!privilegeMgt} />
+                  <Folder className="folder" hidden={privilegeMgt} />
+                  <FolderOpen className="folder" hidden={!privilegeMgt} />
                   Privilege Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closePrivilegeMgt}>
+                <ul className="tree-view-child" hidden={!privilegeMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
@@ -237,14 +227,14 @@ function Master(props) {
                 </ul>
               </li>
               <li>
-                <Typography onClick={handleOpenSystemMgt}>
-                  <Add fontSize="small" hidden={openSystemMgt} />
-                  <HorizontalRule fontSize="small" hidden={closeSystemMgt} />
-                  <Folder className="folder" hidden={openSystemMgt} />
-                  <FolderOpen className="folder" hidden={closeSystemMgt} />
+                <Typography onClick={handleSystemMgt}>
+                  <Add fontSize="small" hidden={systemMgt} />
+                  <HorizontalRule fontSize="small" hidden={!systemMgt} />
+                  <Folder className="folder" hidden={systemMgt} />
+                  <FolderOpen className="folder" hidden={!systemMgt} />
                   System Mgt
                 </Typography>
-                <ul className="tree-view-child" hidden={closeSystemMgt}>
+                <ul className="tree-view-child" hidden={!systemMgt}>
                   <li>
                     <Typography className="document-title">
                       <Description className="file" />
